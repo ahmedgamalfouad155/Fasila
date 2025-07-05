@@ -1,7 +1,6 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class HomeCategoryTypeWidget extends StatelessWidget {
   const HomeCategoryTypeWidget({
@@ -40,7 +39,7 @@ class HomeCategoryTypeWidget extends StatelessWidget {
             child: CircleAvatar(
               radius: 20,
               backgroundColor: context.appColors.white,
-              child: SvgPicture.asset(image),
+              child: Image.asset(image),
             ),
           ),
         ),

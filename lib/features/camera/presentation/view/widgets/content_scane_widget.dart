@@ -42,13 +42,18 @@ class ContentScaneWidget extends StatelessWidget {
               ],
             ),
           ),
-          CircleAvatar(
-            radius: 15,
-            backgroundColor: context.appColors.teal,
-            child: Icon(
-              Icons.arrow_forward,
-              color: context.appColors.white,
-              size: 20,
+          InkWell(
+            onTap: () {
+              
+            },
+            child: CircleAvatar(
+              radius: 15,
+              backgroundColor: context.appColors.teal,
+              child: Icon(
+                Icons.arrow_forward,
+                color: context.appColors.white,
+                size: 20,
+              ),
             ),
           ),
         ],
