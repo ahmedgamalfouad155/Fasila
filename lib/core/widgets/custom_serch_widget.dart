@@ -1,0 +1,31 @@
+
+import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/core/widgets/custom_search_text_form_field.dart';
+import 'package:flutter/material.dart';
+
+class CustomSearchWidget extends StatelessWidget {
+  const CustomSearchWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(
+          width: 50,
+          height: 55,
+          decoration: BoxDecoration(
+            color: context.appColors.teal,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(16),
+              bottomLeft: Radius.circular(16),
+            ),
+          ),
+          child: Icon(Icons.search, color: context.appColors.white),
+        ),
+        Expanded(child: CustomSearchTextFormFieldWidget()),
+      ],
+    );
+  }
+}
