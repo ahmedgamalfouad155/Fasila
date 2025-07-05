@@ -15,10 +15,11 @@ class SignupViewBody extends StatefulWidget {
 }
 
 class _SignupViewBodyState extends State<SignupViewBody> {
-    final TextEditingController passwordController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
@@ -29,6 +30,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
     confirmPasswordController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -48,13 +50,25 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ).copyWith(color: context.appColors.black),
               ),
               const SizedBox(height: 30),
-              CustomTextFieldWidget(hintText: 'Name',controller: nameController,),
+              CustomTextFieldWidget(
+                hintText: 'Name',
+                controller: nameController,
+              ),
               const SizedBox(height: 16),
-              CustomTextFieldWidget(hintText: 'Email',controller: emailController,),
+              CustomTextFieldWidget(
+                hintText: 'Email',
+                controller: emailController,
+              ),
               const SizedBox(height: 16),
-              CustomTextFormFieldWidget(hintText: 'Password',controller: passwordController,),
+              CustomTextFormFieldWidget(
+                hintText: 'Password',
+                controller: passwordController,
+              ),
               const SizedBox(height: 16),
-              CustomTextFormFieldWidget(hintText: 'Confirm Password',controller: confirmPasswordController,),
+              CustomTextFormFieldWidget(
+                hintText: 'Confirm Password',
+                controller: confirmPasswordController,
+              ),
               const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -66,16 +80,19 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 ],
               ),
               const SizedBox(height: 50),
-          
-              CustomButon(text: 'Sign Up', onPressed: () {
-                if (formKey.currentState!.validate()) {
-                    (context).go(AppRouter.kHomeView);
+
+              CustomButon(
+                text: 'Sign Up',
+                onPressed: () {
+                  if (formKey.currentState!.validate()) {
+                    (context).go(AppRouter.kNavBarView);
                     passwordController.clear();
                     emailController.clear();
                     nameController.clear();
                     confirmPasswordController.clear();
                   }
-              }),
+                },
+              ),
             ],
           ),
         ),
