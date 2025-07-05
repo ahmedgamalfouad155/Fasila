@@ -2,8 +2,8 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextFormFieldWidget extends StatelessWidget {
-  const CustomTextFormFieldWidget({
+class CustomTextFieldWidget extends StatelessWidget {
+  const CustomTextFieldWidget({
     super.key,
     required this.hintText,
     this.controller,
@@ -19,7 +19,7 @@ class CustomTextFormFieldWidget extends StatelessWidget {
     return TextFormField(
       keyboardType: keyboardType,
       controller: controller,
-      cursorColor: context.appColors.orange,
+      cursorColor: context.appColors.teal,
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Please enter your $hintText';
@@ -28,9 +28,7 @@ class CustomTextFormFieldWidget extends StatelessWidget {
       },
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: AppStyles.textStyle16(
-          context,
-        ).copyWith(color: Color(0xffAC8E71)),
+        hintStyle: AppStyles.textStyle16Teal(context),
         fillColor: context.appColors.offWhite,
         filled: true,
         enabledBorder: OutlineInputBorder(

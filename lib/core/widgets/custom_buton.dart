@@ -3,7 +3,6 @@ import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 // ignore: must_be_immutable
 class CustomButon extends StatelessWidget {
   CustomButon({
@@ -27,10 +26,10 @@ class CustomButon extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-          backgroundColor: bacgrouncColor ?? context.appColors.orange,
-          side: BorderSide(color: context.appColors.orange),
+          backgroundColor: bacgrouncColor ?? context.appColors.teal,
+          side: BorderSide(color: context.appColors.teal),
           shape: RoundedRectangleBorder(
-            borderRadius: borderRadius ?? BorderRadius.circular(30),
+            borderRadius: borderRadius ?? BorderRadius.circular(10),
           ),
         ),
         child: Text(

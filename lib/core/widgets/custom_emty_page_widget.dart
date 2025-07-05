@@ -29,7 +29,7 @@ class CustomEmptyPage extends StatelessWidget {
           ).copyWith(fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 5),
-        Text(subTitle, style: AppStyles.textStyle16(context)),
+        Text(subTitle, style: AppStyles.textStyle16Black(context)),
         Spacer(),
         CustomButon(
           text: "Custom",

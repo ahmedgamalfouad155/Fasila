@@ -1,3 +1,4 @@
+import 'package:fasila/features/splash/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatelessWidget {
@@ -6,9 +7,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Splash View'),
-      ),
+      body: SplashViewBody(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:fasila/core/router/app_router.dart';
+import 'package:fasila/core/theme/thems.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
+         theme: lightTheme,
+        darkTheme: darkTheme, 
         title: 'FASILA',
         routerConfig: AppRouter.router,
       ),
