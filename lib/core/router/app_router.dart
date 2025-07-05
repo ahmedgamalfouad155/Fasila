@@ -14,7 +14,7 @@ abstract class AppRouter {
 
   static final router = GoRouter(
     routes: [
-      GoRoute(path: '/', builder: (context, state) => AuthLandingView()),
+      GoRoute(path: '/', builder: (context, state) => NavBarView()),
       GoRoute(
         path: konboardingView,
         builder: (context, state) => OnboardingView(),

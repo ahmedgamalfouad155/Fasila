@@ -16,19 +16,20 @@ class CustomSearchTextFormFieldWidget extends StatelessWidget {
         ).copyWith(color: context.appColors.grey),
         fillColor: context.appColors.offWhite,
         filled: true,
+        contentPadding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topRight: Radius.circular(16),
             bottomRight: Radius.circular(16),
           ),
-          borderSide: BorderSide(color: Colors.transparent),
+          borderSide: BorderSide(color: context.appColors.teal, width: 1.2),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topRight: Radius.circular(16),
             bottomRight: Radius.circular(16),
           ),
-          borderSide: BorderSide(color: Colors.transparent),
+          borderSide: BorderSide(color: context.appColors.teal, width: 1.5),
         ),
       ),
     );

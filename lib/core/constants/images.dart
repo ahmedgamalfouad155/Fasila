@@ -15,5 +15,8 @@ class Appimages {
   static const String carouselSliderImage = 'assets/carousel.png';
   static const String drowImage = 'assets/drow.png';
   static const String planetImage = 'assets/planet.png';
+  static const String glovesImage = 'assets/gloves.png';
+  static const String tomatoImage = 'assets/tomato.png';
+  static const String fillteroImage = 'assets/filler.svg';
 
 }

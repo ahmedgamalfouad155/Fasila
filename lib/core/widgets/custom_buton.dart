@@ -10,6 +10,7 @@ class CustomButon extends StatelessWidget {
     this.bacgrouncColor,
     this.textColor,
     this.borderRadius,
+    this.width,this.height,
     required this.text,
     required this.onPressed,
   });
@@ -18,11 +19,13 @@ class CustomButon extends StatelessWidget {
   Color? textColor;
   final BorderRadius? borderRadius;
   final String text;
+  final double? width, height; 
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50.h,
-      width: MediaQuery.of(context).size.width.w,
+      height:height?? 50.h,
+      width:width?? MediaQuery.of(context).size.width.w,
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
@@ -36,7 +39,7 @@ class CustomButon extends StatelessWidget {
           text,
           style: AppStyles.textStyle18(context).copyWith(
             fontWeight: FontWeight.w700,
-            color: textColor ?? context.appColors.white,
+            color: textColor ?? context.appColors.white, 
           ),
         ),
       ),

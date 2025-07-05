@@ -1,12 +1,9 @@
-
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/widgets/custom_search_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchWidget extends StatelessWidget {
-  const CustomSearchWidget({
-    super.key,
-  });
+  const CustomSearchWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +11,7 @@ class CustomSearchWidget extends StatelessWidget {
       children: [
         Container(
           width: 50,
-          height: 55,
+          height: 48,
           decoration: BoxDecoration(
             color: context.appColors.teal,
             borderRadius: BorderRadius.only(
