@@ -1,3 +1,4 @@
+import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/camera/presentation/view/camera_view.dart';
 import 'package:fasila/features/home/presentation/view/home_view.dart';
@@ -9,6 +10,7 @@ import 'package:fasila/features/shop/presentation/view/shop_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 class NavBarViewBody extends StatefulWidget {
   const NavBarViewBody({super.key});
@@ -72,25 +74,25 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400,
                   ),
-                  items: const [
+                  items: [
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.home_filled, size: 28),
+                      icon: SvgPicture.asset(AppImages.homeIcon),
                       label: 'Home',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.shopping_cart, size: 28),
+                      icon: SvgPicture.asset(AppImages.shopIcon),
                       label: 'Shop',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.camera_alt, size: 28),
-                      label: 'Camera',
+                      icon: SvgPicture.asset(AppImages.cameraIcon),
+                      label: '',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.favorite, size: 28),
+                      icon: SvgPicture.asset(AppImages.myPlanetIcon),
                       label: 'My Planet',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.person, size: 28),
+                      icon: SvgPicture.asset(AppImages.profileIcon),
                       label: 'Profile',
                     ),
                   ],

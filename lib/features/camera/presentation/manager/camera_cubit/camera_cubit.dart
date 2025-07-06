@@ -14,11 +14,10 @@ class CameraCubit extends Cubit<CameraState> {
   final ImagePicker _picker = ImagePicker();
 
   Future<void> pickImageFromGallery() async {
-    final pickedFile = await _picker.pickImage(source: ImageSource.camera);
+    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
 
     if (pickedFile != null) {
-      final newImagePath = pickedFile.path;
-
+      final newImagePath = pickedFile.path; 
       final oldImagePath = shopBox.get('cameraImage');
       if (oldImagePath != null && File(oldImagePath).existsSync()) {
         await File(oldImagePath).delete();

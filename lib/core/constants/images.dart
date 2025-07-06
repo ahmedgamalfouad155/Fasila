@@ -10,6 +10,13 @@ class AppImages {
   static const String facebookLogo = 'assets/face.png';
   static const String appleLogo = 'assets/apple.png';
 
+  static const String homeIcon = 'assets/home.svg';
+  static const String shopIcon = 'assets/shop.svg';
+  static const String cameraIcon = 'assets/cam.svg';
+  static const String myPlanetIcon = 'assets/myplanet.svg';
+  static const String profileIcon = 'assets/profile.svg';
+  
+
   static const String notificationIcon = 'assets/notification.svg';
   static const String cartIcon = 'assets/cart.svg';
   static const String carouselSliderImage = 'assets/carousel.png';
