@@ -1,7 +1,9 @@
 import 'package:fasila/core/constants/images.dart';
+import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ContentScaneWidget extends StatelessWidget {
   const ContentScaneWidget({super.key});
@@ -44,7 +46,7 @@ class ContentScaneWidget extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              
+              GoRouter.of(context).push(AppRouter.kScaneResultView);
             },
             child: CircleAvatar(
               radius: 15,

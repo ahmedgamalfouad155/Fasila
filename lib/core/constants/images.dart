@@ -28,6 +28,8 @@ class Appimages {
   static const String lastest1Image = 'assets/lastest1.jpeg'; 
   static const String lastest2Image = 'assets/lastest2.jpeg';
   static const String lastest3Image = 'assets/lastest3.jpeg';
+
+  static const String scaneResultImage = 'assets/scan.png';
   
 
 

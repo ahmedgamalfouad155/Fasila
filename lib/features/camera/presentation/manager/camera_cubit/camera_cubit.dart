@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
-import 'package:image_picker/image_picker.dart'; 
+import 'package:image_picker/image_picker.dart';
 part 'camera_state.dart';
 
 class CameraCubit extends Cubit<CameraState> {
@@ -14,7 +14,7 @@ class CameraCubit extends Cubit<CameraState> {
   final ImagePicker _picker = ImagePicker();
 
   Future<void> pickImageFromGallery() async {
-    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    final pickedFile = await _picker.pickImage(source: ImageSource.camera);
 
     if (pickedFile != null) {
       final newImagePath = pickedFile.path;
