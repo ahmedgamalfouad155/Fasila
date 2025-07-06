@@ -15,6 +15,7 @@ class CameraViewBody extends StatelessWidget {
         String? imagePath;
         if (state is CameraUpdated) {
           imagePath = state.imagePath;
+          
         }
         return Padding(
           padding: const EdgeInsets.all(8.0),
@@ -23,7 +24,7 @@ class CameraViewBody extends StatelessWidget {
             children: [
               ScaneImageWidget(imagePath: imagePath),
               const SizedBox(height: 20),
-              ContentScaneWidget(),
+              ContentScaneWidget(imagePath: imagePath,),
               const SizedBox(height: 20),
               CustomButon(text: "Take a picture", onPressed: () {
                 context.read<CameraCubit>().pickImageFromGallery();

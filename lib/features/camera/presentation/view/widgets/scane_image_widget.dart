@@ -28,10 +28,9 @@ class ScaneImageWidget extends StatelessWidget {
                 height: 150,
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
-                  color: context.appColors.white,
-                  border: Border.all(color: context.appColors.teal, width: 1),
+                  color: context.appColors.white, 
                 ),
-                padding: const EdgeInsets.all(12),
+                
                 child: imagePath != null
                     ? Image.file(
                         File(imagePath!),

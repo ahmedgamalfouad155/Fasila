@@ -31,8 +31,14 @@ abstract class AppRouter {
       GoRoute(path: kLogInView, builder: (context, state) => LogniView()),
       GoRoute(path: kSignUpView, builder: (context, state) => SignupView()),
       GoRoute(path: kNavBarView, builder: (context, state) => NavBarView()),
-      GoRoute(path: kScaneResultView, builder: (context, state) => ScaneResultView()),
-      GoRoute(path: kPlanetDetailsView, builder: (context, state) => PlanetDetailsView()),
+      GoRoute(
+        path: kScaneResultView,
+        builder: (context, state) => ScaneResultView(),
+      ),
+      GoRoute(
+        path: kPlanetDetailsView,
+        builder: (context, state) => PlanetDetailsView(),
+      ),
     ],
   );
 }

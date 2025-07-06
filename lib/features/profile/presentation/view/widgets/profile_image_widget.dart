@@ -70,7 +70,7 @@ class ProfileImageWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'John Doe',
+                    'Fasila',
                     style: AppStyles.textStyle16Teal(
                       context,
                     ).copyWith(fontWeight: FontWeight.bold),

@@ -35,13 +35,7 @@ class HomeCategoryTypeWidget extends StatelessWidget {
               ),
             ],
           ),
-          child: Center(
-            child: CircleAvatar(
-              radius: 20,
-              backgroundColor: context.appColors.white,
-              child: Image.asset(image),
-            ),
-          ),
+          child: Center(child: Image.asset(image)),
         ),
         const SizedBox(height: 6),
         Text(

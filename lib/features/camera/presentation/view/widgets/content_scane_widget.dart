@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
@@ -6,7 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ContentScaneWidget extends StatelessWidget {
-  const ContentScaneWidget({super.key});
+  const ContentScaneWidget({super.key, this.imagePath});
+  final String? imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,9 @@ class ContentScaneWidget extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Row(
         children: [
-          Image.asset(AppImages.logoImage, height: 70),
+          imagePath != null
+              ? Image.file(File(imagePath!), height: 50)
+              : Image.asset(AppImages.logoImage),
           const SizedBox(width: 10),
           Expanded(
             child: Column(

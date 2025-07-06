@@ -1,11 +1,11 @@
-import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:flutter/material.dart';
 
 class ShopItemWidget extends StatelessWidget {
-  const ShopItemWidget({super.key});
+  const ShopItemWidget({super.key, required this.image, required this.title, required this.price});
+  final String image, title, price;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ShopItemWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Image.asset(AppImages.glovesImage),
+          Image.asset(image),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
@@ -38,7 +38,7 @@ class ShopItemWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'gardening gloves',
+                      title,
                       style: AppStyles.textStyle16Teal(context),
                     ),
 
@@ -65,7 +65,7 @@ class ShopItemWidget extends StatelessWidget {
                 ),
 
                 Text(
-                  "EGP 220.00",
+                  price,
                   style: AppStyles.textStyle16Teal(
                     context,
                   ).copyWith(fontWeight: FontWeight.bold),

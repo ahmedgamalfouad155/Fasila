@@ -1,5 +1,6 @@
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/home/presentation/view/widgets/home_category_typy_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -8,19 +9,37 @@ class ListOfExploreHomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height / 6,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => HomeCategoryTypeWidget(
-          image: AppImages.tomatoImage,
-          title: 'Vegetable',
-          height: 60,
-          bacgrouncColor: context.appColors.offWhite,
+    final List<String> images = [
+      AppImages.explore1Image,
+      AppImages.explore2Image,
+      AppImages.explore3Image,
+      AppImages.explore4Image,
+    ];
+    final List<String> titles = ['Vegetable', 'Fruit', 'Leavy plant', 'Flower'];
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Explore Your Plants  ',
+          style: AppStyles.textStyle16Teal(context),
         ),
-        separatorBuilder: (context, index) => const SizedBox(width: 15),
-        itemCount: 5,
-      ),
+        const SizedBox(height: 10),
+        SizedBox(
+          height: MediaQuery.of(context).size.height / 6,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) => HomeCategoryTypeWidget(
+              image: images[index],
+              title: titles[index],
+              height: 60,
+              bacgrouncColor: context.appColors.offWhite,
+            ),
+            separatorBuilder: (context, index) => const SizedBox(width: 15),
+            itemCount: 4,
+          ),
+        ),
+      ],
     );
   }
 }
