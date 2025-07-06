@@ -37,4 +37,5 @@ class AppImages {
   static const String humidityImage = 'assets/humi.svg';
   static const String fertilizerImage = 'assets/fertilze.svg';
   static const String noteImage = 'assets/note.svg';
+  static const String careImage = 'assets/care.svg';
 }
