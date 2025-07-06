@@ -1,5 +1,6 @@
 import 'package:fasila/core/theme/colors.dart';
-import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/togel_cubit.dart'; import 'package:flutter/material.dart';
+import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/togel_cubit.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TogelButtonDetailsWidget extends StatelessWidget {
@@ -17,7 +18,7 @@ class TogelButtonDetailsWidget extends StatelessWidget {
           final cubit = context.read<TogelCubit>();
           cubit.selectTab(index == 0 ? TogelTap.plantInfo : TogelTap.reminders);
         },
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(10),
         selectedColor: context.appColors.white,
         color: context.appColors.black,
         fillColor: context.appColors.teal,

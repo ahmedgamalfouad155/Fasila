@@ -5,6 +5,26 @@ class ReminderContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [Text("Reminder  Content")]);
+    return Column(children: [
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      Text("Reminder  Content"),
+      ]);
   }
 }

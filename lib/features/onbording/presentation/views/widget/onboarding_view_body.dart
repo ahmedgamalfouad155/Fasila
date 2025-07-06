@@ -22,10 +22,8 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody>
 
   @override
   void initState() {
-    super.initState();
-
-    _pageController = PageController();
-
+    super.initState(); 
+    _pageController = PageController(); 
     _fadeController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 800),
@@ -33,13 +31,11 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody>
     _fadeAnimation = CurvedAnimation(
       parent: _fadeController,
       curve: Curves.easeIn,
-    );
-
+    ); 
     _floatingController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
-    )..repeat(reverse: true);
-
+    )..repeat(reverse: true); 
     _floatingAnimation =
         Tween<Offset>(
           begin: const Offset(0, -0.02),
@@ -47,16 +43,14 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody>
         ).animate(
           CurvedAnimation(parent: _floatingController, curve: Curves.easeInOut),
         );
-  }
-
+  } 
   @override
   void dispose() {
     _pageController.dispose();
     _fadeController.dispose();
     _floatingController.dispose();
     super.dispose();
-  }
-
+  } 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<OnboardingCubit, int>(

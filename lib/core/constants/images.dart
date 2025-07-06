@@ -29,4 +29,12 @@ class AppImages {
 
   static const String scaneResultImage = 'assets/scan.png';
   static const String planetDetailsImage = 'assets/bigtomato.png';
+
+  static const String waterImage = 'assets/water.svg';
+  static const String lightImage = 'assets/light.svg';
+  static const String temperatureImage = 'assets/temp.svg';
+  static const String soilImage = 'assets/soil.svg';
+  static const String humidityImage = 'assets/humi.svg';
+  static const String fertilizerImage = 'assets/fertilze.svg';
+  static const String noteImage = 'assets/note.svg';
 }

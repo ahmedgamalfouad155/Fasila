@@ -1,3 +1,4 @@
+import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/togel_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/weeks_toget_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/date_widget.dart';
@@ -14,28 +15,53 @@ class PlanetDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: BlocProvider(
-        create: (context) => TogelCubit(),
-        child: Column(
-          children: [
-            ImagePlanetDetailsWidget(),
-            const SizedBox(height: 10),
-            WeeksWidget(),
-            const SizedBox(height: 10),
-            DateWidget(),
-            const SizedBox(height: 10),
-            BlocProvider(
-              create: (context) => WeeksTogetCubit(),
-              child: WeeksTogelWidget(),
-            ),
-            const TogelButtonDetailsWidget(),
-            const SizedBox(height: 10),
-            const Expanded(
-              child: SingleChildScrollView(child: PlanetDetailscTogelContent()),
-            ),
-          ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: BlocProvider(
+          create: (context) => TogelCubit(),
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsetsGeometry.symmetric(
+                  horizontal: 5,
+                  vertical: 10,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: context.appColors.offWhite,
+                ),
+                child: Column(
+                  children: [
+                    ImagePlanetDetailsWidget(),
+                    const SizedBox(height: 10),
+                    WeeksWidget(),
+                    const SizedBox(height: 10),
+                    DateWidget(),
+                    const SizedBox(height: 10),
+                    BlocProvider(
+                      create: (context) => WeeksTogetCubit(),
+                      child: WeeksTogelWidget(),
+                    ),
+                    const SizedBox(height: 10),
+                    const TogelButtonDetailsWidget(),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 10),
+              Container(
+                padding: EdgeInsetsGeometry.symmetric(
+                  horizontal: 5,
+                  vertical: 10,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: context.appColors.offWhite,
+                ),
+                child: PlanetDetailscTogelContent(),
+              ),
+            ],
+          ),
         ),
       ),
     );
