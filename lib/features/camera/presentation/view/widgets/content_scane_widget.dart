@@ -22,7 +22,7 @@ class ContentScaneWidget extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Row(
         children: [
-          Image.asset(Appimages.logoImage, height: 70),
+          Image.asset(AppImages.logoImage, height: 70),
           const SizedBox(width: 10),
           Expanded(
             child: Column(

@@ -23,7 +23,7 @@ class TrackCropCardWiget extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(Appimages.drowImage, height: 30),
+                  Image.asset(AppImages.drowImage, height: 30),
                   const SizedBox(height: 8),
                   Text(
                     'Track your crop',
@@ -37,7 +37,7 @@ class TrackCropCardWiget extends StatelessWidget {
               Stack(
                 alignment: Alignment.topRight,
                 children: [
-                  Image.asset(Appimages.planetImage),
+                  Image.asset(AppImages.planetImage),
                   Positioned(
                     right: 0,
                     bottom: 30,

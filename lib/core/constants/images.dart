@@ -1,4 +1,4 @@
-class Appimages {
+class AppImages {
   static const String logoImage = 'assets/logo.png';
   static const String authImge = 'assets/auth.svg';
   static const String onBoardingImage1 = 'assets/on1.svg';
@@ -19,21 +19,14 @@ class Appimages {
   static const String tomatoImage = 'assets/tomato.png';
   static const String fillteroImage = 'assets/filler.svg';
 
-
   static const String camera1Image = 'assets/camera1.jpeg';
   static const String camera2Image = 'assets/camera2.jpeg';
   static const String camera3Image = 'assets/camera3.jpeg';
 
-
-  static const String lastest1Image = 'assets/lastest1.jpeg'; 
+  static const String lastest1Image = 'assets/lastest1.jpeg';
   static const String lastest2Image = 'assets/lastest2.jpeg';
   static const String lastest3Image = 'assets/lastest3.jpeg';
 
   static const String scaneResultImage = 'assets/scan.png';
-  
-
-
-
-  
-
+  static const String planetDetailsImage = 'assets/bigtomato.png';
 }

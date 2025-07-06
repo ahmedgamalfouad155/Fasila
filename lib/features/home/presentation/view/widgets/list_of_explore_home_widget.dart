@@ -13,7 +13,7 @@ class ListOfExploreHomeWidget extends StatelessWidget {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => HomeCategoryTypeWidget(
-          image: Appimages.tomatoImage,
+          image: AppImages.tomatoImage,
           title: 'Vegetable',
           height: 60,
           bacgrouncColor: context.appColors.offWhite,

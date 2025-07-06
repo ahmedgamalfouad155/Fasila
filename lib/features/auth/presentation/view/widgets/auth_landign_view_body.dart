@@ -20,7 +20,7 @@ class AuthLandignBody extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Expanded(child: SvgPicture.asset(Appimages.authImge)),
+          Expanded(child: SvgPicture.asset(AppImages.authImge)),
           CustomButon(
             text: 'Login',
             onPressed: () {

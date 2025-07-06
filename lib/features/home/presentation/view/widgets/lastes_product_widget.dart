@@ -32,7 +32,7 @@ class LastesProductWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   HomeCategoryTypeWidget(
-                    image: Appimages.lastest1Image,
+                    image: AppImages.lastest1Image,
                     title: 'Take a picture',
                   ),
                   Icon(
@@ -41,7 +41,7 @@ class LastesProductWidget extends StatelessWidget {
                     size: 16,
                   ),
                   HomeCategoryTypeWidget(
-                    image: Appimages.lastest2Image,
+                    image: AppImages.lastest2Image,
                     title: 'See diagnosis',
                   ),
                   Icon(
@@ -50,7 +50,7 @@ class LastesProductWidget extends StatelessWidget {
                     size: 16,
                   ),
                   HomeCategoryTypeWidget(
-                    image: Appimages.lastest3Image,
+                    image: AppImages.lastest3Image,
                     title: 'Get medicine',
                   ),
                 ],

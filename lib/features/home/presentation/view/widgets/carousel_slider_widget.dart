@@ -18,17 +18,17 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
     {
       "title": "Garden Tools",
       "subtitle": "Make gardening easy and fun with our durable tools!",
-      "image": Appimages.carouselSliderImage,
+      "image": AppImages.carouselSliderImage,
     },
     {
       "title": "Fruits & Veggies",
       "subtitle": "Discover fresh produce for your garden today!",
-      "image": Appimages.carouselSliderImage,
+      "image": AppImages.carouselSliderImage,
     },
     {
       "title": "Plant Care",
       "subtitle": "Get the best tools and tips to care for your plants.",
-      "image": Appimages.carouselSliderImage,
+      "image": AppImages.carouselSliderImage,
     },
   ];
 
@@ -78,11 +78,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
                     ),
                   ),
                   const SizedBox(width: 12),
-                  Image.asset(
-                    item["image"],
-                    height: 80,
-                    fit: BoxFit.contain,
-                  ),
+                  Image.asset(item["image"], height: 80, fit: BoxFit.contain),
                 ],
               ),
             );

@@ -77,11 +77,11 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  LogoContainerWidget(imagePath: Appimages.googleLogo),
+                  LogoContainerWidget(imagePath: AppImages.googleLogo),
                   const SizedBox(width: 10),
-                  LogoContainerWidget(imagePath: Appimages.facebookLogo),
+                  LogoContainerWidget(imagePath: AppImages.facebookLogo),
                   const SizedBox(width: 10),
-                  LogoContainerWidget(imagePath: Appimages.appleLogo),
+                  LogoContainerWidget(imagePath: AppImages.appleLogo),
                 ],
               ),
               const SizedBox(height: 50),

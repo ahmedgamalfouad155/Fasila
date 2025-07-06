@@ -10,7 +10,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Image.asset(Appimages.logoImage),
+        leading: Image.asset(AppImages.logoImage),
         actions: [NotificationAndCartIconsWidget()],
       ),
       body: SafeArea(child: HomeViewBody()),
@@ -25,9 +25,9 @@ class NotificationAndCartIconsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(Appimages.notificationIcon),
+        SvgPicture.asset(AppImages.notificationIcon),
         const SizedBox(width: 8),
-        SvgPicture.asset(Appimages.cartIcon),
+        SvgPicture.asset(AppImages.cartIcon),
         const SizedBox(width: 12),
       ],
     );

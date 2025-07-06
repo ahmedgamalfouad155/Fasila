@@ -19,21 +19,15 @@ class ScaneResultViewBody extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Image.asset(
-                Appimages.scaneResultImage,
+                AppImages.scaneResultImage,
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width,
               ),
             ),
-            const SizedBox(height: 16),
-
+            const SizedBox(height: 16), 
             const ToggleButtonsWidget(),
-            const SizedBox(height: 20),
-
-            const Expanded(
-              child: SingleChildScrollView(
-                child: TMVContent(),
-              ),
-            ),
+            const SizedBox(height: 20), 
+            const Expanded(child: SingleChildScrollView(child: TMVContent())),
           ],
         ),
       ),

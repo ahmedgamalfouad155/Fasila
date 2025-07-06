@@ -12,22 +12,22 @@ class OnboardingCubit extends Cubit<int> {
       title: "Explore your favorite plant",
       description:
           "Find your favorite plant with ease and get its care guide!.",
-      images: Appimages.onBoardingImage1,
+      images: AppImages.onBoardingImage1,
     ),
     OnboardingPageModel(
       title: "Intelligent diagnosis",
       description: "Discover plant diseases at the touch of a button !.",
-      images: Appimages.onBoardingImage2,
+      images: AppImages.onBoardingImage2,
     ),
     OnboardingPageModel(
       title: "Healthy growth",
       description: "Follow your plants' progress step by step",
-      images: Appimages.onBoardingImage3,
+      images: AppImages.onBoardingImage3,
     ),
     OnboardingPageModel(
       title: "Complete store!",
       description: "Everything you need for your home garden",
-      images: Appimages.onBoardingImage4,
+      images: AppImages.onBoardingImage4,
     ),
   ];
 }

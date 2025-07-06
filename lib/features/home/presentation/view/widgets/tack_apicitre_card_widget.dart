@@ -33,7 +33,7 @@ class TakePicitreCardWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   HomeCategoryTypeWidget(
-                    image: Appimages.camera1Image,
+                    image: AppImages.camera1Image,
                     title: 'Take a picture',
                   ),
                   Icon(
@@ -42,7 +42,7 @@ class TakePicitreCardWidget extends StatelessWidget {
                     size: 16,
                   ),
                   HomeCategoryTypeWidget(
-                    image: Appimages.camera2Image,
+                    image: AppImages.camera2Image,
                     title: 'See diagnosis',
                   ),
                   Icon(
@@ -51,7 +51,7 @@ class TakePicitreCardWidget extends StatelessWidget {
                     size: 16,
                   ),
                   HomeCategoryTypeWidget(
-                    image: Appimages.camera3Image,
+                    image: AppImages.camera3Image,
                     title: 'Get medicine',
                   ),
                 ],

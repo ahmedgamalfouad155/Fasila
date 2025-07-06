@@ -33,7 +33,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     return Center(
       child: FadeTransition(
         opacity: fadeAnimation,
-        child: Image.asset(Appimages.logoImage, height: 200, width: 200),
+        child: Image.asset(AppImages.logoImage, height: 200, width: 200),
       ),
     );
   }

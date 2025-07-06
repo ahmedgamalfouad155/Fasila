@@ -36,7 +36,7 @@ class ProfileImageWidget extends StatelessWidget {
                     ),
                     padding: const EdgeInsets.all(12),
                     child: Image.asset(
-                      Appimages.logoImage,
+                      AppImages.logoImage,
                       fit: BoxFit.contain,
                     ),
                   ),

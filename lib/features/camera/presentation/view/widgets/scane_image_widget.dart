@@ -37,7 +37,7 @@ class ScaneImageWidget extends StatelessWidget {
                         File(imagePath!),
                         height: MediaQuery.of(context).size.height / 3,
                       )
-                    : Image.asset(Appimages.logoImage),
+                    : Image.asset(AppImages.logoImage),
               ),
             ],
           ),

@@ -25,7 +25,7 @@ class ShopFilterButtonsWidget extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              SvgPicture.asset(Appimages.fillteroImage),
+              SvgPicture.asset(AppImages.fillteroImage),
 
               Row(
                 children: List.generate(filters.length, (index) {
