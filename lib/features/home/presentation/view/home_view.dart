@@ -20,6 +20,7 @@ class HomeView extends StatelessWidget {
 
 class NotificationAndCartIconsWidget extends StatelessWidget {
   const NotificationAndCartIconsWidget({super.key});
+  
 
   @override
   Widget build(BuildContext context) {

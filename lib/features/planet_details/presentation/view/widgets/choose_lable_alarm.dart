@@ -6,16 +6,14 @@ import 'package:fasila/features/planet_details/presentation/manager/planet_info_
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class PlanetInfoCardWidget extends StatelessWidget {
+class ChooseLableAlarmCardWidget extends StatelessWidget {
   final String title;
-  final Widget icon;
   final Widget details;
   final bool initiallyExpanded;
 
-  const PlanetInfoCardWidget({
+  const ChooseLableAlarmCardWidget({
     super.key,
     required this.title,
-    required this.icon,
     required this.details,
     this.initiallyExpanded = false,
   });
@@ -44,16 +42,16 @@ class PlanetInfoCardWidget extends StatelessWidget {
             child: Column(
               children: [
                 ListTile(
-                  leading: icon,
                   title: Text(
                     title,
                     textAlign: TextAlign.start,
-                    style: AppStyles.textStyle16Teal(
+                    style: AppStyles.textStyle14(
                       context,
-                    ).copyWith(fontWeight: FontWeight.bold),
+                    ).copyWith(color: context.appColors.teal),
                   ),
-                  trailing: IconButton(
-                    icon: AnimatedRotation(
+                  trailing: InkWell(
+                    onTap: cubit.toggleExpanded,
+                    child: AnimatedRotation(
                       duration: const Duration(milliseconds: 300),
                       turns: state.isExpanded ? 0.5 : 0.0,
                       child: Icon(
@@ -61,7 +59,6 @@ class PlanetInfoCardWidget extends StatelessWidget {
                         color: context.appColors.teal,
                       ),
                     ),
-                    onPressed: cubit.toggleExpanded,
                   ),
                 ),
                 AnimatedCrossFade(

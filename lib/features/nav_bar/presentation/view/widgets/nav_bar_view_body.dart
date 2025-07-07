@@ -36,32 +36,20 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
           body: IndexedStack(index: homeCubit.currentIndex, children: screen),
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
-              color: context.appColors.black,
+              color: Colors.white,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.r),
                 topRight: Radius.circular(20.r),
               ),
-              boxShadow: [
-                BoxShadow(
-                  color:context.appColors.black,
-                  offset: const Offset(0, -2), // لأعلى (من الأسفل)
-                  blurRadius: 10,
-                ),
-              ],
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Divider(
-                  height: 1,
-                  thickness: 1,
-                  color:context.appColors.black, // الخط العلوي
-                ),
                 BottomNavigationBar(
                   onTap: (index) => homeCubit.changeIndex(index),
                   currentIndex: homeCubit.currentIndex,
                   type: BottomNavigationBarType.fixed,
-                  backgroundColor:context.appColors.black,
+                  backgroundColor: Colors.transparent,
                   elevation: 0,
                   showUnselectedLabels: true,
                   selectedItemColor: context.appColors.black,
