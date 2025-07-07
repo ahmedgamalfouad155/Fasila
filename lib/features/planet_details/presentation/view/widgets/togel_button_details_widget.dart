@@ -25,7 +25,7 @@ class TogelButtonDetailsWidget extends StatelessWidget {
         borderColor: context.appColors.grey,
         selectedBorderColor: context.appColors.teal,
         constraints: const BoxConstraints(minHeight: 40, minWidth: 140),
-        children: const [Text('About The Disease'), Text('Health Care')],
+        children: const [Text('Plant Info'), Text('Reminders')],
       ),
     );
   }

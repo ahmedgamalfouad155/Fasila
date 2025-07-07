@@ -10,7 +10,7 @@ class PlanetInfoContent extends StatelessWidget {
     return Column(
       children: [
         AddNoteButtonAndWaterAndLigtyAndTempOptionSection(),
-        SoilAndHumidAndFrtilizeAndNoteSection(),
+        SoilAndHumidAndFrtilizeandNoteSection(),
       ],
     );
   }

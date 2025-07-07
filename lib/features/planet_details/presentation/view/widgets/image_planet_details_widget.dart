@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/constants/images.dart';
 import 'package:flutter/material.dart';
 
@@ -8,11 +9,7 @@ class ImagePlanetDetailsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
-      child: Image.asset(
-        AppImages.tomatoImage,
-        // fit: BoxFit.cover,
-        // width: MediaQuery.of(context).size.width,
-      ),
+      child: CachedNetworkImage(imageUrl: AppImages.myPlanet1Image),
     );
   }
 }

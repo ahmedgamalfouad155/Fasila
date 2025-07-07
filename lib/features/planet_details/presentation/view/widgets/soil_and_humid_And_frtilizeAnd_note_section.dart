@@ -1,14 +1,14 @@
+// ignore_for_file: file_names 
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/planet_info_cart_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-class SoilAndHumidAndFrtilizeAndNoteSection extends StatelessWidget {
-  const SoilAndHumidAndFrtilizeAndNoteSection({
-    super.key,
-  });
+
+class SoilAndHumidAndFrtilizeandNoteSection extends StatelessWidget {
+  const SoilAndHumidAndFrtilizeandNoteSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class SoilAndHumidAndFrtilizeAndNoteSection extends StatelessWidget {
       children: [
         CareCardWidget(
           title: 'The Soil',
-          icon: SvgPicture.asset(AppImages.soilImage),
+          icon: SvgPicture.network(AppImages.soilImage),
           details: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,7 +38,7 @@ class SoilAndHumidAndFrtilizeAndNoteSection extends StatelessWidget {
         ),
         CareCardWidget(
           title: 'Humidty',
-          icon: SvgPicture.asset(AppImages.humidityImage),
+          icon: SvgPicture.network(AppImages.humidityImage),
           details: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -67,7 +67,7 @@ class SoilAndHumidAndFrtilizeAndNoteSection extends StatelessWidget {
         ),
         CareCardWidget(
           title: 'Fertiliz',
-          icon: SvgPicture.asset(AppImages.fertilizerImage),
+          icon: SvgPicture.network(AppImages.fertilizerImage),
           details: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -86,10 +86,10 @@ class SoilAndHumidAndFrtilizeAndNoteSection extends StatelessWidget {
               ),
             ],
           ),
-        ), 
+        ),
         CareCardWidget(
           title: 'Note',
-          icon: SvgPicture.asset(AppImages.noteImage),
+          icon: SvgPicture.network(AppImages.noteImage),
           details: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

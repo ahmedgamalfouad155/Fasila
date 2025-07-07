@@ -23,7 +23,7 @@ class AddNoteButtonAndWaterAndLigtyAndTempOptionSection extends StatelessWidget 
         ),
         CareCardWidget(
           title: 'Water',
-          icon: SvgPicture.asset(AppImages.waterImage),
+          icon: SvgPicture.network(AppImages.waterImage),
           details: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -45,7 +45,7 @@ class AddNoteButtonAndWaterAndLigtyAndTempOptionSection extends StatelessWidget 
         ),
         CareCardWidget(
           title: 'Light',
-          icon: SvgPicture.asset(AppImages.lightImage),
+          icon: SvgPicture.network(AppImages.lightImage),
           details: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -60,7 +60,7 @@ class AddNoteButtonAndWaterAndLigtyAndTempOptionSection extends StatelessWidget 
         ),
         CareCardWidget(
           title: 'Temperature',
-          icon: SvgPicture.asset(AppImages.temperatureImage),
+          icon: SvgPicture.network(AppImages.temperatureImage),
           details: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

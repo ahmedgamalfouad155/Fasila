@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
@@ -5,7 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class MyPlanetItemWidget extends StatelessWidget {
-  const MyPlanetItemWidget({super.key, required this.image, required this.title, required this.type});
+  const MyPlanetItemWidget({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.type,
+  });
   final String image, title, type;
 
   @override
@@ -32,7 +38,7 @@ class MyPlanetItemWidget extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Image.asset(image),
+            CachedNetworkImage(imageUrl: image),
             const SizedBox(width: 10),
             Expanded(
               child: Column(

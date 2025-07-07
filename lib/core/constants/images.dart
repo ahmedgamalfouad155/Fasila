@@ -10,56 +10,87 @@ class AppImages {
   static const String facebookLogo = 'assets/face.png';
   static const String appleLogo = 'assets/apple.png';
 
-  static const String homeIcon = 'assets/home.svg';
-  static const String shopIcon = 'assets/shop.svg';
-  static const String cameraIcon = 'assets/cam.svg';
-  static const String myPlanetIcon = 'assets/myplanet.svg';
-  static const String profileIcon = 'assets/profile.svg';
-  
+  static const String homeIcon =
+      'https://drive.google.com/uc?export=view&id=133qs79PFKPA1o1T5u_Vc1MX7rTF1u6Kc';
+  static const String shopIcon =
+      'https://drive.google.com/uc?export=view&id=1l2XPBK9PpdXv1cGVT4nYpW-yOdW1k3gF';
+  static const String cameraIcon =
+      'https://drive.google.com/uc?export=view&id=1w7GutU94ro7gSW61Ee6OKsXWShNNCXDG';
+  static const String myPlanetIcon =
+      'https://drive.google.com/uc?export=view&id=1023CWA_-cAi34v9Fdncke5kKx7Qh-1KH';
+  static const String profileIcon =
+      'https://drive.google.com/uc?export=view&id=1ED6sPlkoLCh-ONW2hGb6ENMQ8CYzzC8-';
 
-  static const String explore1Image = 'assets/exp1.png';
-  static const String explore2Image = 'assets/exp2.png';
-  static const String explore3Image = 'assets/exp3.png';
-  static const String explore4Image = 'assets/exp4.png';
-  
+  static const String explore1Image =
+      'https://drive.google.com/uc?export=view&id=1jgEEgLOTQo7ddM74yWVLHil8EucO1c8u';
+  static const String explore2Image =
+      'https://drive.google.com/uc?export=view&id=1sFWFtcVG7KWJWebFhODRASuyW1rADMWF';
+  static const String explore3Image =
+      'https://drive.google.com/uc?export=view&id=1H6IPEA8N-alWyLy07eiA92oBd3VAcwyC';
+  static const String explore4Image =
+      'https://drive.google.com/uc?export=view&id=10kEP84txQF7i0SQDEdZcR9K7JaGRKBub';
 
   static const String notificationIcon = 'assets/notification.svg';
   static const String cartIcon = 'assets/cart.svg';
+
   static const String carouselSliderImage = 'assets/carousel.png';
-  static const String drowImage = 'assets/drow.png';
-  static const String planetImage = 'assets/planet.png';
-  static const String glovesImage = 'assets/gloves.png';
+  static const String drowImage =
+      'https://drive.google.com/uc?export=view&id=1aMmvt4Oi-Eh1Uj3YnBekYLJyXS5sfYxq';
+  static const String planetImage =
+      'https://drive.google.com/uc?export=view&id=1ofW-VN6e6mivwLOBvItBqEADHxyXhwKb';
   static const String fillteroImage = 'assets/filler.svg';
 
-static const String tomatoImage = 'assets/tomato.png';
-static const String eyarImage = 'assets/5yar.png';
-static const String betenganImage = 'assets/betengan.png';
-static const String basalImage = 'assets/basal.png';
+  static const String myPlanet1Image =
+      'https://drive.google.com/uc?export=view&id=1xI4G60GdDd9KPWgel2Rgi9Jul3B5QM0m';
+  static const String myPlanet2Image =
+      'https://drive.google.com/uc?export=view&id=1Vd1dF8-3I2zbH3uNY0epwokFKeQI8IYn';
+  static const String myPlanet3Image =
+      'https://drive.google.com/uc?export=view&id=134TCZYZqd22JVlDl4kC1uBk1KsxVNyQT';
+  static const String myPlanet4Image =
+      'https://drive.google.com/uc?export=view&id=1eqPBBqnqPXPb7bAld3fWodB82l-YDgPl';
 
+  static const String camera1Image =
+      'https://drive.google.com/uc?export=view&id=1AFyehcXMz2g2hri2J4Ya5005yOmmd_F3';
+  static const String camera2Image =
+      'https://drive.google.com/uc?export=view&id=1wuARIXvU0ntQoiW_gjVOW15d3CRuPM3y';
+  static const String camera3Image =
+      'https://drive.google.com/uc?export=view&id=1fHE3tWmU9KmNx6F1fjOMxu8dLPE1lYYC';
 
-  static const String camera1Image = 'assets/camera1.jpeg';
-  static const String camera2Image = 'assets/camera2.jpeg';
-  static const String camera3Image = 'assets/camera3.jpeg';
+  static const String lastest1Image =
+      'https://drive.google.com/uc?export=view&id=1I8rSXuLOFjo2tYhF3V6NAIC9Rj3dsVyg';
+  static const String lastest2Image =
+      'https://drive.google.com/uc?export=view&id=1CK2NbKDW7joAui2Qon4dpPNONkdySA9x';
+  static const String lastest3Image =
+      'https://drive.google.com/uc?export=view&id=1M5B2yTiGkMt63hQRHvvyzICtg1GPpuhZ';
 
-  static const String lastest1Image = 'assets/lastest1.jpeg';
-  static const String lastest2Image = 'assets/lastest2.jpeg';
-  static const String lastest3Image = 'assets/lastest3.jpeg';
-
-
-  static const String shop1Image = 'assets/shop1.png'; 
-  static const String shop2Image = 'assets/shop2.png'; 
-  static const String shop3Image = 'assets/shop3.png'; 
-  static const String shop4Image = 'assets/shop4.png'; 
+  static const String shop1Image =
+      'https://drive.google.com/uc?export=view&id=10J7Wu-A0PZ2JhmfgYDKysdNBgEKqjop1';
+  static const String shop2Image =
+      'https://drive.google.com/uc?export=view&id=1xccOGCpw19A7BqdixcUEJzyKHq36HLbN';
+  static const String shop3Image =
+      'https://drive.google.com/uc?export=view&id=11qPAiDhsuIy2Y43joLt2Xbve5CVYh6D2';
+  static const String shop4Image =
+      'https://drive.google.com/uc?export=view&id=1FPQ7z7Ay50p9NzUbNKJwoUw-Ih7y7Iie';
+  static const String shop5Image =
+      'https://drive.google.com/uc?export=view&id=1ClI41DpGEeIfOv0S_fmtlpyM9yzwfGCc';
 
   static const String scaneResultImage = 'assets/scan.png';
   static const String planetDetailsImage = 'assets/bigtomato.png';
 
-  static const String waterImage = 'assets/water.svg';
-  static const String lightImage = 'assets/light.svg';
-  static const String temperatureImage = 'assets/temp.svg';
-  static const String soilImage = 'assets/soil.svg';
-  static const String humidityImage = 'assets/humi.svg';
-  static const String fertilizerImage = 'assets/fertilze.svg';
-  static const String noteImage = 'assets/note.svg';
-  static const String careImage = 'assets/care.svg';
+  static const String waterImage =
+      'https://drive.google.com/uc?export=view&id=1xfsXih7DkaYaK-4pXI4z9dQvQmlLkuCH';
+  static const String lightImage =
+      'https://drive.google.com/uc?export=view&id=1kpTDC6V-Kere-nADB907w7a3O7lcH9la';
+  static const String temperatureImage =
+      'https://drive.google.com/uc?export=view&id=1PJsZbqOKOIvp4rLqnhtKHCjXkxVHHYdR';
+  static const String soilImage =
+      'https://drive.google.com/uc?export=view&id=1Ca4Etavk2JFLrO6fgLqvvHx2E8Ch_jK8';
+  static const String humidityImage =
+      'https://drive.google.com/uc?export=view&id=1QGjfeGK9jbSVjMpucz0iZKgh5pp-qQr2';
+  static const String fertilizerImage =
+      'https://drive.google.com/uc?export=view&id=1b4t5pwQ4N0GypBGkvTHX-fjnbHgCXyQ0';
+  static const String noteImage =
+      'https://drive.google.com/uc?export=view&id=1EwN86HZeKgY-x3zX48e20tPqh5FCzNS6';
+  static const String careImage =
+      'https://drive.google.com/uc?export=view&id=1rrIxQ0OKcqJBAwoZgwRONA4FxRns_G6x';
 }

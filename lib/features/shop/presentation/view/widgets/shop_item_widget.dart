@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
@@ -27,7 +28,7 @@ class ShopItemWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Image.asset(image),
+          CachedNetworkImage(imageUrl: image),
           const SizedBox(width: 10),
           Expanded(
             child: Column(

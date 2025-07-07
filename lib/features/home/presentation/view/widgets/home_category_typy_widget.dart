@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class HomeCategoryTypeWidget extends StatelessWidget {
               ),
             ],
           ),
-          child: Center(child: Image.asset(image)),
+          child: Center(child: CachedNetworkImage(imageUrl: image)),
         ),
         const SizedBox(height: 6),
         Text(

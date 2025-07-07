@@ -2,6 +2,7 @@ import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class TrackCropCardWiget extends StatelessWidget {
   const TrackCropCardWiget({super.key});
@@ -23,7 +24,7 @@ class TrackCropCardWiget extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(AppImages.drowImage, height: 30),
+                  SvgPicture.network(AppImages.drowImage, height: 30),
                   const SizedBox(height: 8),
                   Text(
                     'Track your crop',
@@ -37,7 +38,7 @@ class TrackCropCardWiget extends StatelessWidget {
               Stack(
                 alignment: Alignment.topRight,
                 children: [
-                  Image.asset(AppImages.planetImage),
+                  SvgPicture.network(AppImages.planetImage),
                   Positioned(
                     right: 0,
                     bottom: 30,

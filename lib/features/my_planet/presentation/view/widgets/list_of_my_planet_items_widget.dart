@@ -8,10 +8,10 @@ class ListOfMyPlanetItemsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<String> images = [
-      AppImages.tomatoImage,
-      AppImages.eyarImage,
-      AppImages.betenganImage,
-      AppImages.basalImage,
+      AppImages.myPlanet1Image,
+      AppImages.myPlanet2Image,
+      AppImages.myPlanet3Image,
+      AppImages.myPlanet4Image,
     ];
     final List<String> titles = ['Tomato', 'option', 'eggplant', 'onion'];
     final List<String> types = [

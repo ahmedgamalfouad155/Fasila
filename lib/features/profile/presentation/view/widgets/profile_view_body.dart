@@ -76,7 +76,7 @@ class ProfileViewBody extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
+            ), 
           ],
         ),
       ),

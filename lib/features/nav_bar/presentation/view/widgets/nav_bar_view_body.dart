@@ -36,14 +36,14 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
           body: IndexedStack(index: homeCubit.currentIndex, children: screen),
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: context.appColors.black,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.r),
                 topRight: Radius.circular(20.r),
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05), // ظل خفيف
+                  color:context.appColors.black,
                   offset: const Offset(0, -2), // لأعلى (من الأسفل)
                   blurRadius: 10,
                 ),
@@ -55,13 +55,13 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
                 Divider(
                   height: 1,
                   thickness: 1,
-                  color: Colors.grey.withOpacity(0.3), // الخط العلوي
+                  color:context.appColors.black, // الخط العلوي
                 ),
                 BottomNavigationBar(
                   onTap: (index) => homeCubit.changeIndex(index),
                   currentIndex: homeCubit.currentIndex,
                   type: BottomNavigationBarType.fixed,
-                  backgroundColor: Colors.transparent,
+                  backgroundColor:context.appColors.black,
                   elevation: 0,
                   showUnselectedLabels: true,
                   selectedItemColor: context.appColors.black,
@@ -76,23 +76,23 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
                   ),
                   items: [
                     BottomNavigationBarItem(
-                      icon: SvgPicture.asset(AppImages.homeIcon),
+                      icon: SvgPicture.network(AppImages.homeIcon),
                       label: 'Home',
                     ),
                     BottomNavigationBarItem(
-                      icon: SvgPicture.asset(AppImages.shopIcon),
+                      icon: SvgPicture.network(AppImages.shopIcon),
                       label: 'Shop',
                     ),
                     BottomNavigationBarItem(
-                      icon: SvgPicture.asset(AppImages.cameraIcon),
+                      icon: SvgPicture.network(AppImages.cameraIcon),
                       label: '',
                     ),
                     BottomNavigationBarItem(
-                      icon: SvgPicture.asset(AppImages.myPlanetIcon),
+                      icon: SvgPicture.network(AppImages.myPlanetIcon),
                       label: 'My Planet',
                     ),
                     BottomNavigationBarItem(
-                      icon: SvgPicture.asset(AppImages.profileIcon),
+                      icon: SvgPicture.network(AppImages.profileIcon),
                       label: 'Profile',
                     ),
                   ],
