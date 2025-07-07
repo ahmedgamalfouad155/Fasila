@@ -1,6 +1,8 @@
+import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/features/profile/presentation/view/widgets/profile_image_widget.dart';
 import 'package:fasila/features/profile/presentation/view/widgets/profile_option_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({super.key});
@@ -17,7 +19,9 @@ class ProfileViewBody extends StatelessWidget {
             ProfileOptionWidget(
               icon: Icons.location_on,
               title: 'Location',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kLocationView);
+              },
             ),
             const SizedBox(height: 10),
 
@@ -31,7 +35,9 @@ class ProfileViewBody extends StatelessWidget {
             ProfileOptionWidget(
               icon: Icons.favorite,
               title: 'Favorites',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kFavoritesView);
+              },
             ),
             const SizedBox(height: 10),
 
@@ -45,21 +51,27 @@ class ProfileViewBody extends StatelessWidget {
             ProfileOptionWidget(
               icon: Icons.badge_rounded,
               title: 'My Orders',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kMyOrdersView);
+              },
             ),
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
               icon: Icons.pix_rounded,
               title: 'Fasila Pro',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kFasilaProView);
+              },
             ),
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
               icon: Icons.phone,
               title: 'Contact Us',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kContactUsView);
+              },
             ),
             const SizedBox(height: 10),
             Row(
@@ -76,7 +88,7 @@ class ProfileViewBody extends StatelessWidget {
                   ),
                 ),
               ],
-            ), 
+            ),
           ],
         ),
       ),
