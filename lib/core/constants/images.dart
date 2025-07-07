@@ -93,4 +93,6 @@ class AppImages {
       'https://drive.google.com/uc?export=view&id=1EwN86HZeKgY-x3zX48e20tPqh5FCzNS6';
   static const String careImage =
       'https://drive.google.com/uc?export=view&id=1rrIxQ0OKcqJBAwoZgwRONA4FxRns_G6x';
+
+  static const String locationImage = 'assets/location.png';
 }
