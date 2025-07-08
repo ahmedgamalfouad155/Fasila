@@ -1,11 +1,8 @@
-
 import 'package:fasila/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class AlarmSliderWidget extends StatelessWidget {
-  const AlarmSliderWidget({
-    super.key,
-  });
+  const AlarmSliderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +12,7 @@ class AlarmSliderWidget extends StatelessWidget {
         thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
         overlayShape: const RoundSliderOverlayShape(overlayRadius: 1),
         activeTrackColor: context.appColors.teal,
-        inactiveTrackColor: context.appColors.grey,
+        inactiveTrackColor: const Color.fromARGB(255, 210, 209, 211),
         thumbColor: context.appColors.teal,
       ),
       child: Slider(

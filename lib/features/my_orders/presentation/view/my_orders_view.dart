@@ -1,3 +1,4 @@
+import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/my_orders/presentation/view/widgets/my_orders_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,15 @@ class MyOrdersView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:   MyOrdersViewBody(),
+      appBar: AppBar(
+        title: Text(
+          'My Orders',
+          style: AppStyles.textStyle16Teal(
+            context,
+          ).copyWith(fontWeight: FontWeight.bold),
+        ),
+      ),
+      body: MyOrdersViewBody(),
     );
   }
 }
