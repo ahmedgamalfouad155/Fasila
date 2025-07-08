@@ -1,4 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/router/app_router.dart';
+import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/profile/presentation/view/widgets/profile_image_widget.dart';
 import 'package:fasila/features/profile/presentation/view/widgets/profile_option_widget.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +20,7 @@ class ProfileViewBody extends StatelessWidget {
             ProfileImageWidget(),
             const SizedBox(height: 10),
             ProfileOptionWidget(
-              icon: Icons.location_on,
+              logo: Icon(Icons.location_on, color: context.appColors.teal),
               title: 'Location',
               onTap: () {
                 GoRouter.of(context).push(AppRouter.kLocationView);
@@ -26,14 +29,14 @@ class ProfileViewBody extends StatelessWidget {
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              icon: Icons.payment,
+              logo: CachedNetworkImage(imageUrl: AppImages.paymentImage),
               title: 'Payment',
               onTap: () {},
             ),
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              icon: Icons.favorite,
+              logo: Icon(Icons.favorite, color: context.appColors.teal),
               title: 'Favorites',
               onTap: () {
                 GoRouter.of(context).push(AppRouter.kFavoritesView);
@@ -42,14 +45,15 @@ class ProfileViewBody extends StatelessWidget {
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              icon: Icons.grid_view_rounded,
+              logo: CachedNetworkImage(imageUrl: AppImages.myPlanetLogo),
               title: 'My Plants',
               onTap: () {},
             ),
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              icon: Icons.badge_rounded,
+              logo: CachedNetworkImage(imageUrl: AppImages.myOrdersLogo),
+
               title: 'My Orders',
               onTap: () {
                 GoRouter.of(context).push(AppRouter.kMyOrdersView);
@@ -58,7 +62,8 @@ class ProfileViewBody extends StatelessWidget {
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              icon: Icons.pix_rounded,
+              logo: CachedNetworkImage(imageUrl: AppImages.faselaProLogo),
+
               title: 'Fasila Pro',
               onTap: () {
                 GoRouter.of(context).push(AppRouter.kFasilaProView);
@@ -67,7 +72,7 @@ class ProfileViewBody extends StatelessWidget {
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              icon: Icons.phone,
+              logo: Icon(Icons.phone, color: context.appColors.teal),
               title: 'Contact Us',
               onTap: () {
                 GoRouter.of(context).push(AppRouter.kContactUsView);

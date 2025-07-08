@@ -6,12 +6,12 @@ class ProfileOptionWidget extends StatelessWidget {
   const ProfileOptionWidget({
     super.key,
     required this.title,
-    required this.icon,
+    required this.logo,
     required this.onTap,
   });
 
   final String title;
-  final IconData icon;
+  final Widget logo;
   final VoidCallback onTap;
 
   @override
@@ -26,7 +26,7 @@ class ProfileOptionWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
           child: Row(
             children: [
-              Icon(icon, color: context.appColors.teal, size: 20),
+              logo,
               const SizedBox(width: 10),
               Text(
                 title,

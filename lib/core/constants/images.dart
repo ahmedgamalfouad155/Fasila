@@ -95,4 +95,26 @@ class AppImages {
       'https://drive.google.com/uc?export=view&id=1rrIxQ0OKcqJBAwoZgwRONA4FxRns_G6x';
 
   static const String locationImage = 'assets/location.png';
+
+  static const String twitterLogo =
+      'https://drive.google.com/uc?export=view&id=1KbkSOL2ZSodQK906NBLS4K70mEb8wd-4'; 
+  static const String websiteLogo =
+      'https://drive.google.com/uc?export=view&id=1jXLV6vPVPWQmC5mGFilZKZ9a7m7IvOqZ';
+  static const String linkedinLogo =
+      'https://drive.google.com/uc?export=view&id=176fkcdCBhiQYinsDf47xMnF2etCQ2xza';
+  static const String whatsappLogo =
+      'https://drive.google.com/uc?export=view&id=1k7LOCD73xbe2pynQH8ZTKUah6vi6f5Yd';
+  static const String messengerLogo =
+      'https://drive.google.com/uc?export=view&id=103-btxWmzRzKXpuvfvJ-GMjsD65oWUYH';
+  static const String instgramLogo =
+      'https://drive.google.com/uc?export=view&id=1SunFSKF8LHw2XJdPvi0Gz7HjclpctpOz';
+  static const String faceLogo =
+      'https://drive.google.com/uc?export=view&id=1Y2NeO7Krkv0einfxALz8SWF3ZMkStAUG';
+  static const String behanceLogo =
+      'https://drive.google.com/uc?export=view&id=1yleIT09olaXe1uRzwuTDK92gzUvSmz1x';
+
+      static const String paymentImage ='https://drive.google.com/uc?export=view&id=1plsArWn9DNABk70Q-YShpvUUotCwdZkq';
+      static const String faselaProLogo ='https://drive.google.com/uc?export=view&id=1n7TufxRyX7NXPFqrh_viyejgDE4sRoLd';
+      static const String myOrdersLogo ='https://drive.google.com/uc?export=view&id=1JW9hv7AGIuoSQ4YU_p0zr28teYqYnUaO';
+      static const String myPlanetLogo ='https://drive.google.com/uc?export=view&id=1Y_PFaxNZ4UlNoIeNuOTrg85Qft_VzSO2';
 }
