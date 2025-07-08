@@ -6,6 +6,7 @@ import 'package:fasila/features/contact_us/presentation/view/contact_us_view.dar
 import 'package:fasila/features/fasila_pro/presentation/view/fasila_pro_view.dart';
 import 'package:fasila/features/favorites/presentation/view/favorites_view.dart';
 import 'package:fasila/features/location/presentation/view/location_view.dart';
+import 'package:fasila/features/location/presentation/view/select_location_view.dart';
 import 'package:fasila/features/my_orders/presentation/view/my_orders_view.dart';
 import 'package:fasila/features/nav_bar/presentation/view/nav_bar_view.dart';
 import 'package:fasila/features/onbording/onboarding_view.dart';
@@ -25,6 +26,7 @@ abstract class AppRouter {
   static String kLocationView = '/locationView';
   static String kMyOrdersView = '/myOrdersView';
   static String kFavoritesView = '/favoritesView';
+  static String kSelectLocationView = '/selectLocationView';
 
 
   static final router = GoRouter(
@@ -61,6 +63,10 @@ abstract class AppRouter {
       GoRoute(path: kLocationView, builder: (context, state) => LocationView()),
       GoRoute(path: kMyOrdersView, builder: (context, state) => MyOrdersView()),
       GoRoute(path: kFavoritesView, builder: (context, state) => FavoritesView()),
+      GoRoute(
+        path: kSelectLocationView,
+        builder: (context, state) => SelectLocationView(),
+      ),
     ],
   );
 }
