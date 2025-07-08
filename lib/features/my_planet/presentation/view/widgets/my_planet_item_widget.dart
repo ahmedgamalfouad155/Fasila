@@ -11,8 +11,10 @@ class MyPlanetItemWidget extends StatelessWidget {
     required this.image,
     required this.title,
     required this.type,
+    this.button,
   });
   final String image, title, type;
+  final Widget? button;
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +67,8 @@ class MyPlanetItemWidget extends StatelessWidget {
                     ],
                   ),
                   Text(type, style: AppStyles.textStyle18(context)),
+
+                  button ?? SizedBox(),
                 ],
               ),
             ),

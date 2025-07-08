@@ -1,4 +1,4 @@
-import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/togel_cubit.dart';
+import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/details_togel_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/planet_info_content.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/reminder_content.dart';
 import 'package:flutter/material.dart';
@@ -9,9 +9,9 @@ class PlanetDetailscTogelContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final selectedTab = context.watch<TogelCubit>().state;
+    final selectedTab = context.watch<DetailsTogelCubit>().state;
 
-    return selectedTab == TogelTap.plantInfo
+    return selectedTab == FavoriteTogelTap.plantInfo
         ? const PlanetInfoContent()
         : const ReminderContent();
   }

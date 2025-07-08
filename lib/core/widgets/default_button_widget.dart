@@ -15,6 +15,7 @@ class DefaultButtonWidget extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.icon,
+    this.style,
   });
   final void Function()? onPressed;
   Color? bacgrouncColor;
@@ -23,6 +24,7 @@ class DefaultButtonWidget extends StatelessWidget {
   final String text;
   final double? width, height;
   final Widget? icon;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,7 @@ class DefaultButtonWidget extends StatelessWidget {
             const SizedBox(width: 5),
             Text(
               text,
-              style: AppStyles.textStyle16Black(context).copyWith(
+              style: style ?? AppStyles.textStyle16Black(context).copyWith(
                 fontWeight: FontWeight.w700,
                 color: textColor ?? context.appColors.white,
               ),
