@@ -3,7 +3,10 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/default_button_widget.dart';
+import 'package:fasila/features/cart/presentation/manager/add_to_cart_cubit/product_counter_cubit.dart';
+import 'package:fasila/features/cart/presentation/view/widget/count_of_product_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class CartItemWidget extends StatelessWidget {
@@ -75,21 +78,25 @@ class CartItemWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                DefaultButtonWidget(
-                  icon: Icon(
-                    Icons.delete_outline,
-                    color: context.appColors.white,
+                BlocProvider(
+                  create: (context) => ProductCounterCubit(),
+                  child: CountOfProdutWidget(
+                    width: MediaQuery.of(context).size.width / 4,
                   ),
+                ),
+
+                DefaultButtonWidget(
+                  borderRadius: BorderRadius.circular(10),
                   text: "Delete",
                   onPressed: () {},
-                  width: 120,
+                  width: MediaQuery.of(context).size.width / 4,
                   height: 40,
                 ),
                 DefaultButtonWidget(
-                  icon: Icon(Icons.favorite, color: context.appColors.white),
-                  text: "Move To Favorite",
+                  borderRadius: BorderRadius.circular(10),
+                  text: "Favorite",
                   onPressed: () {},
-                  width: 180,
+                  width: MediaQuery.of(context).size.width / 4,
                   height: 40,
                 ),
               ],
