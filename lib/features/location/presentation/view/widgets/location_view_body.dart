@@ -13,8 +13,7 @@ class LocationViewBody extends StatelessWidget {
       child: Column(
         children: [
           Image.asset(AppImages.locationImage),
-          SelectLocationCardWidget(),
-
+          SelectLocationCardWidget(), 
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(

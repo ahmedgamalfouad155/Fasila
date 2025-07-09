@@ -9,7 +9,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final appDocumentDir = await getApplicationDocumentsDirectory();
   Hive.init(appDocumentDir.path);
-  await Hive.openBox('fasilaBox');
+  await Hive.openBox('fasilaBox'); 
   runApp(const MyApp());
 }
 
