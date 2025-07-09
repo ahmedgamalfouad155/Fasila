@@ -27,7 +27,7 @@ class FavoritePlanetContent extends StatelessWidget {
                 child: MyPlanetFilterButtonsWidget(),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height / 1.5,
+                height: MediaQuery.of(context).size.height / 1.4,
                 child: Expanded(
                   child: ListView.separated(
                     itemBuilder: (context, index) => MyPlanetItemWidget(

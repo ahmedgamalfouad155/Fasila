@@ -27,7 +27,10 @@ class NotificationAndCartIconsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(AppImages.notificationIcon),
+        InkWell(
+          onTap: () => GoRouter.of(context).push(AppRouter.kNotificationView),
+          child: SvgPicture.asset(AppImages.notificationIcon),
+        ),
         const SizedBox(width: 8),
         InkWell(
           onTap: () => GoRouter.of(context).push(AppRouter.kCartView),
