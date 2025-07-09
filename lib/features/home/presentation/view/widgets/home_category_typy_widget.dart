@@ -36,7 +36,12 @@ class HomeCategoryTypeWidget extends StatelessWidget {
               ),
             ],
           ),
-          child: Center(child: CachedNetworkImage(imageUrl: image)),
+          child: Center(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: CachedNetworkImage(imageUrl: image),
+            ),
+          ),
         ),
         const SizedBox(height: 6),
         Text(

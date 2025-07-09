@@ -1,10 +1,13 @@
+import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/widgets/custom_serch_widget.dart';
 import 'package:flutter/material.dart';
 
 AppBar customSearchAppBar({
-  required String title,
   required BuildContext context,
   bool arrowBack = true,
 }) {
-  return AppBar(title: CustomSearchWidget());
+  return AppBar(
+    iconTheme: IconThemeData(color: context.appColors.teal),
+    title: CustomSearchWidget(),
+  );
 }

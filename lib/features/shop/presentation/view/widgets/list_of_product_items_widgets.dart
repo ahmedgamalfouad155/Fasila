@@ -1,9 +1,9 @@
 import 'package:fasila/core/constants/images.dart';
-import 'package:fasila/features/shop/presentation/view/widgets/shop_item_widget.dart';
+import 'package:fasila/features/shop/presentation/view/widgets/product_item_widget.dart';
 import 'package:flutter/material.dart';
 
-class ListOfShopItemsWidgets extends StatelessWidget {
-  const ListOfShopItemsWidgets({super.key});
+class ListOfProductItemsWidgets extends StatelessWidget {
+  const ListOfProductItemsWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class ListOfShopItemsWidgets extends StatelessWidget {
 
     return Expanded(
       child: ListView.separated(
-        itemBuilder: (context, index) => ShopItemWidget(
+        itemBuilder: (context, index) => ProductItemWidget(
           image: images[index],
           title: titles[index],
           price: price[index],

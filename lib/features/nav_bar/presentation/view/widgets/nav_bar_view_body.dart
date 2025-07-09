@@ -10,7 +10,7 @@ import 'package:fasila/features/shop/presentation/view/shop_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class NavBarViewBody extends StatefulWidget {
   const NavBarViewBody({super.key});
@@ -26,6 +26,7 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
     MyPlanetView(),
     ProfileView(),
   ];
+
   @override
   Widget build(BuildContext context) {
     final homeCubit = BlocProvider.of<NavBarCubit>(context);
@@ -36,54 +37,49 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
           body: IndexedStack(index: homeCubit.currentIndex, children: screen),
           bottomNavigationBar: Container(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: context.appColors.white,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.r),
                 topRight: Radius.circular(20.r),
               ),
             ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                BottomNavigationBar(
-                  onTap: (index) => homeCubit.changeIndex(index),
-                  currentIndex: homeCubit.currentIndex,
-                  type: BottomNavigationBarType.fixed,
-                  backgroundColor: Colors.transparent,
-                  elevation: 0,
-                  showUnselectedLabels: true,
-                  selectedItemColor: context.appColors.black,
-                  unselectedItemColor: context.appColors.teal,
-                  selectedLabelStyle: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  unselectedLabelStyle: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w400,
-                  ),
-                  items: [
-                    BottomNavigationBarItem(
-                      icon: SvgPicture.network(AppImages.homeIcon),
-                      label: 'Home',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: SvgPicture.network(AppImages.shopIcon),
-                      label: 'Shop',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: SvgPicture.network(AppImages.cameraIcon),
-                      label: '',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: SvgPicture.network(AppImages.myPlanetIcon),
-                      label: 'My Planet',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: SvgPicture.network(AppImages.profileIcon),
-                      label: 'Profile',
-                    ),
-                  ],
+            child: BottomNavigationBar(
+              onTap: (index) => homeCubit.changeIndex(index),
+              currentIndex: homeCubit.currentIndex,
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              showUnselectedLabels: true,
+              selectedItemColor: context.appColors.black,
+              unselectedItemColor: context.appColors.teal,
+              selectedLabelStyle: TextStyle(
+                fontSize: 12.sp,
+                fontWeight: FontWeight.bold,
+              ),
+              unselectedLabelStyle: TextStyle(
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400,
+              ),
+              items: [
+                BottomNavigationBarItem(
+                  icon: SvgPicture.network(AppImages.homeIcon),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.network(AppImages.shopIcon),
+                  label: 'Shop',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.network(AppImages.cameraIcon, width: 60),
+                  label: '',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.network(AppImages.myPlanetIcon),
+                  label: 'My Planet',
+                ),
+                BottomNavigationBarItem(
+                  icon: SvgPicture.network(AppImages.profileIcon),
+                  label: 'Profile',
                 ),
               ],
             ),
