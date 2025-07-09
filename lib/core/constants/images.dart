@@ -117,4 +117,9 @@ class AppImages {
       static const String faselaProLogo ='https://drive.google.com/uc?export=view&id=1n7TufxRyX7NXPFqrh_viyejgDE4sRoLd';
       static const String myOrdersLogo ='https://drive.google.com/uc?export=view&id=1JW9hv7AGIuoSQ4YU_p0zr28teYqYnUaO';
       static const String myPlanetLogo ='https://drive.google.com/uc?export=view&id=1Y_PFaxNZ4UlNoIeNuOTrg85Qft_VzSO2';
+
+      static const String emptyFavoriteImage =
+      'https://drive.google.com/uc?export=view&id=1MtzD5roJQ7aboEe21Ei8ocNPVtk0y8PH'; 
+      static const String emptyCartImage =
+      'https://drive.google.com/uc?export=view&id=1YvLYkD8uYPXXb0TsAHpKXVSLhVmezJlG';
 }

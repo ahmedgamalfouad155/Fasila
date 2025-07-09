@@ -1,8 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
-import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 
 class CustomEmptyPage extends StatelessWidget {
   const CustomEmptyPage({
@@ -18,26 +17,19 @@ class CustomEmptyPage extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: MediaQuery.of(context).size.height / 2,
-          child: SvgPicture.asset(image),
+          height: MediaQuery.of(context).size.height / 2.5,
+          child: CachedNetworkImage(imageUrl: image),
         ),
-        SizedBox(height: 15),
+        const SizedBox(height: 15),
         Text(
           title,
-          style: AppStyles.textStyle20(
-            context,
-          ).copyWith(fontWeight: FontWeight.bold),
+          style: AppStyles.textStyle20(context).copyWith(
+            fontWeight: FontWeight.bold,
+            color: context.appColors.teal,
+          ),
         ),
-        SizedBox(height: 5),
-        Text(subTitle, style: AppStyles.textStyle16Black(context)),
-        Spacer(),
-        CustomButon(
-          text: "Custom",
-          onPressed: () {
-            
-          },
-        ),
-        SizedBox(height: 20),
+        const SizedBox(height: 5),
+        Text(subTitle, style: AppStyles.textStyle16Teal(context)),
       ],
     );
   }
