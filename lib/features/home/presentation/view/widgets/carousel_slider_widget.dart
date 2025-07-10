@@ -18,17 +18,17 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
     {
       "title": "Garden Tools",
       "subtitle": "Make gardening easy and fun with our durable tools!",
-      "image": AppImages.carouselSliderImage,
+      "image": AppImages.carouselSlider1Image,
     },
     {
-      "title": "Fruits & Veggies",
-      "subtitle": "Discover fresh produce for your garden today!",
-      "image": AppImages.carouselSliderImage,
+      "title": "Fertilizers",
+      "subtitle": "Healthy soil, thriving plants try our fertilizers today!",
+      "image": AppImages.carouselSlider2Image,
     },
     {
       "title": "Plant Care",
       "subtitle": "Get the best tools and tips to care for your plants.",
-      "image": AppImages.carouselSliderImage,
+      "image": AppImages.carouselSlider1Image,
     },
   ];
 
@@ -38,10 +38,12 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
       children: [
         CarouselSlider.builder(
           itemCount: sliderItems.length,
+
           itemBuilder: (context, index, realIndex) {
             final item = sliderItems[index];
             return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 8),
+              margin: const EdgeInsets.symmetric(horizontal: 5),
+
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.centerLeft,
@@ -85,9 +87,9 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
           },
           options: CarouselOptions(
             height: 140,
-            autoPlay: false,
+            autoPlay: true,
             enlargeCenterPage: false,
-            viewportFraction: 0.9,
+            viewportFraction: 1,
             onPageChanged: (index, reason) {
               setState(() {
                 _currentIndex = index;

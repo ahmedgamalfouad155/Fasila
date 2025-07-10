@@ -33,7 +33,9 @@ class AppImages {
   static const String notificationIcon = 'assets/notification.svg';
   static const String cartIcon = 'assets/cart.svg';
 
-  static const String carouselSliderImage = 'assets/carousel.png';
+  static const String carouselSlider1Image = 'assets/carousel.png';
+  static const String carouselSlider2Image = 'assets/carouselSlider2Image.png';
+
   static const String drowImage =
       'https://drive.google.com/uc?export=view&id=1aMmvt4Oi-Eh1Uj3YnBekYLJyXS5sfYxq';
   static const String planetImage =
@@ -97,7 +99,7 @@ class AppImages {
   static const String locationImage = 'assets/location.png';
 
   static const String twitterLogo =
-      'https://drive.google.com/uc?export=view&id=1KbkSOL2ZSodQK906NBLS4K70mEb8wd-4'; 
+      'https://drive.google.com/uc?export=view&id=1KbkSOL2ZSodQK906NBLS4K70mEb8wd-4';
   static const String websiteLogo =
       'https://drive.google.com/uc?export=view&id=1jXLV6vPVPWQmC5mGFilZKZ9a7m7IvOqZ';
   static const String linkedinLogo =
@@ -113,13 +115,17 @@ class AppImages {
   static const String behanceLogo =
       'https://drive.google.com/uc?export=view&id=1yleIT09olaXe1uRzwuTDK92gzUvSmz1x';
 
-      static const String paymentImage ='https://drive.google.com/uc?export=view&id=1plsArWn9DNABk70Q-YShpvUUotCwdZkq';
-      static const String faselaProLogo ='https://drive.google.com/uc?export=view&id=1n7TufxRyX7NXPFqrh_viyejgDE4sRoLd';
-      static const String myOrdersLogo ='https://drive.google.com/uc?export=view&id=1JW9hv7AGIuoSQ4YU_p0zr28teYqYnUaO';
-      static const String myPlanetLogo ='https://drive.google.com/uc?export=view&id=1Y_PFaxNZ4UlNoIeNuOTrg85Qft_VzSO2';
+  static const String paymentImage =
+      'https://drive.google.com/uc?export=view&id=1plsArWn9DNABk70Q-YShpvUUotCwdZkq';
+  static const String faselaProLogo =
+      'https://drive.google.com/uc?export=view&id=1n7TufxRyX7NXPFqrh_viyejgDE4sRoLd';
+  static const String myOrdersLogo =
+      'https://drive.google.com/uc?export=view&id=1JW9hv7AGIuoSQ4YU_p0zr28teYqYnUaO';
+  static const String myPlanetLogo =
+      'https://drive.google.com/uc?export=view&id=1Y_PFaxNZ4UlNoIeNuOTrg85Qft_VzSO2';
 
-      static const String emptyFavoriteImage =
-      'https://drive.google.com/uc?export=view&id=1MtzD5roJQ7aboEe21Ei8ocNPVtk0y8PH'; 
-      static const String emptyCartImage =
+  static const String emptyFavoriteImage =
+      'https://drive.google.com/uc?export=view&id=1MtzD5roJQ7aboEe21Ei8ocNPVtk0y8PH';
+  static const String emptyCartImage =
       'https://drive.google.com/uc?export=view&id=1YvLYkD8uYPXXb0TsAHpKXVSLhVmezJlG';
 }
