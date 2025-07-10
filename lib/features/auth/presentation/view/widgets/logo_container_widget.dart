@@ -1,11 +1,12 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LogoContainerWidget extends StatelessWidget {
   const LogoContainerWidget({
     super.key,
-    required this.imagePath,
+    required this.logo,
     this.width = 60,
     this.height = 50,
     this.backgroundColor,
@@ -13,7 +14,7 @@ class LogoContainerWidget extends StatelessWidget {
     this.onTap,
   });
 
-  final String imagePath;
+  final String logo;
   final double width;
   final double height;
   final Color? backgroundColor;
@@ -32,12 +33,11 @@ class LogoContainerWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius.r),
         ),
         child: Center(
-          child: Image.asset(
-            imagePath,
-            fit: BoxFit.contain,
+          child: SvgPicture.asset(
+            logo,
             errorBuilder: (context, error, stackTrace) {
               return Icon(
-                Icons.image_not_supported,
+                Icons.error,
                 color: context.appColors.white,
                 size: 24.sp,
               );

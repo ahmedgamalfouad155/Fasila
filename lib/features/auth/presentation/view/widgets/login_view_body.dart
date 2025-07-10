@@ -1,12 +1,9 @@
-import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/router/app_router.dart';
-import 'package:fasila/core/theme/colors.dart';
-import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
-import 'package:fasila/core/widgets/custom_text_field_widget.dart';
-import 'package:fasila/core/widgets/custom_textformfield_widget.dart';
-import 'package:fasila/features/auth/presentation/view/widgets/divider_with_text_widget.dart';
-import 'package:fasila/features/auth/presentation/view/widgets/logo_container_widget.dart';
+import 'package:fasila/features/auth/presentation/view/widgets/auth_heder_text_widget.dart';
+import 'package:fasila/features/auth/presentation/view/widgets/continue_text_and_social_logo_section_wdget.dart';
+import 'package:fasila/features/auth/presentation/view/widgets/forget_and_create_account_text_widget.dart';
+import 'package:fasila/features/auth/presentation/view/widgets/login_fields_section_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -39,51 +36,19 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('Login here', style: AppStyles.textStyle24(context)),
-              const SizedBox(height: 10),
-              Text(
-                'Welcome back you’ve been missed!',
-                style: AppStyles.textStyle12Grey(
-                  context,
-                ).copyWith(color: context.appColors.black),
+              AuthHederTextWidget(
+                title: "Login here",
+                subTitle: "Welcome back you’ve been missed!",
               ),
               const SizedBox(height: 30),
-              CustomTextFieldWidget(
-                hintText: 'Email',
-                controller: emailController,
-              ),
-              const SizedBox(height: 20),
-              CustomTextFormFieldWidget(
-                hintText: 'Password',
-                controller: passwordController,
+              LoginFieldsSectionWidget(
+                emailController: emailController,
+                passwordController: passwordController,
               ),
               const SizedBox(height: 25),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Forgot Password?',
-                    style: AppStyles.textStyle12Grey(context),
-                  ),
-                  Text(
-                    'Create New Account',
-                    style: AppStyles.textStyle12Grey(context),
-                  ),
-                ],
-              ),
+              ForgetAndCreateAccountTextWidget(),
               const SizedBox(height: 30),
-              const DividerWithTextWidget(),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  LogoContainerWidget(imagePath: AppImages.googleLogo),
-                  const SizedBox(width: 10),
-                  LogoContainerWidget(imagePath: AppImages.facebookLogo),
-                  const SizedBox(width: 10),
-                  LogoContainerWidget(imagePath: AppImages.appleLogo),
-                ],
-              ),
+              ContinueTextAndSocialLogoSectionWdiget(),
               const SizedBox(height: 50),
               CustomButon(
                 text: 'Login',

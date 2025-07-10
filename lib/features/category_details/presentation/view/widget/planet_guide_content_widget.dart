@@ -12,7 +12,6 @@ class PlantGuideContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<FilterCubit, int>(
       builder: (context, selectedIndex) {
-        print(selectedIndex);
         switch (selectedIndex) {
           case 0:
             return const PlantingContentGuideSectionWidget();

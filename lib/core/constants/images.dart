@@ -6,15 +6,15 @@ class AppImages {
   static const String onBoardingImage3 = 'assets/on3.svg';
   static const String onBoardingImage4 = 'assets/on4.svg';
 
-  static const String googleLogo = 'assets/google.png';
-  static const String facebookLogo = 'assets/face.png';
-  static const String appleLogo = 'assets/apple.png';
+  static const String googleLogo = 'assets/googleLogo.svg';
+  static const String facebookLogo = 'assets/facelogo.svg';
+  static const String appleLogo = 'assets/applelogo.svg';
 
   static const String navHomeIcon = 'assets/navhome.svg';
   static const String navHomeIconClick = 'assets/navhomeclick.svg';
   static const String navShopIcon = 'assets/navshop.svg';
   static const String navShopIconClick = 'assets/navshopclick.svg';
-  static const String navCameraIcon = 'assets/navcamer.svg'; 
+  static const String navCameraIcon = 'assets/navcamer.svg';
   static const String navMyPlanetIcon = 'assets/navplanet.svg';
   static const String navMyPlanetIconClick = 'assets/navplanetclick.svg';
   static const String navProfileIcon = 'assets/navprofile.svg';
@@ -114,12 +114,9 @@ class AppImages {
   static const String behanceLogo =
       'https://drive.google.com/uc?export=view&id=1yleIT09olaXe1uRzwuTDK92gzUvSmz1x';
 
-  static const String paymentImage =
-      'assets/payment.svg';
-  static const String faselaProLogo =
-      'assets/fasilaPro.svg';
-  static const String myOrdersLogo =
-      'assets/myOrders.svg';
+  static const String paymentImage = 'assets/payment.svg';
+  static const String faselaProLogo = 'assets/fasilaPro.svg';
+  static const String myOrdersLogo = 'assets/myOrders.svg';
   static const String myPlanetLogo =
       'https://drive.google.com/uc?export=view&id=1Y_PFaxNZ4UlNoIeNuOTrg85Qft_VzSO2';
 

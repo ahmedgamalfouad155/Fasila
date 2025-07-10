@@ -39,7 +39,7 @@ class CustomTextFormFieldWidget extends StatelessWidget {
             suffixIcon: IconButton(
               icon: Icon(
                 isHidden ? Icons.visibility_off : Icons.visibility,
-                color: context.appColors.grey,
+                color: context.appColors.teal,
               ),
               onPressed: () {
                 context.read<PasswordVisibilityCubit>().toggleVisibility();
@@ -47,11 +47,11 @@ class CustomTextFormFieldWidget extends StatelessWidget {
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: Colors.transparent),
+              borderSide: BorderSide(color: context.appColors.teal),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
-              borderSide: BorderSide(color: Colors.transparent),
+              borderSide: BorderSide(color: context.appColors.teal),
             ),
           ),
         );
