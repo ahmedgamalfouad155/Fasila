@@ -16,7 +16,6 @@ import 'package:fasila/features/notification/presentation/view/notification_view
 import 'package:fasila/features/onbording/onboarding_view.dart';
 import 'package:fasila/features/planet_details/presentation/view/planet_details_view.dart';
 import 'package:fasila/features/product_details/presentation/view/product_details_view.dart';
-import 'package:fasila/features/splash/splash._view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -41,7 +40,7 @@ abstract class AppRouter {
 
   static final router = GoRouter(
     routes: [
-      GoRoute(path: '/', builder: (context, state) => SplashView()),
+      GoRoute(path: '/', builder: (context, state) => NavBarView()),
       GoRoute(
         path: konboardingView,
         builder: (context, state) => OnboardingView(),

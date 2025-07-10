@@ -76,7 +76,6 @@ class AppImages {
       'https://drive.google.com/uc?export=view&id=1ClI41DpGEeIfOv0S_fmtlpyM9yzwfGCc';
 
   static const String scaneResultImage = 'assets/scan.png';
-  static const String planetDetailsImage = 'assets/bigtomato.png';
 
   static const String waterImage =
       'https://drive.google.com/uc?export=view&id=1xfsXih7DkaYaK-4pXI4z9dQvQmlLkuCH';
