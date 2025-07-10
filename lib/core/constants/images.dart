@@ -115,11 +115,11 @@ class AppImages {
       'https://drive.google.com/uc?export=view&id=1yleIT09olaXe1uRzwuTDK92gzUvSmz1x';
 
   static const String paymentImage =
-      'https://drive.google.com/uc?export=view&id=1plsArWn9DNABk70Q-YShpvUUotCwdZkq';
+      'assets/payment.svg';
   static const String faselaProLogo =
-      'https://drive.google.com/uc?export=view&id=1n7TufxRyX7NXPFqrh_viyejgDE4sRoLd';
+      'assets/fasilaPro.svg';
   static const String myOrdersLogo =
-      'https://drive.google.com/uc?export=view&id=1JW9hv7AGIuoSQ4YU_p0zr28teYqYnUaO';
+      'assets/myOrders.svg';
   static const String myPlanetLogo =
       'https://drive.google.com/uc?export=view&id=1Y_PFaxNZ4UlNoIeNuOTrg85Qft_VzSO2';
 

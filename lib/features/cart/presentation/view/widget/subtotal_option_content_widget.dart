@@ -1,4 +1,3 @@
-
 import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -15,12 +14,7 @@ class SubtotalOptionContentWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          title,
-          style: AppStyles.textStyle16Black(
-            context,
-          ).copyWith(fontWeight: FontWeight.bold),
-        ),
+        Text(title, style: AppStyles.textStyle14(context)),
         Text(
           price,
           style: AppStyles.textStyle16Teal(

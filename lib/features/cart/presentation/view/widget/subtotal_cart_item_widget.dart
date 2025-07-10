@@ -20,7 +20,7 @@ class SubtotalCartItemsWidget extends StatelessWidget {
           BoxShadow(
             color: context.appColors.grey.withAlpha((0.4 * 255).toInt()),
             offset: const Offset(-2, 4),
-            blurRadius: 6,
+            blurRadius: 3,
             spreadRadius: 1,
           ),
         ],
@@ -29,12 +29,7 @@ class SubtotalCartItemsWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Subtotal(3 Items)',
-            style: AppStyles.textStyle16Teal(
-              context,
-            ).copyWith(fontWeight: FontWeight.bold),
-          ),
+          Text('Subtotal(3 Items)', style: AppStyles.textStyle16Teal(context)),
           SubtotalOptionContentWidget(title: 'Products ', price: 'EGP 550.00'),
           SubtotalOptionContentWidget(title: 'Delivery ', price: 'EGP 50.00'),
           Divider(color: context.appColors.teal, thickness: 1, height: 1),

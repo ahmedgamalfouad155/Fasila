@@ -1,10 +1,12 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
 import 'package:fasila/features/profile/presentation/view/widgets/profile_image_widget.dart';
 import 'package:fasila/features/profile/presentation/view/widgets/profile_option_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 class ProfileViewBody extends StatelessWidget {
@@ -29,7 +31,7 @@ class ProfileViewBody extends StatelessWidget {
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              logo: CachedNetworkImage(imageUrl: AppImages.paymentImage),
+              logo: SvgPicture.asset(AppImages.paymentImage),
               title: 'Payment',
               onTap: () {},
             ),
@@ -44,16 +46,20 @@ class ProfileViewBody extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            ProfileOptionWidget(
-              logo: CachedNetworkImage(imageUrl: AppImages.myPlanetLogo),
-              title: 'My Plants',
-              onTap: () {},
+            BlocProvider(
+              create: (context) => NavBarCubit(),
+              child: ProfileOptionWidget(
+                logo: SvgPicture.asset(AppImages.navMyPlanetIconClick),
+                title: 'My Plants',
+                onTap: () {
+                  context.read<NavBarCubit>().changeIndex(3);
+                },
+              ),
             ),
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              logo: CachedNetworkImage(imageUrl: AppImages.myOrdersLogo),
-
+              logo: SvgPicture.asset(AppImages.myOrdersLogo),
               title: 'My Orders',
               onTap: () {
                 GoRouter.of(context).push(AppRouter.kMyOrdersView);
@@ -62,7 +68,7 @@ class ProfileViewBody extends StatelessWidget {
             const SizedBox(height: 10),
 
             ProfileOptionWidget(
-              logo: CachedNetworkImage(imageUrl: AppImages.faselaProLogo),
+              logo: SvgPicture.asset(AppImages.faselaProLogo),
 
               title: 'Fasila Pro',
               onTap: () {

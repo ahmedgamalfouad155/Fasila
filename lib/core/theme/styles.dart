@@ -28,7 +28,7 @@ abstract class AppStyles {
   );
   static TextStyle textStyle16Teal(BuildContext context) => TextStyle(
     fontSize: 16.sp,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.bold,
     color: context.appColors.teal,
   );
 

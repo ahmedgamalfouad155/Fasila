@@ -44,8 +44,7 @@ class HomeCategoryTypeWidget extends StatelessWidget {
             ),
             child: Center(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: CachedNetworkImage(imageUrl: image),
+                child: CachedNetworkImage(imageUrl: image, height: 50),
               ),
             ),
           ),

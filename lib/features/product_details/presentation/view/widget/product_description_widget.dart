@@ -12,12 +12,7 @@ class ProductDescriptionWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text(
-            "Carden Hand Trowel",
-            style: AppStyles.textStyle16Teal(
-              context,
-            ).copyWith(fontWeight: FontWeight.bold),
-          ),
+          Text("Carden Hand Trowel", style: AppStyles.textStyle16Teal(context)),
           Text(
             "Egp 220.00",
             style: AppStyles.textStyle14(
