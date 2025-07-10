@@ -1,5 +1,6 @@
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/camera/presentation/view/camera_view.dart';
 import 'package:fasila/features/home/presentation/view/home_view.dart';
 import 'package:fasila/features/my_planet/presentation/view/my_planet.dart';
@@ -47,38 +48,52 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
               onTap: (index) => homeCubit.changeIndex(index),
               currentIndex: homeCubit.currentIndex,
               type: BottomNavigationBarType.fixed,
-              backgroundColor: Colors.transparent,
+              backgroundColor: context.appColors.offWhite,
               elevation: 0,
-              showUnselectedLabels: true,
-              selectedItemColor: context.appColors.black,
+
+              selectedItemColor: context.appColors.teal,
               unselectedItemColor: context.appColors.teal,
-              selectedLabelStyle: TextStyle(
-                fontSize: 12.sp,
-                fontWeight: FontWeight.bold,
-              ),
-              unselectedLabelStyle: TextStyle(
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w400,
-              ),
+              selectedLabelStyle: AppStyles.textStyle12White(
+                context,
+              ).copyWith(fontWeight: FontWeight.bold),
+              unselectedLabelStyle: AppStyles.textStyle12White(
+                context,
+              ).copyWith(fontWeight: FontWeight.bold),
               items: [
                 BottomNavigationBarItem(
-                  icon: SvgPicture.network(AppImages.homeIcon),
+                  icon: SvgPicture.asset(
+                    homeCubit.currentIndex == 0
+                        ? AppImages.navHomeIconClick
+                        : AppImages.navHomeIcon,
+                  ),
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: SvgPicture.network(AppImages.shopIcon),
+                  icon: SvgPicture.asset(
+                    homeCubit.currentIndex == 1
+                        ? AppImages.navShopIconClick
+                        : AppImages.navShopIcon,
+                  ),
                   label: 'Shop',
                 ),
                 BottomNavigationBarItem(
-                  icon: SvgPicture.network(AppImages.cameraIcon, width: 60),
+                  icon: SvgPicture.asset(AppImages.navCameraIcon, width: 60),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  icon: SvgPicture.network(AppImages.myPlanetIcon),
+                  icon: SvgPicture.asset(
+                    homeCubit.currentIndex == 3
+                        ? AppImages.navMyPlanetIconClick
+                        : AppImages.navMyPlanetIcon,
+                  ),
                   label: 'My Planet',
                 ),
                 BottomNavigationBarItem(
-                  icon: SvgPicture.network(AppImages.profileIcon),
+                  icon: SvgPicture.asset(
+                    homeCubit.currentIndex == 4
+                        ? AppImages.navProfileIconClick
+                        : AppImages.navProfileIcon,
+                  ),
                   label: 'Profile',
                 ),
               ],

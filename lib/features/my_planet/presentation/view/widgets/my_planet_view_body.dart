@@ -11,11 +11,11 @@ class MyPlanetViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 10),
         BlocProvider(
           create: (context) => FilterCubit(),
           child: MyPlanetFilterButtonsWidget(),
         ),
+        const SizedBox(height: 15),
         ListOfMyPlanetItemsWidget(),
       ],
     );

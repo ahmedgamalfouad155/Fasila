@@ -18,6 +18,13 @@ class CustomSearchWidget extends StatelessWidget {
               topLeft: Radius.circular(16),
               bottomLeft: Radius.circular(16),
             ),
+            boxShadow: [
+              BoxShadow(
+                color: context.appColors.teal.withAlpha((1 * 255).toInt()),
+                blurRadius: 3,
+                offset: const Offset(0, 1),
+              ),
+            ],
           ),
           child: Icon(Icons.search, color: context.appColors.white),
         ),

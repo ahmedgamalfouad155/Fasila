@@ -23,10 +23,13 @@ class ListOfMyPlanetItemsWidget extends StatelessWidget {
 
     return Expanded(
       child: ListView.separated(
-        itemBuilder: (context, index) => MyPlanetItemWidget(
-          image: images[index],
-          title: titles[index],
-          type: types[index],
+        itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: MyPlanetItemWidget(
+            image: images[index],
+            title: titles[index],
+            type: types[index],
+          ),
         ),
         separatorBuilder: (context, index) => const SizedBox(height: 15),
         itemCount: 4,

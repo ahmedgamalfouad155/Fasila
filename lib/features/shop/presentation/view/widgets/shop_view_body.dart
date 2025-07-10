@@ -9,19 +9,15 @@ class ShopViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsetsGeometry.symmetric(horizontal: 10),
-      child: Column(
-        children: [
-          const SizedBox(height: 20),
-          BlocProvider(
-            create: (_) => FilterCubit(),
-            child: ShopFilterButtonsWidget(),
-          ),
-          const SizedBox(height: 10),
-          ListOfProductItemsWidgets(),
-        ],
-      ),
+    return Column(
+      children: [
+        BlocProvider(
+          create: (_) => FilterCubit(),
+          child: ShopFilterButtonsWidget(),
+        ),
+        const SizedBox(height: 10),
+        ListOfProductItemsWidgets(),
+      ],
     );
   }
 }

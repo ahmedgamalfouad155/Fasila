@@ -10,16 +10,15 @@ class AppImages {
   static const String facebookLogo = 'assets/face.png';
   static const String appleLogo = 'assets/apple.png';
 
-  static const String homeIcon =
-      'https://drive.google.com/uc?export=view&id=133qs79PFKPA1o1T5u_Vc1MX7rTF1u6Kc';
-  static const String shopIcon =
-      'https://drive.google.com/uc?export=view&id=1l2XPBK9PpdXv1cGVT4nYpW-yOdW1k3gF';
-  static const String cameraIcon =
-      'https://drive.google.com/uc?export=view&id=1w7GutU94ro7gSW61Ee6OKsXWShNNCXDG';
-  static const String myPlanetIcon =
-      'https://drive.google.com/uc?export=view&id=1023CWA_-cAi34v9Fdncke5kKx7Qh-1KH';
-  static const String profileIcon =
-      'https://drive.google.com/uc?export=view&id=1ED6sPlkoLCh-ONW2hGb6ENMQ8CYzzC8-';
+  static const String navHomeIcon = 'assets/navhome.svg';
+  static const String navHomeIconClick = 'assets/navhomeclick.svg';
+  static const String navShopIcon = 'assets/navshop.svg';
+  static const String navShopIconClick = 'assets/navshopclick.svg';
+  static const String navCameraIcon = 'assets/navcamer.svg'; 
+  static const String navMyPlanetIcon = 'assets/navplanet.svg';
+  static const String navMyPlanetIconClick = 'assets/navplanetclick.svg';
+  static const String navProfileIcon = 'assets/navprofile.svg';
+  static const String navProfileIconClick = 'assets/navprofileclick.svg';
 
   static const String explore1Image =
       'https://drive.google.com/uc?export=view&id=1jgEEgLOTQo7ddM74yWVLHil8EucO1c8u';

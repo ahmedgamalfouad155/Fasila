@@ -28,10 +28,13 @@ class ListOfProductItemsWidgets extends StatelessWidget {
 
     return Expanded(
       child: ListView.separated(
-        itemBuilder: (context, index) => ProductItemWidget(
-          image: images[index],
-          title: titles[index],
-          price: price[index],
+        itemBuilder: (context, index) => Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: ProductItemWidget(
+            image: images[index],
+            title: titles[index],
+            price: price[index],
+          ),
         ),
         separatorBuilder: (context, index) => const SizedBox(height: 15),
         itemCount: 4,

@@ -26,13 +26,15 @@ class ListOfExploreHomeWidget extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         SizedBox(
-          height: MediaQuery.of(context).size.height / 6,
+          height: MediaQuery.of(context).size.height / 7,
           child: ListView.separated(
+            physics: const NeverScrollableScrollPhysics(),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => HomeCategoryTypeWidget(
               image: images[index],
               title: titles[index],
               height: 60,
+              width: MediaQuery.of(context).size.width / 5,
               bacgrouncColor: context.appColors.offWhite,
             ),
             separatorBuilder: (context, index) => const SizedBox(width: 15),
