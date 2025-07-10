@@ -3,6 +3,7 @@ import 'package:fasila/features/auth/presentation/view/lognin_view.dart';
 import 'package:fasila/features/auth/presentation/view/signup_view.dart';
 import 'package:fasila/features/camera/presentation/view/scane_result_view.dart';
 import 'package:fasila/features/cart/presentation/view/cart_view.dart';
+import 'package:fasila/features/category_details/presentation/view/category_datails_view.dart';
 import 'package:fasila/features/contact_us/presentation/view/contact_us_view.dart';
 import 'package:fasila/features/fasila_pro/presentation/view/fasila_pro_view.dart';
 import 'package:fasila/features/favorites/presentation/view/favorites_view.dart';
@@ -33,6 +34,8 @@ abstract class AppRouter {
   static String kProductDetailsView = '/productDetailsView';
   static String kCartView = '/cartView';
   static String kNotificationView = '/notificationView';
+  static String kCategoryDetailsView = '/categoryDetailsView';
+
 
   static final router = GoRouter(
     routes: [
@@ -83,6 +86,10 @@ abstract class AppRouter {
       GoRoute(
         path: kNotificationView,
         builder: (context, state) => NotificationView(),
+      ),
+      GoRoute(
+        path: kCategoryDetailsView,
+        builder: (context, state) => CategoryDatailsView(),
       ),
     ],
   );
