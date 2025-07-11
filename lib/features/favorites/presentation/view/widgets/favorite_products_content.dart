@@ -12,10 +12,10 @@ class FavoriteProductsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> images = [
-      AppImages.shop1Image,
-      AppImages.shop2Image,
-      AppImages.shop3Image,
-      AppImages.shop4Image,
+      AppImages.productPot1Image,
+      AppImages.productPot2Image,
+      AppImages.productPot3Image,
+      AppImages.productPot4Image,
     ];
     return images.isNotEmpty
         ? Column(

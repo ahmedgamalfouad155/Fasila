@@ -111,16 +111,42 @@ class AppImages {
   static const String lastest3Image =
       'https://drive.google.com/uc?export=view&id=1M5B2yTiGkMt63hQRHvvyzICtg1GPpuhZ';
 
-  static const String shop1Image =
-      'https://drive.google.com/uc?export=view&id=10J7Wu-A0PZ2JhmfgYDKysdNBgEKqjop1';
-  static const String shop2Image =
-      'https://drive.google.com/uc?export=view&id=1xccOGCpw19A7BqdixcUEJzyKHq36HLbN';
-  static const String shop3Image =
-      'https://drive.google.com/uc?export=view&id=11qPAiDhsuIy2Y43joLt2Xbve5CVYh6D2';
-  static const String shop4Image =
-      'https://drive.google.com/uc?export=view&id=1FPQ7z7Ay50p9NzUbNKJwoUw-Ih7y7Iie';
-  static const String shop5Image =
-      'https://drive.google.com/uc?export=view&id=1ClI41DpGEeIfOv0S_fmtlpyM9yzwfGCc';
+  /// Shop Section
+  static const String productPot1Image =
+      'https://drive.google.com/uc?export=view&id=17Cl4FEg6UhQoU3tYHjfXM7jOpst4YETY';
+  static const String productPot2Image =
+      'https://drive.google.com/uc?export=view&id=1Pseaxmr7DfOKhcj0o3jkDlXe94PKr0iQ';
+  static const String productPot3Image =
+      'https://drive.google.com/uc?export=view&id=1MmZdYF-PrrIivUTs4-MIjR7NzVZRe0gj';
+  static const String productPot4Image =
+      'https://drive.google.com/uc?export=view&id=1TcLsTYEqcOStMHrrokwUSrZtFPcZRYVm';
+  static const String productPot5Image =
+      'https://drive.google.com/uc?export=view&id=1-d7pUfUMTrxAElzLszWsprg3RN2YjUWs';
+
+  static const String productFertilizer1Image =
+      'https://drive.google.com/uc?export=view&id=19MU91jCKNKM-hephlWBKwsoeqA5jD6a4';
+  static const String productFertilizer2Image =
+      'https://drive.google.com/uc?export=view&id=18Ry80qNX8Ky2p-BBDPT-NnXQwb2i0DuA';
+  static const String productFertilizer3Image =
+      'https://drive.google.com/uc?export=view&id=1Dn34AHdXnwpfN8AzRJgfbcs4VreCCMrA';
+  static const String productFertilizer4Image =
+      'https://drive.google.com/uc?export=view&id=1Qq5aO7cK-YtflUkK28x4NPC6E2gSs0o2';
+  static const String productFertilizer5Image =
+      'https://drive.google.com/uc?export=view&id=1s5S77FShkKnaP6Fo47PUVn1QZE6BDRlY';
+
+  static const String productSeedImage =
+      'https://drive.google.com/uc?export=view&id=1HvFoluL21m9R5c_GWi_SMxQ8qcOQA1cv';
+
+  static const String productGardenSupplies1Image =
+      'https://drive.google.com/uc?export=view&id=1ddPxsxuKkCVHpS0hmCTmd6V_kJrqqcnd';
+  static const String productGardenSupplies2Image =
+      'https://drive.google.com/uc?export=view&id=1d4N3HsPYP3L4SDRWYEKQfiP1McUQ545A';
+  static const String productGardenSupplies3Image =
+      'https://drive.google.com/uc?export=view&id=1KQkAPGZYuHzmI9Q5g30qQaQ43dcktJqq';
+  static const String productGardenSupplies4Image =
+      'https://drive.google.com/uc?export=view&id=1L2Xk0L9H3d4A3jbhxgNIKxgPQNFAPIeG';
+  static const String productGardenSupplies5Image =
+      'https://drive.google.com/uc?export=view&id=1_nzthVgiuHidl7ICKg1CuLxuagYUPRBO';
 
   static const String scaneResultImage = 'assets/scan.png';
 

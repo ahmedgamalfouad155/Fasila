@@ -8,10 +8,10 @@ class ListOfProductItemsWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<String> images = [
-      AppImages.shop1Image,
-      AppImages.shop2Image,
-      AppImages.shop3Image,
-      AppImages.shop4Image,
+      AppImages.productPot1Image,
+      AppImages.productPot2Image,
+      AppImages.productPot3Image,
+      AppImages.productPot4Image,
     ];
     final List<String> titles = [
       'hand trowel',

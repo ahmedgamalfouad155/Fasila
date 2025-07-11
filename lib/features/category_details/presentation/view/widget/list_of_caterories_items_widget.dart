@@ -18,7 +18,7 @@ class ListOfCateroriesItemsWidget extends StatelessWidget {
           );
         },
         separatorBuilder: (context, index) => const SizedBox(height: 15),
-        itemCount: myPlanetData[category]!.length,
+        itemCount:  myPlanetData[category]!.length,
       ),
     );
   }
