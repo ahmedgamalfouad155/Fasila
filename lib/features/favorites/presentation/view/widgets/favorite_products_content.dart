@@ -2,7 +2,6 @@ import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/widgets/custom_emty_page_widget.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
 import 'package:fasila/features/shop/presentation/view/widgets/shop_filter_buttons_widget.dart';
-import 'package:fasila/features/shop/presentation/view/widgets/product_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,11 +29,11 @@ class FavoriteProductsContent extends StatelessWidget {
                 child: ListView.separated(
                   itemBuilder: (context, index) => Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: ProductItemWidget(
-                      image: images[index],
-                      title: 'Zalaah',
-                      price: 'EGP 90.00',
-                    ),
+                    // child: ProductItemWidget(
+                    //   image: images[index],
+                    //   title: 'Zalaah',
+                    //   price: 'EGP 90.00',
+                    // ),
                   ),
                   separatorBuilder: (context, index) =>
                       const SizedBox(height: 10),

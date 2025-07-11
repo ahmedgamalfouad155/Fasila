@@ -1,6 +1,6 @@
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/features/shop/presentation/view/widgets/product_filter_content.dart';
 import 'package:fasila/features/shop/presentation/view/widgets/shop_filter_buttons_widget.dart';
-import 'package:fasila/features/shop/presentation/view/widgets/list_of_product_items_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,15 +9,15 @@ class ShopViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        BlocProvider(
-          create: (_) => FilterCubit(),
-          child: ShopFilterButtonsWidget(),
-        ),
-        const SizedBox(height: 10),
-        ListOfProductItemsWidgets(),
-      ],
+    return BlocProvider(
+      create: (context) => FilterCubit(),
+      child: Column(
+        children: [
+          ShopFilterButtonsWidget(),
+          const SizedBox(height: 10),
+          ProductFilterContentWidget(),
+        ],
+      ),
     );
   }
 }

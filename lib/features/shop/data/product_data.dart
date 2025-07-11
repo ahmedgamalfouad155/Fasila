@@ -8,9 +8,49 @@ const String seeds = 'seeds';
 const String fertilizer = 'fertilizer';
 
 final Map<String, List<ProductModel>> productData = {
-  all:[
-
-
+  all: [
+    ProductModel(
+      image: AppImages.productPot1Image,
+      title: 'hand trowel',
+      description: 'Hand trowel for gardening and landscaping',
+      price: 'EGP 220.00',
+    ),
+    ProductModel(
+      image: AppImages.productSeedImage,
+      title: 'Tomato seeds',
+      description: 'Tomato seeds for planting',
+      price: 'EGP 50.00',
+    ),
+     ProductModel(
+      image: AppImages.productGardenSupplies5Image,
+      title: 'wheelbarrow',
+      description: 'Garden wheelbarrow for transporting soil and plants',
+      price: 'EGP 299.00',
+    ),
+    ProductModel(
+      image: AppImages.productFertilizer1Image,
+      title: 'Chelated iron',
+      description: 'Chelated iron for plant nutrition',
+      price: 'EGP 250.00',
+    ),
+    ProductModel(
+      image: AppImages.productFertilizer4Image,
+      title: 'Slow-release ',
+      description: 'Slow-release fertilizer for plant nutrition',
+      price: 'EGP 100.00',
+    ),
+    ProductModel(
+      image: AppImages.productPot4Image,
+      title: 'Zain Fert',
+      description: 'Zain Fert for plant nutrition',
+      price: 'EGP 200.00',
+    ),
+    ProductModel(
+      image: AppImages.productFertilizer5Image,
+      title: 'Liquid fertilizer',
+      description: 'Liquid fertilizer for plant nutrition',
+      price: 'EGP 80.00',
+    ),
   ],
   pots: [
     ProductModel(
@@ -72,7 +112,7 @@ final Map<String, List<ProductModel>> productData = {
     ),
     ProductModel(
       image: AppImages.productGardenSupplies5Image,
-      title: 'Garden wheelbarrow',
+      title: 'wheelbarrow',
       description: 'Garden wheelbarrow for transporting soil and plants',
       price: 'EGP 299.00',
     ),
@@ -136,7 +176,7 @@ final Map<String, List<ProductModel>> productData = {
     ),
     ProductModel(
       image: AppImages.productFertilizer4Image,
-      title: 'Slow-release fertilizer',
+      title: 'Slow-release ',
       description: 'Slow-release fertilizer for plant nutrition',
       price: 'EGP 100.00',
     ),

@@ -3,17 +3,13 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
+import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ProductItemWidget extends StatelessWidget {
-  const ProductItemWidget({
-    super.key,
-    required this.image,
-    required this.title,
-    required this.price,
-  });
-  final String image, title, price;
+  const ProductItemWidget({super.key, required this.product});
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +35,29 @@ class ProductItemWidget extends StatelessWidget {
         ),
         child: Row(
           children: [
-            CachedNetworkImage(imageUrl: image),
+            Container(
+              width: MediaQuery.of(context).size.width / 4,
+              height: MediaQuery.of(context).size.width / 4,
+              decoration: BoxDecoration(
+                color: context.appColors.white,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: context.appColors.teal, width: 1),
+                boxShadow: [
+                  BoxShadow(
+                    color: context.appColors.grey,
+                    blurRadius: 6,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: CachedNetworkImage(
+                  imageUrl: product.image,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
             const SizedBox(width: 10),
             Expanded(
               child: Column(
@@ -49,7 +67,10 @@ class ProductItemWidget extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(title, style: AppStyles.textStyle16Teal(context)),
+                      Text(
+                        product.title,
+                        style: AppStyles.textStyle16Teal(context),
+                      ),
 
                       Row(
                         children: [
@@ -67,14 +88,14 @@ class ProductItemWidget extends StatelessWidget {
                   ),
 
                   Text(
-                    "While it's always good to get your hands dirty, sometimes you need protection.....",
+                    product.description,
                     style: AppStyles.textStyle12Grey(context),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
 
                   Text(
-                    price,
+                    product.price,
                     style: AppStyles.textStyle16Teal(
                       context,
                     ).copyWith(fontWeight: FontWeight.bold),
