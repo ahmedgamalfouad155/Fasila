@@ -1,7 +1,7 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/details_togel_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/weeks_toget_cubit.dart';
-import 'package:fasila/features/planet_details/presentation/view/widgets/date_widget.dart';
+import 'package:fasila/features/planet_details/presentation/view/widgets/date_text_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/image_planet_details_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/planet_detailsc_togel_content.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/togel_button_details_widget.dart';
@@ -37,7 +37,7 @@ class PlanetDetailsViewBody extends StatelessWidget {
                     const SizedBox(height: 10),
                     WeeksWidget(),
                     const SizedBox(height: 10),
-                    DateWidget(),
+                    DateTextWidget(),
                     const SizedBox(height: 10),
                     BlocProvider(
                       create: (context) => WeeksTogetCubit(),
