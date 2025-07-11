@@ -33,42 +33,46 @@ class MyPlanetFilterButtonsWidget extends StatelessWidget {
         builder: (context, selectedIndex) {
           return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: Row(
-              children: List.generate(filters.length, (index) {
-                final isSelected = selectedIndex == index;
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                  child: InkWell(
-                    onTap: () {
-                      context.read<FilterCubit>().changeFilter(index);
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 6,
-                      ),
-                      decoration: BoxDecoration(
-                        color: isSelected
-                            ? context.appColors.teal
-                            : context.appColors.offWhite,
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(
-                          color: context.appColors.teal,
-                          width: 1.2,
+            child: Column(
+              children: [
+                Row(
+                  children: List.generate(filters.length, (index) {
+                    final isSelected = selectedIndex == index;
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      child: InkWell(
+                        onTap: () {
+                          context.read<FilterCubit>().changeFilter(index);
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: isSelected
+                                ? context.appColors.teal
+                                : context.appColors.offWhite,
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(
+                              color: context.appColors.teal,
+                              width: 1.2,
+                            ),
+                          ),
+                          child: Text(
+                            filters[index],
+                            style: isSelected
+                                ? AppStyles.textStyle14(
+                                    context,
+                                  ).copyWith(color: context.appColors.white)
+                                : AppStyles.textStyle14(context),
+                          ),
                         ),
                       ),
-                      child: Text(
-                        filters[index],
-                        style: isSelected
-                            ? AppStyles.textStyle14(
-                                context,
-                              ).copyWith(color: context.appColors.white)
-                            : AppStyles.textStyle14(context),
-                      ),
-                    ),
-                  ),
-                );
-              }),
+                    );
+                  }),
+                ), 
+              ],
             ),
           );
         },

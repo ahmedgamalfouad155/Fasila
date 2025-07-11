@@ -2,6 +2,7 @@ import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_emty_page_widget.dart';
 import 'package:fasila/core/widgets/default_button_widget.dart';
+import 'package:fasila/features/my_planet/data/my_planet_data.dart';
 import 'package:fasila/features/my_planet/presentation/view/widgets/my_planet_filter_buttons_widget.dart';
 import 'package:fasila/features/my_planet/presentation/view/widgets/my_planet_item_widget.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
@@ -30,12 +31,12 @@ class FavoritePlanetContent extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height / 1.6,
                 child: ListView.separated(
-                  itemBuilder: (context, index) => Padding(
+                  itemBuilder: (context, index) {
+                    final item = myPlanetData[all]![index];
+                    return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: MyPlanetItemWidget(
-                      image: images[index],
-                      title: "title",
-                      type: "fruits",
+                      myPlanetModel: item,
                       button: DefaultButtonWidget(
                         height: 30,
                         style: AppStyles.textStyle12White(
@@ -45,7 +46,8 @@ class FavoritePlanetContent extends StatelessWidget {
                         onPressed: () {},
                       ),
                     ),
-                  ),
+                  );
+                  },
                   separatorBuilder: (context, index) =>
                       const SizedBox(height: 10),
                   itemCount: images.length,

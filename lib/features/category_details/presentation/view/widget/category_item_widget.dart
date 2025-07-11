@@ -6,20 +6,14 @@ import 'package:fasila/features/my_planet/data/models/my_planet_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class MyPlanetItemWidget extends StatelessWidget {
-  const MyPlanetItemWidget({
-    super.key,
-    required this.myPlanetModel,
-    this.button,
-  });
+class CategoryItemWidget extends StatelessWidget {
+  const CategoryItemWidget({super.key, required this.myPlanetModel});
   final MyPlanetModel myPlanetModel;
-  final Widget? button;
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kPlanetDetailsView);
+        GoRouter.of(context).push(AppRouter.kCategoryDetailsView);
       },
       child: Container(
         padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),
@@ -46,28 +40,25 @@ class MyPlanetItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+                  Text(
+                    myPlanetModel.title,
+                    style: AppStyles.textStyle16Teal(context),
+                  ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(myPlanetModel.title, style: AppStyles.textStyle16Teal(context)),
-
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.favorite_border,
-                            color: context.appColors.teal,
-                          ),
-                          Icon(
-                            Icons.share_rounded,
-                            color: context.appColors.teal,
-                          ),
-                        ],
+                      Text(
+                        myPlanetModel.type,
+                        style: AppStyles.textStyle18(context),
+                      ),
+                      Icon(
+                        Icons.keyboard_arrow_right,
+                        color: context.appColors.teal,
                       ),
                     ],
                   ),
-                  Text(myPlanetModel.type, style: AppStyles.textStyle18(context)),
-
-                  button ?? SizedBox(),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),

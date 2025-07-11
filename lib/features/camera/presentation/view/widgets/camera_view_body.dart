@@ -16,7 +16,7 @@ class CameraViewBody extends StatelessWidget {
         if (state is CameraUpdated) {
           imagePath = state.imagePath;
         }
-        print(imagePath);
+        
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
