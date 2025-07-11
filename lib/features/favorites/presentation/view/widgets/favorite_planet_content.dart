@@ -15,10 +15,10 @@ class FavoritePlanetContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> images = [
-      AppImages.myPlanet1Image,
-      AppImages.myPlanet2Image,
-      AppImages.myPlanet3Image,
-      AppImages.myPlanet4Image,
+      AppImages.myPlanetFruit1Image,
+      AppImages.myPlanetVegetable1Image,
+      AppImages.myPlanetVegetable2Image,
+      AppImages.myPlanetVegetable3Image,
     ];
     return images.isNotEmpty
         ? Column(
@@ -34,19 +34,19 @@ class FavoritePlanetContent extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final item = myPlanetData[all]![index];
                     return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: MyPlanetItemWidget(
-                      myPlanetModel: item,
-                      button: DefaultButtonWidget(
-                        height: 30,
-                        style: AppStyles.textStyle12White(
-                          context,
-                        ).copyWith(fontWeight: FontWeight.bold),
-                        text: "Add To My Garden",
-                        onPressed: () {},
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: MyPlanetItemWidget(
+                        myPlanetModel: item,
+                        button: DefaultButtonWidget(
+                          height: 30,
+                          style: AppStyles.textStyle12White(
+                            context,
+                          ).copyWith(fontWeight: FontWeight.bold),
+                          text: "Add To My Garden",
+                          onPressed: () {},
+                        ),
                       ),
-                    ),
-                  );
+                    );
                   },
                   separatorBuilder: (context, index) =>
                       const SizedBox(height: 10),

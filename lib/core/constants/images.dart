@@ -41,15 +41,62 @@ class AppImages {
       'https://drive.google.com/uc?export=view&id=1ofW-VN6e6mivwLOBvItBqEADHxyXhwKb';
   static const String fillteroImage = 'assets/filler.svg';
 
-  static const String myPlanet1Image =
-      'https://drive.google.com/uc?export=view&id=1xI4G60GdDd9KPWgel2Rgi9Jul3B5QM0m';
-  static const String myPlanet2Image =
-      'https://drive.google.com/uc?export=view&id=1Vd1dF8-3I2zbH3uNY0epwokFKeQI8IYn';
-  static const String myPlanet3Image =
-      'https://drive.google.com/uc?export=view&id=134TCZYZqd22JVlDl4kC1uBk1KsxVNyQT';
-  static const String myPlanet4Image =
-      'https://drive.google.com/uc?export=view&id=1eqPBBqnqPXPb7bAld3fWodB82l-YDgPl';
+  // My Planet Section
+  static const String myPlanetFruit1Image =
+      'https://drive.google.com/uc?export=view&id=12eqSKytxbyBST1pZks82Jviq3yk4w-QW';
+  static const String myPlanetFruit2Image =
+      'https://drive.google.com/uc?export=view&id=1WownRWLe-t5FHMa5QzNee-i_aWGKXbbp';
+  static const String myPlanetFruit3Image =
+      'https://drive.google.com/uc?export=view&id=1RrFm9uO9R7YvEi1GaLRW36knwchhkaFA';
+  static const String myPlanetFruit4Image =
+      'https://drive.google.com/uc?export=view&id=1kSl7bFPRCSe6FmtLA1o6UiV-vpCiAgb6';
+  static const String myPlanetFruit5Image =
+      'https://drive.google.com/uc?export=view&id=1Pto_PcGQwm5UWVx7Nga3KkL_5RL8XtoN';
+  static const String myPlanetFruit6Image =
+      'https://drive.google.com/uc?export=view&id=1tpWtWTl7bMSRrlhuo3ingJKCLD2jV9EF';
+  static const String myPlanetFruit7Image =
+      'https://drive.google.com/uc?export=view&id=1cF8Ae-9s7Dv3T2rub-YR_m68QWUTRgqk';
 
+  static const String myPlanetVegetable1Image =
+      'https://drive.google.com/uc?export=view&id=1qyrnec7Al_hurCjlRr4T4yz8JK3Pw7ts';
+  static const String myPlanetVegetable2Image =
+      'https://drive.google.com/uc?export=view&id=1iGts6qa9Uid8b42yiXjuWAB49PD5CiH6';
+  static const String myPlanetVegetable3Image =
+      'https://drive.google.com/uc?export=view&id=1VhfstszfXgGVhKQsp2zGNt0iA8kdO5m-';
+  static const String myPlanetVegetable4Image =
+      'https://drive.google.com/uc?export=view&id=1y70olG1oJU4I62p6w8cuE013GAUV4_6I';
+  static const String myPlanetVegetable5Image =
+      'https://drive.google.com/uc?export=view&id=1iJj1VWVqAAU5_YmaISrGZFQaOJlhJDgE';
+  static const String myPlanetVegetable6Image =
+      'https://drive.google.com/uc?export=view&id=1lJM-LoEeNnn6xrzynvbvs3_bRWH2IZg4';
+  static const String myPlanetVegetable7Image =
+      'https://drive.google.com/uc?export=view&id=1RSmoNowEntxZwRlnXc2ali8gH43bHqu-';
+
+  static const String myPlanetLeavyPlant1Image =
+      'https://drive.google.com/uc?export=view&id=18Bw0uV5ZbkutSaA05ecohWxbbM_P7Z48';
+  static const String myPlanetLeavyPlant2Image =
+      'https://drive.google.com/uc?export=view&id=1jM8BzjVsFecjqMgbyig-LaS1TmA-H6zP';
+  static const String myPlanetLeavyPlant3Image =
+      'https://drive.google.com/uc?export=view&id=1-j6l0wNgMr4Xa5rUidB_PV126ro__T6N';
+  static const String myPlanetLeavyPlant4Image =
+      'https://drive.google.com/uc?export=view&id=13M2ZYaU03ry2PP4Dl66VfdbjHegpC4i2';
+  static const String myPlanetLeavyPlant5Image =
+      'https://drive.google.com/uc?export=view&id=1nknF6QAf-rKwlrF-z4yC65g3KoFyEs3l';
+  static const String myPlanetLeavyPlant6Image =
+      'https://drive.google.com/uc?export=view&id=1NSpOfEI23BQ92Q2oUZ-hGSRMrFN7T60S';
+
+  static const String myPlanetOrnamental1Image =
+      'https://drive.google.com/uc?export=view&id=1uihuLmOnJfcnd1r4jTmoG-w3p2tG9fDJ';
+  static const String myPlanetOrnamental2Image =
+      'https://drive.google.com/uc?export=view&id=160tBNL3hPHUvslFsojcQfYnRP8dQSH9P';
+  static const String myPlanetOrnamental3Image =
+      'https://drive.google.com/uc?export=view&id=12tz-DZ75Y2ZU1C6Qv3kW6zBUqDIOBHzu';
+  static const String myPlanetOrnamental4Image =
+      'https://drive.google.com/uc?export=view&id=1PEBE-rQfMkwVWxujMcEjNOUXsnGzHBLv';
+  static const String myPlanetOrnamental5Image =
+      'https://drive.google.com/uc?export=view&id=1YsSplvmY4akiXVSZEWsEGwa1Uu4Z_s1G';
+
+  /// Camer Section
   static const String camera1Image =
       'https://drive.google.com/uc?export=view&id=1AFyehcXMz2g2hri2J4Ya5005yOmmd_F3';
   static const String camera2Image =

@@ -9,7 +9,7 @@ class ImagePlanetDetailsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
-      child: CachedNetworkImage(imageUrl: AppImages.myPlanet1Image),
+      child: CachedNetworkImage(imageUrl: AppImages.myPlanetFruit1Image),
     );
   }
 }

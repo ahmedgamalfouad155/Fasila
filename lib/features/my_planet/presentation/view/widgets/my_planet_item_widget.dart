@@ -39,7 +39,27 @@ class MyPlanetItemWidget extends StatelessWidget {
         ),
         child: Row(
           children: [
-            CachedNetworkImage(imageUrl: myPlanetModel.image),
+            Container(
+              width: MediaQuery.of(context).size.width / 4,
+              height: MediaQuery.of(context).size.width / 4,
+              decoration: BoxDecoration(
+                color: context.appColors.white,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: context.appColors.teal, width: 1),
+                boxShadow: [
+                  BoxShadow(
+                    color: context.appColors.grey,
+                    blurRadius: 6,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: CachedNetworkImage(imageUrl: myPlanetModel.image),
+              ),
+            ),
             const SizedBox(width: 10),
             Expanded(
               child: Column(
@@ -49,7 +69,10 @@ class MyPlanetItemWidget extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(myPlanetModel.title, style: AppStyles.textStyle16Teal(context)),
+                      Text(
+                        myPlanetModel.title,
+                        style: AppStyles.textStyle16Teal(context),
+                      ),
 
                       Row(
                         children: [
@@ -65,7 +88,10 @@ class MyPlanetItemWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Text(myPlanetModel.type, style: AppStyles.textStyle18(context)),
+                  Text(
+                    myPlanetModel.type,
+                    style: AppStyles.textStyle18(context),
+                  ),
 
                   button ?? SizedBox(),
                 ],
