@@ -23,9 +23,9 @@ class MyPlanetFilterButtonsWidget extends StatelessWidget {
         color: context.appColors.white,
         boxShadow: [
           BoxShadow(
-            color: context.appColors.grey,
-            blurRadius: 6,
-            offset: const Offset(0, 1),
+            color: context.appColors.grey.withAlpha((0.4 * 255).toInt()),
+            blurRadius: 2,
+            offset: const Offset(0, 3),
           ),
         ],
       ),
@@ -33,45 +33,42 @@ class MyPlanetFilterButtonsWidget extends StatelessWidget {
         builder: (context, selectedIndex) {
           return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Row(
-                children: List.generate(filters.length, (index) {
-                  final isSelected = selectedIndex == index;
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    child: InkWell(
-                      onTap: () {
-                        context.read<FilterCubit>().changeFilter(index);
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 6,
-                        ),
-                        decoration: BoxDecoration(
-                          color: isSelected
-                              ? context.appColors.teal
-                              : context.appColors.offWhite,
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(
-                            color: context.appColors.teal,
-                            width: 1.2,
-                          ),
-                        ),
-                        child: Text(
-                          filters[index],
-                          style: isSelected
-                              ? AppStyles.textStyle14(
-                                  context,
-                                ).copyWith(color: context.appColors.white)
-                              : AppStyles.textStyle14(context),
+            child: Row(
+              children: List.generate(filters.length, (index) {
+                final isSelected = selectedIndex == index;
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: InkWell(
+                    onTap: () {
+                      context.read<FilterCubit>().changeFilter(index);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 6,
+                      ),
+                      decoration: BoxDecoration(
+                        color: isSelected
+                            ? context.appColors.teal
+                            : context.appColors.offWhite,
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(
+                          color: context.appColors.teal,
+                          width: 1.2,
                         ),
                       ),
+                      child: Text(
+                        filters[index],
+                        style: isSelected
+                            ? AppStyles.textStyle14(
+                                context,
+                              ).copyWith(color: context.appColors.white)
+                            : AppStyles.textStyle14(context),
+                      ),
                     ),
-                  );
-                }),
-              ),
+                  ),
+                );
+              }),
             ),
           );
         },

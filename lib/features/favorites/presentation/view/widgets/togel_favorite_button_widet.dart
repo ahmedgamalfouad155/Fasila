@@ -1,5 +1,5 @@
 import 'package:fasila/core/theme/colors.dart';
-import 'package:fasila/features/favorites/presentation/manager/favorite_togel_cubit.dart'; 
+import 'package:fasila/features/favorites/presentation/manager/favorite_togel_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,7 +24,7 @@ class TogelFavoriteButtonWidet extends StatelessWidget {
         selectedColor: context.appColors.white,
         color: context.appColors.black,
         fillColor: context.appColors.teal,
-        borderColor: context.appColors.grey,
+        borderColor: context.appColors.teal,
         selectedBorderColor: context.appColors.teal,
         constraints: const BoxConstraints(minHeight: 40, minWidth: 140),
         children: const [Text('Plants'), Text('Products')],

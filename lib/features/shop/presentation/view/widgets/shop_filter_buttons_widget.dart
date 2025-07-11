@@ -25,9 +25,9 @@ class ShopFilterButtonsWidget extends StatelessWidget {
         color: context.appColors.white,
         boxShadow: [
           BoxShadow(
-            color: context.appColors.grey,
-            blurRadius: 6,
-            offset: const Offset(0, 1),
+            color: context.appColors.grey.withAlpha((0.4 * 255).toInt()),
+            blurRadius: 2,
+            offset: const Offset(0, 3),
           ),
         ],
       ),

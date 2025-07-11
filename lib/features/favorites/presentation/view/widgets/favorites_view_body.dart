@@ -12,17 +12,20 @@ class FavoritesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => FavoriteTogelCubit(),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            TogelFavoriteButtonWidet(),
-            const SizedBox(height: 10),
-            Divider(color: context.appColors.teal, thickness: 2, height: 0),
-            const SizedBox(height: 10),
-            FavoriteDetailsTogelContent(),
-          ],
-        ),
+      child: Column(
+        children: [
+          TogelFavoriteButtonWidet(),
+          const SizedBox(height: 10),
+          Divider(
+            color: context.appColors.teal,
+            thickness: 2,
+            height: 0,
+            endIndent: 20,
+            indent: 20,
+          ),
+          const SizedBox(height: 10),
+          FavoriteDetailsTogelContent(),
+        ],
       ),
     );
   }

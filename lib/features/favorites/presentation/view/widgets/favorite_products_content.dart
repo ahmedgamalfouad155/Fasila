@@ -12,10 +12,10 @@ class FavoriteProductsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> images = [
-      // AppImages.shop1Image,
-      // AppImages.shop2Image,
-      // AppImages.shop3Image,
-      // AppImages.shop4Image,
+      AppImages.shop1Image,
+      AppImages.shop2Image,
+      AppImages.shop3Image,
+      AppImages.shop4Image,
     ];
     return images.isNotEmpty
         ? Column(
@@ -24,14 +24,17 @@ class FavoriteProductsContent extends StatelessWidget {
                 create: (_) => FilterCubit(),
                 child: ShopFilterButtonsWidget(),
               ),
-              const SizedBox(height: 5),
+              const SizedBox(height: 10),
               SizedBox(
                 height: MediaQuery.of(context).size.height / 1.6,
                 child: ListView.separated(
-                  itemBuilder: (context, index) => ProductItemWidget(
-                    image: images[index],
-                    title: 'Zalaah',
-                    price: 'EGP 90.00',
+                  itemBuilder: (context, index) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: ProductItemWidget(
+                      image: images[index],
+                      title: 'Zalaah',
+                      price: 'EGP 90.00',
+                    ),
                   ),
                   separatorBuilder: (context, index) =>
                       const SizedBox(height: 10),

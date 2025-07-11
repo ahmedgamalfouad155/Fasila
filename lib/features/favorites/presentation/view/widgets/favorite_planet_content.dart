@@ -26,11 +26,13 @@ class FavoritePlanetContent extends StatelessWidget {
                 create: (context) => FilterCubit(),
                 child: MyPlanetFilterButtonsWidget(),
               ),
+              const SizedBox(height: 20),
               SizedBox(
-                height: MediaQuery.of(context).size.height / 1.4,
-                child: Expanded(
-                  child: ListView.separated(
-                    itemBuilder: (context, index) => MyPlanetItemWidget(
+                height: MediaQuery.of(context).size.height / 1.6,
+                child: ListView.separated(
+                  itemBuilder: (context, index) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: MyPlanetItemWidget(
                       image: images[index],
                       title: "title",
                       type: "fruits",
@@ -43,10 +45,10 @@ class FavoritePlanetContent extends StatelessWidget {
                         onPressed: () {},
                       ),
                     ),
-                    separatorBuilder: (context, index) =>
-                        const SizedBox(height: 10),
-                    itemCount: images.length,
                   ),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(height: 10),
+                  itemCount: images.length,
                 ),
               ),
             ],
