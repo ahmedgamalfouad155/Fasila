@@ -26,7 +26,7 @@ class ContentScaneWidget extends StatelessWidget {
       child: Row(
         children: [
           imagePath != null
-              ? Image.file(File(imagePath!), height: 50)
+              ? Image.file(File(imagePath!), height: 70)
               : Image.asset(AppImages.logoImage),
           const SizedBox(width: 10),
           Expanded(

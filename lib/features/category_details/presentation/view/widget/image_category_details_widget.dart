@@ -35,7 +35,8 @@ class ImageCategoryDetailsWidget extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: CachedNetworkImage(
-                imageUrl: AppImages.myPlanetFruit1Image,
+                imageUrl: AppImages.tomatoImage,
+                fit: BoxFit.cover,
               ),
             ),
           ),

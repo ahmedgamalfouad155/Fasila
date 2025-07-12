@@ -13,28 +13,39 @@ class CategoryDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 10, left: 8, right: 8),
-        child: Column(
-          children: [
-            ImageCategoryDetailsWidget(),
-            const SizedBox(height: 10),
-            DescriptionCategoryDetailsWidget(),
-            const SizedBox(height: 10),
-            DetailsOptionWidget(),
-            const SizedBox(height: 10),
-            BlocProvider(
-              create: (context) => FilterCubit(),
-              child: PlanetGuideButtonTogelWidget(),
-            ),
-            const SizedBox(height: 10),
-            DefaultButtonWidget(
-              text: "Add to my garden",
-              onPressed: () {},
-              icon: Icon(Icons.add, color: context.appColors.white),
-            ),
-          ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 8, right: 8),
+      child: Scaffold(
+        bottomNavigationBar: DefaultButtonWidget(
+          text: "Add to my garden",
+          onPressed: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                behavior: SnackBarBehavior.floating,
+                duration: Duration(seconds: 1),
+                content: Text('Added to my garden'),
+                backgroundColor: context.appColors.teal,
+              ),
+            );
+          },
+          icon: Icon(Icons.add, color: context.appColors.white),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              ImageCategoryDetailsWidget(),
+              const SizedBox(height: 10),
+              DescriptionCategoryDetailsWidget(),
+              const SizedBox(height: 10),
+              DetailsOptionWidget(),
+              const SizedBox(height: 10),
+              BlocProvider(
+                create: (context) => FilterCubit(),
+                child: PlanetGuideButtonTogelWidget(),
+              ),
+              const SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );

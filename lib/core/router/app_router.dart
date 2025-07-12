@@ -22,6 +22,7 @@ import 'package:fasila/features/planet_details/presentation/view/planet_details_
 import 'package:fasila/features/product_details/presentation/view/product_details_view.dart';
 import 'package:fasila/features/profile/presentation/view/profile_view.dart';
 import 'package:fasila/features/shop/presentation/view/shop_view.dart';
+import 'package:fasila/features/splash/splash._view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -29,6 +30,7 @@ abstract class AppRouter {
   static final _rootNavigatorKey = GlobalKey<NavigatorState>();
   static final _shellNavigatorKey = GlobalKey<NavigatorState>();
 
+  static String kSplashView = '/splashView';
   static String konboardingView = '/onboardingView';
   static String kAuthLandingView = '/authLandingView';
   static String kLogInView = '/logInView';
@@ -57,7 +59,7 @@ abstract class AppRouter {
 
   static final router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: kHomeView,
+    initialLocation: kSplashView,
 
     routes: [
       ShellRoute(
@@ -65,7 +67,7 @@ abstract class AppRouter {
         builder: (context, state, child) {
           return NavBarView(child: child);
         },
-        routes: [
+        routes: [ 
           GoRoute(path: kHomeView, builder: (context, state) => HomeView()),
           GoRoute(path: kShopView, builder: (context, state) => ShopView()),
           GoRoute(path: kCameraView, builder: (context, state) => CameraView()),
@@ -111,7 +113,7 @@ abstract class AppRouter {
           ),
         ],
       ),
-
+      GoRoute(path: kSplashView, builder: (context, state) => SplashView()),
       GoRoute(
         path: konboardingView,
         builder: (context, state) => OnboardingView(),

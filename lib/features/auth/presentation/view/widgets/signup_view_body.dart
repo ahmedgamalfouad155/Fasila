@@ -57,7 +57,7 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 text: 'Sign Up',
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    (context).go(AppRouter.kNavBarView);
+                    (context).go(AppRouter.kHomeView);
                     passwordController.clear();
                     emailController.clear();
                     nameController.clear();

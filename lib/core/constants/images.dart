@@ -41,6 +41,9 @@ class AppImages {
       'https://drive.google.com/uc?export=view&id=1ofW-VN6e6mivwLOBvItBqEADHxyXhwKb';
   static const String fillteroImage = 'assets/filler.svg';
 
+    static const String tomatoImage =
+      'https://drive.google.com/uc?export=view&id=1E3jHYSx86N6_vMS3L3-dFhXbBzbJ59xk'; 
+
   // My Planet Section
   static const String myPlanetFruit1Image =
       'https://drive.google.com/uc?export=view&id=12eqSKytxbyBST1pZks82Jviq3yk4w-QW';

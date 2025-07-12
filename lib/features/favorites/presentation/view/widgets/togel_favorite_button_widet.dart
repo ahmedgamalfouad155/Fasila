@@ -22,7 +22,7 @@ class TogelFavoriteButtonWidet extends StatelessWidget {
         },
         borderRadius: BorderRadius.circular(10),
         selectedColor: context.appColors.white,
-        color: context.appColors.black,
+        color: context.appColors.teal,
         fillColor: context.appColors.teal,
         borderColor: context.appColors.teal,
         selectedBorderColor: context.appColors.teal,

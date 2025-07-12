@@ -28,7 +28,10 @@ class ImagePlanetDetailsWidget extends StatelessWidget {
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(16),
-            child: CachedNetworkImage(imageUrl: AppImages.myPlanetFruit1Image),
+            child: CachedNetworkImage(
+              imageUrl: AppImages.tomatoImage,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         ShareAndFavoriteWidget(icon: Icons.more_vert),

@@ -3,8 +3,8 @@ import 'package:fasila/features/my_planet/data/my_planet_data.dart';
 import 'package:flutter/material.dart';
 
 class ListOfCateroriesItemsWidget extends StatelessWidget {
-  const ListOfCateroriesItemsWidget({super.key, this.category});
-  final String? category;
+  const ListOfCateroriesItemsWidget({super.key,required this.category});
+  final String category;
 
   @override
   Widget build(BuildContext context) {

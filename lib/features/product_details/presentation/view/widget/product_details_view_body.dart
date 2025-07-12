@@ -9,16 +9,18 @@ class ProductDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            ImageAndDescriptionDetailsWidget(),
-            const SizedBox(height: 10),
-            LastesProductWidget(),
-            const SizedBox(height: 10),
-            AddToCartButtonAndQtyWidget(),
-          ],
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Scaffold(
+        bottomNavigationBar: AddToCartButtonAndQtyWidget(),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              ImageAndDescriptionDetailsWidget(),
+              const SizedBox(height: 10),
+              LastesProductWidget(),
+              const SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );

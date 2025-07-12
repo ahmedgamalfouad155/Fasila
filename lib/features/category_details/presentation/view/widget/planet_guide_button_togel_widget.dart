@@ -33,6 +33,7 @@ class PlanetGuideButtonTogelWidget extends StatelessWidget {
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: List.generate(filters.length, (index) {
                     final isSelected = selectedIndex == index;
                     return Padding(
@@ -42,10 +43,8 @@ class PlanetGuideButtonTogelWidget extends StatelessWidget {
                           context.read<FilterCubit>().changeFilter(index);
                         },
                         child: Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 6,
-                          ),
+                          width: MediaQuery.of(context).size.width / 4,
+                          padding: const EdgeInsets.symmetric(vertical: 6),
                           decoration: BoxDecoration(
                             color: isSelected
                                 ? context.appColors.teal
@@ -58,11 +57,14 @@ class PlanetGuideButtonTogelWidget extends StatelessWidget {
                           ),
                           child: Text(
                             filters[index],
+                            textAlign: TextAlign.center,
                             style: isSelected
                                 ? AppStyles.textStyle14(
                                     context,
                                   ).copyWith(color: context.appColors.white)
-                                : AppStyles.textStyle14(context),
+                                : AppStyles.textStyle14(
+                                    context,
+                                  ).copyWith(color: context.appColors.teal),
                           ),
                         ),
                       ),

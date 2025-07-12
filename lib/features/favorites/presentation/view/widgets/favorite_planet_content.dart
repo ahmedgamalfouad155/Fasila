@@ -29,7 +29,7 @@ class FavoritePlanetContent extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               SizedBox(
-                height: MediaQuery.of(context).size.height / 1.6,
+                height: MediaQuery.of(context).size.height / 1.75,
                 child: ListView.separated(
                   itemBuilder: (context, index) {
                     final item = myPlanetData[all]![index];

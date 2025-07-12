@@ -54,7 +54,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 text: 'Login',
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    (context).go(AppRouter.kNavBarView);
+                    (context).go(AppRouter.kHomeView);
                     passwordController.clear();
                     emailController.clear();
                   }
