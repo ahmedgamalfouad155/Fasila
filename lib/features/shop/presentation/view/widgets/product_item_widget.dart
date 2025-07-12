@@ -16,6 +16,7 @@ class ProductItemWidget extends StatelessWidget {
     return InkWell(
       onTap: () {
         GoRouter.of(context).push(AppRouter.kProductDetailsView);
+        
       },
       child: Container(
         padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),

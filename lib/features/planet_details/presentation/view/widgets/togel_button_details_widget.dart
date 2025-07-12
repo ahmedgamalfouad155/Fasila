@@ -24,11 +24,11 @@ class TogelButtonDetailsWidget extends StatelessWidget {
         },
         borderRadius: BorderRadius.circular(10),
         selectedColor: context.appColors.white,
-        color: context.appColors.black,
+        color: context.appColors.teal,
         fillColor: context.appColors.teal,
         borderColor: context.appColors.grey,
         selectedBorderColor: context.appColors.teal,
-        constraints: const BoxConstraints(minHeight: 40, minWidth: 140),
+        constraints: const BoxConstraints(minHeight: 40, minWidth: 160),
         children: const [Text('Plant Info'), Text('Reminders')],
       ),
     );

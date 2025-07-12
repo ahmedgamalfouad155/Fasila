@@ -1,7 +1,9 @@
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
+import 'package:fasila/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class GetAdviceWidget extends StatelessWidget {
@@ -11,6 +13,7 @@ class GetAdviceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        context.read<NavBarCubit>().changeIndex(4);
         GoRouter.of(context).push(AppRouter.kContactUsView);
       },
       child: Card(

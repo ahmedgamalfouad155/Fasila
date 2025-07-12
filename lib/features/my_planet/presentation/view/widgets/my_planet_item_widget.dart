@@ -10,10 +10,8 @@ class MyPlanetItemWidget extends StatelessWidget {
   const MyPlanetItemWidget({
     super.key,
     required this.myPlanetModel,
-    this.button,
   });
   final MyPlanetModel myPlanetModel;
-  final Widget? button;
 
   @override
   Widget build(BuildContext context) {
@@ -66,34 +64,25 @@ class MyPlanetItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
+                  Text(
+                    myPlanetModel.title,
+                    style: AppStyles.textStyle16Teal(context),
+                  ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        myPlanetModel.title,
-                        style: AppStyles.textStyle16Teal(context),
+                        myPlanetModel.type,
+                        style: AppStyles.textStyle18(context),
                       ),
-
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.favorite_border,
-                            color: context.appColors.teal,
-                          ),
-                          Icon(
-                            Icons.share_rounded,
-                            color: context.appColors.teal,
-                          ),
-                        ],
+                      Icon(
+                        Icons.keyboard_arrow_right,
+                        color: context.appColors.teal,
                       ),
                     ],
                   ),
-                  Text(
-                    myPlanetModel.type,
-                    style: AppStyles.textStyle18(context),
-                  ),
-
-                  button ?? SizedBox(),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),

@@ -48,7 +48,9 @@ class WeeksTogelWidget extends StatelessWidget {
                               ? AppStyles.textStyle14(
                                   context,
                                 ).copyWith(color: context.appColors.white)
-                              : AppStyles.textStyle14(context),
+                              : AppStyles.textStyle14(
+                                  context,
+                                ).copyWith(color: context.appColors.teal),
                         ),
                         Text(
                           number[index],
@@ -56,7 +58,9 @@ class WeeksTogelWidget extends StatelessWidget {
                               ? AppStyles.textStyle14(
                                   context,
                                 ).copyWith(color: context.appColors.white)
-                              : AppStyles.textStyle14(context),
+                              : AppStyles.textStyle14(
+                                  context,
+                                ).copyWith(color: context.appColors.teal),
                         ),
                       ],
                     ),

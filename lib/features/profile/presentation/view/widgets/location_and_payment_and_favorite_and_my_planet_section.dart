@@ -45,6 +45,7 @@ class LocationAndPaymentAndFavoritAndMyPlanetSection extends StatelessWidget {
             title: 'My Plants',
             onTap: () {
               context.read<NavBarCubit>().changeIndex(3);
+              GoRouter.of(context).push(AppRouter.kMyPlanetView);
             },
           ),
         ),

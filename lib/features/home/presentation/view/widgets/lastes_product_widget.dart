@@ -1,10 +1,12 @@
 import 'package:fasila/core/constants/images.dart';
+import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/home/presentation/view/widgets/home_category_typy_widget.dart';
 import 'package:fasila/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class LastesProductWidget extends StatelessWidget {
   const LastesProductWidget({super.key});
@@ -25,6 +27,7 @@ class LastesProductWidget extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 context.read<NavBarCubit>().changeIndex(1);
+                context.go(AppRouter.kShopView);
               },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

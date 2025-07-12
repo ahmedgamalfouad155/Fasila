@@ -2,9 +2,9 @@ import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_emty_page_widget.dart';
 import 'package:fasila/core/widgets/default_button_widget.dart';
+import 'package:fasila/features/category_details/presentation/view/widget/category_item_widget.dart';
 import 'package:fasila/features/my_planet/data/my_planet_data.dart';
 import 'package:fasila/features/my_planet/presentation/view/widgets/my_planet_filter_buttons_widget.dart';
-import 'package:fasila/features/my_planet/presentation/view/widgets/my_planet_item_widget.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,7 +35,7 @@ class FavoritePlanetContent extends StatelessWidget {
                     final item = myPlanetData[all]![index];
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: MyPlanetItemWidget(
+                      child: CategoryItemWidget(
                         myPlanetModel: item,
                         button: DefaultButtonWidget(
                           height: 30,

@@ -22,8 +22,8 @@ class HomeCategoryTypeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        GoRouter.of(context).push(AppRouter.kCategoryView);
+      onTap: () { 
+        context.go(AppRouter.kCategoryView);
       },
       child: Column(
         children: [
