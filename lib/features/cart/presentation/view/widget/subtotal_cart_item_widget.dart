@@ -29,11 +29,11 @@ class SubtotalCartItemsWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Subtotal(3 Items)', style: AppStyles.textStyle16Teal(context)),
-          SubtotalOptionContentWidget(title: 'Products ', price: 'EGP 550.00'),
+          Text('Subtotal(1 Items)', style: AppStyles.textStyle16Teal(context)),
+          SubtotalOptionContentWidget(title: 'Products ', price: 'EGP 249.00'),
           SubtotalOptionContentWidget(title: 'Delivery ', price: 'EGP 50.00'),
           Divider(color: context.appColors.teal, thickness: 1, height: 1),
-          SubtotalOptionContentWidget(title: 'Total ', price: 'EGP 600.00'),
+          SubtotalOptionContentWidget(title: 'Total ', price: 'EGP 299.00'),
         ],
       ),
     );

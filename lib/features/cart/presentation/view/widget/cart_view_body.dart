@@ -10,13 +10,17 @@ class CartViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(child: ListOfCartItemsWidget()),
-          SliverToBoxAdapter(child: SubtotalCartItemsWidget()),
-          SliverToBoxAdapter(child: CheckoutAndAddProductButtonsWidget()),
-        ],
-        // slivers: (
+      child: Scaffold(
+        bottomNavigationBar: CheckoutAndAddProductButtonsWidget(),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              ListOfCartItemsWidget(),
+              const SizedBox(height: 10),
+              SubtotalCartItemsWidget(),
+            ],
+          ),
+        ),
       ),
     );
   }

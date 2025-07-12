@@ -12,11 +12,11 @@ class ListOfCartItemsWidget extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) => CartItemWidget(
         image: AppImages.lastest1Image,
-        title: 'title',
-        price: 'price',
+        title: 'Agriuculture tools',
+        price: '249.00 EGP',
       ),
       separatorBuilder: (context, index) => const SizedBox(height: 10),
-      itemCount: 4,
+      itemCount: 1,
     );
   }
 }

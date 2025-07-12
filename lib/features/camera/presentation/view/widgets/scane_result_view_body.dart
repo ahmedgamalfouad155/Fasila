@@ -1,4 +1,4 @@
-import 'package:fasila/core/constants/images.dart';
+import 'dart:io';
 import 'package:fasila/features/camera/presentation/manager/tmvtab_cubit/tmvtab_cubit.dart';
 import 'package:fasila/features/camera/presentation/view/widgets/tmv_content_widget.dart';
 import 'package:fasila/features/camera/presentation/view/widgets/toggle_buttons_widget.dart';
@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ScaneResultViewBody extends StatelessWidget {
-  const ScaneResultViewBody({super.key});
+  const ScaneResultViewBody({super.key, required this.imagePath});
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -16,17 +17,20 @@ class ScaneResultViewBody extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                AppImages.scaneResultImage,
-                fit: BoxFit.cover,
-                width: MediaQuery.of(context).size.width,
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 3.5,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.file(
+                  File(imagePath),
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width,
+                ),
               ),
             ),
-            const SizedBox(height: 16), 
+            const SizedBox(height: 16),
             const ToggleButtonsWidget(),
-            const SizedBox(height: 20), 
+            const SizedBox(height: 20),
             const Expanded(child: SingleChildScrollView(child: TMVContent())),
           ],
         ),

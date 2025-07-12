@@ -51,7 +51,9 @@ class ContentScaneWidget extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              GoRouter.of(context).push(AppRouter.kScaneResultView);
+              GoRouter.of(
+                context,
+              ).push(AppRouter.kScaneResultView, extra: imagePath);
             },
             child: CircleAvatar(
               radius: 15,

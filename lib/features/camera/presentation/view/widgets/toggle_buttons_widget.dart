@@ -19,8 +19,8 @@ class ToggleButtonsWidget extends StatelessWidget {
           cubit.selectTab(index == 0 ? TMVTab.about : TMVTab.healthCare);
         },
         borderRadius: BorderRadius.circular(24),
-        selectedColor:context.appColors.white,
-        color: context.appColors.black,
+        selectedColor: context.appColors.white,
+        color: context.appColors.teal,
         fillColor: context.appColors.teal,
         borderColor: context.appColors.grey,
         selectedBorderColor: context.appColors.teal,
