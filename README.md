@@ -1,16 +1,65 @@
-# fasila
+# 🌿 Fasila - Smart Gardening App
 
-A new Flutter project.
 
-## Getting Started
+## 📽️ Demo
+### 📱 Mobile Version:
+[🔗 Click here to watch the demo video](https://drive.google.com/file/d/1sU7QVmWZyRIJzjpO3UJnSe69zyKxZSbf/view?usp=sharing)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Overview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Fasila** is a smart gardening assistant that helps users grow their favorite plants with confidence and ease. Whether you're a beginner or a seasoned gardener, Fasila provides all the necessary guidance for successful plant care. The app offers localized, educational, and user-friendly features to make gardening accessible for everyone.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🌱 Features
+
+### 🔐 Authentication
+- Simple and clean authentication flow (Sign up / Login).
+- Designed to integrate Firebase in future releases.
+
+### 🪴 Plant Guide & Tracking
+- Browse a wide variety of plants with detailed information:
+  - Required temperature 🌡️
+  - Ideal humidity 💧
+  - Watering schedule 🕒
+- Add your plant to the **"My Plants"** section and receive personalized care instructions.
+- Set **reminders** to stay on top of your plant care routine.
+
+### 🛒 E-commerce Shop
+- Built-in **agricultural tools store** to buy planting supplies.
+- Products are organized by category for easier browsing.
+- Supports two methods for entering shipping address:
+  - Manual entry 📝
+  - Google Maps location picker 📍
+
+### ❤️ Favorites & Cart
+- Add your favorite **plants** and **products** to the favorites list.
+- Add products to your **cart** and proceed to checkout when ready.
+
+---
+
+## 🧠 Tech Stack
+
+- **Flutter**
+- **State Management:** Cubit (Bloc)
+- **Architecture:** MVVM (Model-View-ViewModel)
+- **Local Data Only** (Future plan to integrate Firebase for real-time data and cloud sync)
+- **Responsive UI** with clean modular code
+- **Google Maps Integration** for address selection
+
+---
+
+## 🚧 Roadmap
+
+- [ ] Integrate **Firebase Authentication**
+- [ ] Connect to **Firebase Firestore** for real-time plant data
+- [ ] Add **push notifications** for plant care reminders
+- [ ] Implement **payment gateway** for e-commerce
+- [ ] Improve accessibility & localization (multi-language support)
+
+---
+
+## 📂 Repository Structure
+
