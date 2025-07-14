@@ -9,7 +9,12 @@
 
 ## 📱 Overview
 
-**Fasila** is a smart gardening assistant that helps users grow their favorite plants with confidence and ease. Whether you're a beginner or a seasoned gardener, Fasila provides all the necessary guidance for successful plant care. The app offers localized, educational, and user-friendly features to make gardening accessible for everyone.
+Fasila is a smart gardening assistant that helps users grow their favorite plants with confidence and ease. Whether you're a beginner or a seasoned gardener, Fasila provides all the necessary guidance for successful plant care — including information about ideal temperature, humidity, and watering schedules for each plant.
+
+In addition to plant care features, Fasila includes a built-in agricultural **e-commerce store** where users can browse, favorite, and purchase farming tools and supplies. Products are categorized for easier navigation, and users can add items to their cart and choose their delivery address either manually or via Google Maps.
+
+Fasila combines education, guidance, and shopping in one place — making gardening smarter, simpler, and more accessible than ever.
+
 
 ---
 
