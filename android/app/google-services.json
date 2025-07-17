@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "296333495392",
+    "project_id": "fasila-b42dc",
+    "storage_bucket": "fasila-b42dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296333495392:android:b4bd10b5a79aa3ef7c0705",
+        "android_client_info": {
+          "package_name": "com.example.fasila"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa7ugcsEwV2KC7pCUUoFDGg8rZ0VQfUOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
