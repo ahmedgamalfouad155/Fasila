@@ -14,7 +14,9 @@ class CategoryItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kCategoryDetailsView);
+        GoRouter.of(
+          context,
+        ).push(AppRouter.kCategoryDetailsView, extra: planetModel);
       },
       child: Container(
         padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),

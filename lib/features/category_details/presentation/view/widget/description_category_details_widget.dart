@@ -1,9 +1,14 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionCategoryDetailsWidget extends StatelessWidget {
-  const DescriptionCategoryDetailsWidget({super.key});
+  const DescriptionCategoryDetailsWidget({
+    super.key,
+    required this.planetModel,
+  });
+  final PlanetModel planetModel;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +33,7 @@ class DescriptionCategoryDetailsWidget extends StatelessWidget {
           const SizedBox(width: 10),
           Expanded(
             child: Text(
-              'Tomatoes are red, juicy fruits rich in vitamins and antioxidants.',
+              planetModel.description,
               style: AppStyles.textStyle14(
                 context,
               ).copyWith(color: context.appColors.grey),

@@ -5,6 +5,7 @@ import 'package:fasila/features/auth/presentation/view/signup_view.dart';
 import 'package:fasila/features/camera/presentation/view/camera_view.dart';
 import 'package:fasila/features/camera/presentation/view/scane_result_view.dart';
 import 'package:fasila/features/cart/presentation/view/cart_view.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/category_details/presentation/view/category_datails_view.dart';
 import 'package:fasila/features/category_details/presentation/view/category_view.dart';
 import 'package:fasila/features/contact_us/presentation/view/contact_us_view.dart';
@@ -103,7 +104,11 @@ abstract class AppRouter {
           ),
           GoRoute(
             path: kCategoryDetailsView,
-            builder: (context, state) => CategoryDatailsView(),
+            
+            builder: (context, state) {
+               state.extra as PlanetModel;
+              return CategoryDatailsView();
+            },
           ),
           GoRoute(
             path: kPlanetDetailsView,

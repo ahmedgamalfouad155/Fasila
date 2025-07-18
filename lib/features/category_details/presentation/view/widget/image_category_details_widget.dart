@@ -1,12 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/share_and_favorite_widget.dart';
 import 'package:flutter/material.dart';
 
 class ImageCategoryDetailsWidget extends StatelessWidget {
-  const ImageCategoryDetailsWidget({super.key});
+  const ImageCategoryDetailsWidget({super.key, required this.planetModel});
+  final PlanetModel planetModel;
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +36,8 @@ class ImageCategoryDetailsWidget extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: CachedNetworkImage(
-                imageUrl: AppImages.tomatoImage,
-                fit: BoxFit.cover,
+                imageUrl: planetModel.imageUrl,
+                // fit: BoxFit.cover,
               ),
             ),
           ),
@@ -52,7 +53,7 @@ class ImageCategoryDetailsWidget extends StatelessWidget {
                 border: Border.all(color: context.appColors.teal, width: 1),
               ),
               child: Text(
-                "Tomato",
+                planetModel.name,
                 style: AppStyles.textStyle14(context).copyWith(
                   color: context.appColors.teal,
                   fontWeight: FontWeight.bold,
