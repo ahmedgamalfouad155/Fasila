@@ -15,7 +15,7 @@ class CategoryFilterContentWidget extends StatelessWidget {
           case 0:
             return const ListOfCateroriesItemsWidget(category: all);
           case 1:
-            return const ListOfCateroriesItemsWidget(category: vegetable );
+            return const ListOfCateroriesItemsWidget(category: vegetable);
           case 2:
             return const ListOfCateroriesItemsWidget(category: fruits);
           case 3:

@@ -1,5 +1,3 @@
-
-
 import 'package:fasila/features/category_details/data/services/planet_services.dart';
 import 'package:fasila/features/category_details/data/services/planet_services_impl.dart';
 import 'package:fasila/features/category_details/presentation/manager/planets_cubit/planets_state.dart';
@@ -10,10 +8,22 @@ class PlanetsCubit extends Cubit<PlanetsState> {
 
   final PlanetServices planetServices = PlanetServicesImpl();
 
-  void getPlanets({required String categoryName}) async {
+  void getAllPlanets() async {
     emit(PlanetsLoadingState());
     try {
-      final planets = await planetServices.getPlanets(categoryName);
+      final planets = await planetServices.getAllPlanets();
+      emit(PlanetsSuccessState(planets));
+    } catch (e) {
+      emit(PlanetsFailedState(e.toString()));
+    }
+  }
+
+  void getCategoryPlanets({required String categoryName}) async {
+    emit(PlanetsLoadingState());
+    try {
+      final planets = await planetServices.getPlanetsDependedOnCategoryName(
+        categoryName,
+      );
       emit(PlanetsSuccessState(planets));
     } catch (e) {
       emit(PlanetsFailedState(e.toString()));

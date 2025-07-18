@@ -6,12 +6,21 @@ import 'package:fasila/features/category_details/data/services/planet_services.d
 class PlanetServicesImpl implements PlanetServices {
   final firestor = FirestoreServices.instance;
 
+    @override
+  Future<List<PlanetModel>> getAllPlanets()async => await firestor.getCollection(
+    path: FirestorePath.planets(),
+    builder: (data, documentId) => PlanetModel.fromMap(data, documentId),
+  );
+  
+
   @override
-  Future<List<PlanetModel>> getPlanets(String categoryName) async =>
-      await firestor.getCollection(
-        path: FirestorePath.planets(),
-        builder: (data, documentId) => PlanetModel.fromMap(data, documentId),
-        queryBuilder: (query) =>
-            query.where('category', isEqualTo: categoryName),
-      );
+  Future<List<PlanetModel>> getPlanetsDependedOnCategoryName(
+    String categoryName,
+  ) async => await firestor.getCollection(
+    path: FirestorePath.planets(),
+    builder: (data, documentId) => PlanetModel.fromMap(data, documentId),
+    queryBuilder: (query) => query.where('category', isEqualTo: categoryName),
+  );
+  
+
 }

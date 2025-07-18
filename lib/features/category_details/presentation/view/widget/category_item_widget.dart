@@ -2,17 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
-import 'package:fasila/features/my_planet/data/models/my_planet_model.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CategoryItemWidget extends StatelessWidget {
-  const CategoryItemWidget({
-    super.key,
-    required this.myPlanetModel,
-    this.button,
-  });
-  final MyPlanetModel myPlanetModel;
+  const CategoryItemWidget({super.key, required this.planetModel, this.button});
+  final PlanetModel planetModel;
   final Widget? button;
   @override
   Widget build(BuildContext context) {
@@ -55,7 +51,7 @@ class CategoryItemWidget extends StatelessWidget {
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
-                child: CachedNetworkImage(imageUrl: myPlanetModel.image),
+                child: CachedNetworkImage(imageUrl: planetModel.imageUrl),
               ),
             ),
             const SizedBox(width: 10),
@@ -68,7 +64,7 @@ class CategoryItemWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        myPlanetModel.title,
+                        planetModel.name,
                         style: AppStyles.textStyle16Teal(context),
                       ),
 
@@ -87,7 +83,7 @@ class CategoryItemWidget extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    myPlanetModel.type,
+                    planetModel.category,
                     style: AppStyles.textStyle18(context),
                   ),
 
