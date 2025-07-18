@@ -36,7 +36,6 @@ class AuthCubit extends Cubit<AuthState> {
         emit(SignupSuccessState());
         final userData = UserModel(name: name, uid: user.uid, email: email);
         await authServices.setUserData(userData);
-        print("set user to firestore");
       } else {
         emit(SignupFailedState('Signup failed'));
       }

@@ -1,5 +1,5 @@
 class FirestorePath {
-  static String products() => "products/";
+  static String planets() => "planets/";
   static String categories() => "categories/";
   static String user(String uid) => "users/$uid";
 
