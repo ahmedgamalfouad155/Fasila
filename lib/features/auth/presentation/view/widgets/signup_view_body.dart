@@ -1,10 +1,8 @@
-import 'package:fasila/core/router/app_router.dart';
-import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/auth_heder_text_widget.dart';
+import 'package:fasila/features/auth/presentation/view/widgets/signup_button_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/signup_fields_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/signup_role_section_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
@@ -53,17 +51,12 @@ class _SignupViewBodyState extends State<SignupViewBody> {
               ),
               const SizedBox(height: 16),
               SignupRoleSectionWidget(),
-              CustomButon(
-                text: 'Sign Up',
-                onPressed: () {
-                  if (formKey.currentState!.validate()) {
-                    (context).go(AppRouter.kHomeView);
-                    passwordController.clear();
-                    emailController.clear();
-                    nameController.clear();
-                    confirmPasswordController.clear();
-                  }
-                },
+              SignupButtonSectionWidget(
+                formKey: formKey,
+                passwordController: passwordController,
+                emailController: emailController,
+                nameController: nameController,
+                confirmPasswordController: confirmPasswordController,
               ),
             ],
           ),

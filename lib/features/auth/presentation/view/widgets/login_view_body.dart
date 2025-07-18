@@ -1,11 +1,9 @@
-import 'package:fasila/core/router/app_router.dart';
-import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/auth_heder_text_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/continue_text_and_social_logo_section_wdget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/forget_and_create_account_text_widget.dart';
+import 'package:fasila/features/auth/presentation/view/widgets/login_buton_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/login_fields_section_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
@@ -50,15 +48,10 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               const SizedBox(height: 30),
               ContinueTextAndSocialLogoSectionWdiget(),
               const SizedBox(height: 50),
-              CustomButon(
-                text: 'Login',
-                onPressed: () {
-                  if (formKey.currentState!.validate()) {
-                    (context).go(AppRouter.kHomeView);
-                    passwordController.clear();
-                    emailController.clear();
-                  }
-                },
+              LoginButonSectionWidget(
+                formKey: formKey,
+                passwordController: passwordController,
+                emailController: emailController,
               ),
             ],
           ),

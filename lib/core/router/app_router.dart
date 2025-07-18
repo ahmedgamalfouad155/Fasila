@@ -1,3 +1,4 @@
+import 'package:fasila/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:fasila/features/auth/presentation/view/auth_landing_view.dart';
 import 'package:fasila/features/auth/presentation/view/lognin_view.dart';
 import 'package:fasila/features/auth/presentation/view/signup_view.dart';
@@ -24,6 +25,7 @@ import 'package:fasila/features/profile/presentation/view/profile_view.dart';
 import 'package:fasila/features/shop/presentation/view/shop_view.dart';
 import 'package:fasila/features/splash/splash._view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -59,15 +61,31 @@ abstract class AppRouter {
 
   static final router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: kSplashView,
+    initialLocation: '/',
 
     routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) {
+          return BlocBuilder<AuthCubit, AuthState>(
+            bloc: BlocProvider.of<AuthCubit>(context),
+            builder: (context, state) {
+              if (state is LoginSuccessState) {
+                return NavBarView(child: HomeView());
+              } else {
+                return SplashView();
+              }
+            },
+          );
+        },
+      ),
+
       ShellRoute(
         navigatorKey: _shellNavigatorKey,
         builder: (context, state, child) {
           return NavBarView(child: child);
         },
-        routes: [ 
+        routes: [
           GoRoute(path: kHomeView, builder: (context, state) => HomeView()),
           GoRoute(path: kShopView, builder: (context, state) => ShopView()),
           GoRoute(path: kCameraView, builder: (context, state) => CameraView()),
