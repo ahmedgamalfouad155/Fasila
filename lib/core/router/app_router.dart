@@ -23,6 +23,7 @@ import 'package:fasila/features/onbording/onboarding_view.dart';
 import 'package:fasila/features/planet_details/presentation/view/planet_details_view.dart';
 import 'package:fasila/features/product_details/presentation/view/product_details_view.dart';
 import 'package:fasila/features/profile/presentation/view/profile_view.dart';
+import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:fasila/features/shop/presentation/view/shop_view.dart';
 import 'package:fasila/features/splash/splash._view.dart';
 import 'package:flutter/material.dart';
@@ -120,7 +121,10 @@ abstract class AppRouter {
           ),
           GoRoute(
             path: kProductDetailsView,
-            builder: (context, state) => ProductDetailsView(),
+            builder: (context, state) {
+               state.extra as ProductModel;
+              return ProductDetailsView();
+            },
           ),
           GoRoute(
             path: kFavoritesView,

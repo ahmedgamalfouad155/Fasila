@@ -15,8 +15,9 @@ class ProductItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kProductDetailsView);
-        
+        GoRouter.of(
+          context,
+        ).push(AppRouter.kProductDetailsView, extra: product);
       },
       child: Container(
         padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),
@@ -54,7 +55,7 @@ class ProductItemWidget extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: CachedNetworkImage(
-                  imageUrl: product.image,
+                  imageUrl: product.imageUrl,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -69,7 +70,7 @@ class ProductItemWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        product.title,
+                        product.name,
                         style: AppStyles.textStyle16Teal(context),
                       ),
 
@@ -89,19 +90,18 @@ class ProductItemWidget extends StatelessWidget {
                   ),
 
                   Text(
-                    product.description,
+                    product.discription,
                     style: AppStyles.textStyle12Grey(context),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
 
                   Text(
-                    product.price,
+                    "${product.price}.00 EGP",
                     style: AppStyles.textStyle16Teal(
                       context,
                     ).copyWith(fontWeight: FontWeight.bold),
-                  ),
-
+                  ), 
                   CustomButon(
                     text: "Add To My Cart",
                     onPressed: () {},

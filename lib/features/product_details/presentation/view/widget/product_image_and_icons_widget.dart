@@ -1,11 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/share_and_favorite_widget.dart';
+import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 
 class ProductImageAndIconsWidget extends StatelessWidget {
-  const ProductImageAndIconsWidget({super.key});
+  const ProductImageAndIconsWidget({super.key, required this.productModel});
+  final ProductModel productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class ProductImageAndIconsWidget extends StatelessWidget {
               ),
             ],
           ),
-          child: CachedNetworkImage(imageUrl: AppImages.lastest1Image),
+          child: CachedNetworkImage(imageUrl: productModel.imageUrl),
         ),
         ShareAndFavoriteWidget(icon: Icons.favorite_outline),
       ],
