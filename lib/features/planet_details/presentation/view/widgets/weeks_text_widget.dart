@@ -10,10 +10,7 @@ class WeeksWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        CustomBigSnackBar.show(
-          context: context,
-         
-        );
+        WeeksSnackBarWidget.show(context: context);
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
