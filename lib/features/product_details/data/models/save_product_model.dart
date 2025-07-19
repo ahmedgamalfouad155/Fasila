@@ -7,6 +7,7 @@ class SaveProductModel {
   final num price;
   final num quantity;
   final num totalPrice;
+  final String discription;
 
   SaveProductModel({
     required this.id,
@@ -17,6 +18,7 @@ class SaveProductModel {
     required this.price,
     required this.quantity,
     required this.totalPrice,
+    required this.discription,
   });
 
   Map<String, dynamic> toMap() {
@@ -29,6 +31,7 @@ class SaveProductModel {
       'price': price,
       'quantity': quantity,
       'totalPrice': totalPrice,
+      'discription': discription,
     };
   }
 
@@ -45,6 +48,7 @@ class SaveProductModel {
       price: map['price'] as num,
       quantity: map['quantity'] as num,
       totalPrice: map['totalPrice'] as num,
+      discription: map['discription'] as String,
     );
   }
 }

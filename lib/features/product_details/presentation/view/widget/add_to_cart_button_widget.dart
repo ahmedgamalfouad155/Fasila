@@ -56,6 +56,7 @@ class AddToCartButtonWidget extends StatelessWidget {
                   imageUrl: productModel.imageUrl,
                   price: productModel.price,
                   quantity: quantity,
+                  discription: productModel.discription,
                   totalPrice: productModel.price * quantity,
                 ),
               );

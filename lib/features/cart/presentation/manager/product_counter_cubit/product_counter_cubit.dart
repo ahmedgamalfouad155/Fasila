@@ -1,4 +1,4 @@
-import 'package:fasila/features/cart/presentation/manager/add_to_cart_cubit/product_counter_state.dart';
+import 'package:fasila/features/cart/presentation/manager/product_counter_cubit/product_counter_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductCounterCubit extends Cubit<ProductCounterState> {
