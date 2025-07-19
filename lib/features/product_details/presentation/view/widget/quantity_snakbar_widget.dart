@@ -1,6 +1,6 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
-import 'package:fasila/features/product_details/presentation/manager/quantity_cubit.dart';
+import 'package:fasila/features/product_details/presentation/manager/quantity_cubit/quantity_cubit.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/togel_quantity_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
