@@ -1,4 +1,4 @@
-import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/features/product_details/presentation/manager/quantity_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fasila/core/theme/colors.dart';
@@ -12,7 +12,7 @@ class TogelQuantityProductWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(color: context.appColors.offWhite),
-      child: BlocBuilder<FilterCubit, int>(
+      child: BlocBuilder<QuantityCubit, int>(
         builder: (context, selectedIndex) {
           return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -23,7 +23,8 @@ class TogelQuantityProductWidget extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   child: InkWell(
                     onTap: () {
-                      context.read<FilterCubit>().changeFilter(index);
+                      context.read<QuantityCubit>().changeFilter(index);
+                      
                     },
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 5),

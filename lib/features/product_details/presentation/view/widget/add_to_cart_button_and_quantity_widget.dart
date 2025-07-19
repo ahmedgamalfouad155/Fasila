@@ -1,11 +1,13 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
+import 'package:fasila/features/product_details/presentation/manager/quantity_cubit.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/quantity_snakbar_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AddToCartButtonAndQtyWidget extends StatelessWidget {
-  const AddToCartButtonAndQtyWidget({super.key});
+class AddToCartButtonAndQuantityWidget extends StatelessWidget {
+  const AddToCartButtonAndQuantityWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,14 @@ class AddToCartButtonAndQtyWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("QTY", style: AppStyles.textStyle16Teal(context)),
-                Text("1", style: AppStyles.textStyle16Teal(context)),
+                BlocBuilder<QuantityCubit, int>(
+                  builder: (context, state) { 
+                    return Text(
+                      "${state + 1}",
+                      style: AppStyles.textStyle16Teal(context),
+                    );
+                  },
+                ),
               ],
             ),
           ),
