@@ -24,13 +24,13 @@ class AddToFavoriteCubit extends Cubit<AddToFavoriteState> {
   }
 
   Future<void> deleteFromFavorite(ProductModel product) async {
-    emit(AddToFavoriteLoadingState());
+    emit(DeleteFromFavoriteLoadingState());
     try {
       isFavorite = !isFavorite;
       await addtofavoriteServices.deleteProductFromFavorite(product);
-      emit(AddToFavoriteSuccessState());
+      emit(DeleteFromFavoriteSuccessState());
     } catch (e) {
-      emit(AddToFavoriteFailedState(e.toString()));
+      emit(DeleteFromFavoriteFailedState(e.toString()));
     }
   }
 }

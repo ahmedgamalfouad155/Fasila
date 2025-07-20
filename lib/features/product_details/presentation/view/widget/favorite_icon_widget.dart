@@ -1,4 +1,5 @@
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_cubit.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_state.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
@@ -12,21 +13,40 @@ class FavoriteIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<AddToFavoriteCubit>();
-    return BlocBuilder<AddToFavoriteCubit, AddToFavoriteState>(
+    return BlocConsumer<AddToFavoriteCubit, AddToFavoriteState>(
+      bloc: cubit,
+      listener: (context, state) {
+        if (state is AddToFavoriteSuccessState) {
+          customSnakBar(context, message: "Added To Favorite");
+        } else if (state is DeleteFromFavoriteSuccessState) {
+          customSnakBar(context, message: "Deleted From Favorite");
+        }
+      },
       builder: (context, state) {
-        return InkWell(
-          onTap: () {
-            cubit.isFavorite
-                ? cubit.deleteFromFavorite(productModel)
-                : cubit.addToFavorite(productModel);
-            print(cubit.isFavorite);
-          },
-          child: Icon(
-            cubit.isFavorite ? Icons.favorite : Icons.favorite_border,
-            size: 15,
-            color: context.appColors.teal,
-          ),
-        );
+        if (state is AddToFavoriteLoadingState) {
+          return const CircularProgressIndicator();
+        } else if (
+            state is AddToFavoriteInitial ||
+            state is AddToFavoriteSuccessState ||
+            state is DeleteFromFavoriteSuccessState
+            ) {
+          return InkWell(
+            onTap: () {
+              cubit.isFavorite
+                  ? cubit.deleteFromFavorite(productModel)
+                  : cubit.addToFavorite(productModel);
+            },
+            child: Icon(
+              cubit.isFavorite ? Icons.favorite : Icons.favorite_border,
+              size: 15,
+              color: context.appColors.teal,
+            ),
+          );
+        } else if (state is AddToFavoriteFailedState) {
+          return Text(state.error);
+        } else {
+          return Text("error");
+        }
       },
     );
   }

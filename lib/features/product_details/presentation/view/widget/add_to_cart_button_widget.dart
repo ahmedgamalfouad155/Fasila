@@ -1,6 +1,6 @@
 import 'package:fasila/core/constants/constants.dart';
-import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
+import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/product_details/data/models/save_product_model.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_cart_cubit/add_to_cart_cubit.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_cart_cubit/add_to_cart_state.dart';
@@ -25,17 +25,7 @@ class AddToCartButtonWidget extends StatelessWidget {
       bloc: addToCartCubit,
       listener: (context, state) {
         if (state is AddToCartSuccessState) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text("Add to Card"),
-              duration: Duration(milliseconds: 500),
-              backgroundColor: context.appColors.teal,
-              behavior: SnackBarBehavior.floating,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-            ),
-          );
+          customSnakBar(context, message: "Add to Cart");
         }
       },
       builder: (context, state) {

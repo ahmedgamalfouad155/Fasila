@@ -12,4 +12,12 @@ final class AddToFavoriteFailedState extends AddToFavoriteState {
   AddToFavoriteFailedState(this.error);
 }
 
+final class DeleteFromFavoriteLoadingState extends AddToFavoriteState {}
 
+final class DeleteFromFavoriteSuccessState extends AddToFavoriteState {}
+
+final class DeleteFromFavoriteFailedState extends AddToFavoriteState {
+  final String error;
+
+  DeleteFromFavoriteFailedState(this.error);
+}
