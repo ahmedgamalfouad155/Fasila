@@ -11,6 +11,10 @@ class FirestorePath {
       "users/$uid/favorite/$favoriteId";
   static String myProductsFavorite(String uid) => "users/$uid/favorite/";
 
+  static String garden(String uid, String garden) =>
+      "users/$uid/garden/$garden";
+  static String myGarden(String uid) => "users/$uid/garden/";
+
   static String addresses(String uid, String addressId) =>
       "users/$uid/addresses/$addressId";
   static String myAddresses(String uid) => "users/$uid/addresses/";

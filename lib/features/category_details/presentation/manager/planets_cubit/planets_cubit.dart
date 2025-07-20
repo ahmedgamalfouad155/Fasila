@@ -1,5 +1,5 @@
-import 'package:fasila/features/category_details/data/services/planet_services.dart';
-import 'package:fasila/features/category_details/data/services/planet_services_impl.dart';
+import 'package:fasila/features/category_details/data/services/planet_service/planet_services.dart';
+import 'package:fasila/features/category_details/data/services/planet_service/planet_services_impl.dart';
 import 'package:fasila/features/category_details/presentation/manager/planets_cubit/planets_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
