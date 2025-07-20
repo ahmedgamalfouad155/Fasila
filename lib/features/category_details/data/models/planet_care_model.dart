@@ -6,7 +6,7 @@ class PlantCareModel {
   final String soil;
   final String humidity;
   final String fertilizer;
-  final String season;
+  final String season; 
 
   PlantCareModel({
     required this.water,

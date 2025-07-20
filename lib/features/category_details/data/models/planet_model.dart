@@ -1,3 +1,4 @@
+import 'package:fasila/features/category_details/data/models/daily_farm_entry_model.dart';
 import 'package:fasila/features/category_details/data/models/planet_care_model.dart';
 
 class PlanetModel {
@@ -7,6 +8,7 @@ class PlanetModel {
   final String imageUrl;
   final String description;
   final PlantCareModel planetCare;
+  final List<DailyFarmEntry> dailyFarm;
 
   PlanetModel({
     required this.id,
@@ -15,6 +17,7 @@ class PlanetModel {
     required this.imageUrl,
     required this.description,
     required this.planetCare,
+    required this.dailyFarm,
   });
 
   Map<String, dynamic> toMap() {
@@ -25,10 +28,15 @@ class PlanetModel {
       'imageUrl': imageUrl,
       'description': description,
       'care': planetCare.toMap(),
+      'dailyFarming': dailyFarm.map((entry) => entry.toMap()).toList(),
     };
   }
 
   factory PlanetModel.fromMap(Map<String, dynamic> map, String documentId) {
+    final dailyFarmData = (map['dailyFarming'] as List<dynamic>? ?? [])
+        .map((e) => DailyFarmEntry.fromMap(e as Map<String, dynamic>))
+        .toList();
+
     return PlanetModel(
       id: documentId,
       name: map['name'] as String,
@@ -36,6 +44,7 @@ class PlanetModel {
       imageUrl: map['imageUrl'] as String,
       description: map['description'] as String,
       planetCare: PlantCareModel.fromMap(map['care'] as Map<String, dynamic>),
+      dailyFarm: dailyFarmData,
     );
   }
 }

@@ -54,10 +54,12 @@ class _ListOfCateroriesItemsWidgetState
           } else if (state is PlanetsFailedState) {
             return Text(state.error);
           } else if (state is PlanetsSuccessState) {
+            
             return Expanded(
               child: ListView.separated(
                 itemBuilder: (context, index) {
                   final item = state.planets[index];
+
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: CategoryItemWidget(planetModel: item),
