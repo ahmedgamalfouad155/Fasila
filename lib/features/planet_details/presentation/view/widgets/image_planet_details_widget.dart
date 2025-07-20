@@ -1,11 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/core/theme/decoration.dart';
 import 'package:fasila/core/theme/styles.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:flutter/material.dart';
 
 class ImagePlanetDetailsWidget extends StatelessWidget {
-  const ImagePlanetDetailsWidget({super.key});
+  const ImagePlanetDetailsWidget({super.key, required this.planetModel});
+  final PlanetModel planetModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,22 +16,12 @@ class ImagePlanetDetailsWidget extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height / 4,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: context.appColors.white,
-            boxShadow: [
-              BoxShadow(
-                color: context.appColors.grey,
-                blurRadius: 3,
-                offset: const Offset(0, 1),
-              ),
-            ],
-          ),
+          decoration: defaultBoxDecoration(context),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: CachedNetworkImage(
-              imageUrl: AppImages.tomatoImage,
-              fit: BoxFit.cover,
+              imageUrl: planetModel.imageUrl,
+              // fit: BoxFit.cover,
             ),
           ),
         ),
@@ -45,7 +37,7 @@ class ImagePlanetDetailsWidget extends StatelessWidget {
               border: Border.all(color: context.appColors.teal, width: 1),
             ),
             child: Text(
-              "Tomato",
+              planetModel.name,
               style: AppStyles.textStyle14(context).copyWith(
                 color: context.appColors.teal,
                 fontWeight: FontWeight.bold,

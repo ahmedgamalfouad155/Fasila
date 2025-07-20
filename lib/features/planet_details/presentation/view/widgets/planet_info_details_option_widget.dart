@@ -6,8 +6,8 @@ import 'package:fasila/features/planet_details/presentation/view/widgets/planet_
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CategoryDetailsOptionWidget extends StatelessWidget {
-  const CategoryDetailsOptionWidget({super.key, required this.planetModel});
+class PlanetInfoDetailsOptionWidget extends StatelessWidget {
+  const PlanetInfoDetailsOptionWidget({super.key, required this.planetModel});
   final PlanetModel planetModel;
 
   @override
@@ -95,6 +95,19 @@ class CategoryDetailsOptionWidget extends StatelessWidget {
 
               child: Text(
                 planetModel.planetCare.fertilizer,
+                style: AppStyles.textStyle14(
+                  context,
+                ).copyWith(color: context.appColors.grey),
+              ),
+            ),
+          ),
+          PlanetInfoCardWidget(
+            title: 'Note',
+            icon: SvgPicture.network(AppImages.noteImage),
+            details: Align(
+              alignment: AlignmentDirectional.topStart,
+              child: Text(
+                'Before Planting : User conpost or slow-realase fertizer',
                 style: AppStyles.textStyle14(
                   context,
                 ).copyWith(color: context.appColors.grey),

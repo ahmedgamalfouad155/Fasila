@@ -1,4 +1,5 @@
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/details_togel_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/weeks_toget_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/date_text_widget.dart';
@@ -11,7 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PlanetDetailsViewBody extends StatelessWidget {
-  const PlanetDetailsViewBody({super.key});
+  const PlanetDetailsViewBody({super.key, required this.planetModel});
+  final PlanetModel planetModel;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,7 @@ class PlanetDetailsViewBody extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    ImagePlanetDetailsWidget(),
+                    ImagePlanetDetailsWidget(planetModel:   planetModel,),
                     const SizedBox(height: 10),
                     WeeksWidget(),
                     const SizedBox(height: 10),
@@ -58,7 +60,9 @@ class PlanetDetailsViewBody extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                   color: context.appColors.offWhite,
                 ),
-                child: PlanetDetailscTogelContent(),
+                child: PlanetDetailscTogelContent(
+                  planetModel: planetModel,
+                ),
               ),
             ],
           ),

@@ -20,7 +20,7 @@ class CategoryDetailsViewBody extends StatelessWidget {
       child: Scaffold(
         bottomNavigationBar: BlocProvider(
           create: (context) => AddToGardenCubit(),
-          child: AddToMyGardenButtonWidget( planetModel: planetModel),
+          child: AddToMyGardenButtonWidget(planetModel: planetModel),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -29,7 +29,7 @@ class CategoryDetailsViewBody extends StatelessWidget {
               const SizedBox(height: 10),
               DescriptionCategoryDetailsWidget(planetModel: planetModel),
               const SizedBox(height: 10),
-              DetailsOptionWidget(planetModel: planetModel),
+              CategoryDetailsOptionWidget(planetModel: planetModel),
               const SizedBox(height: 10),
               BlocProvider(
                 create: (context) => FilterCubit(),

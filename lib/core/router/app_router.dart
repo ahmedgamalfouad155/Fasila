@@ -105,15 +105,18 @@ abstract class AppRouter {
           ),
           GoRoute(
             path: kCategoryDetailsView,
-            
+
             builder: (context, state) {
-               state.extra as PlanetModel;
+              state.extra as PlanetModel;
               return CategoryDatailsView();
             },
           ),
           GoRoute(
             path: kPlanetDetailsView,
-            builder: (context, state) => PlanetDetailsView(),
+            builder: (context, state) {
+              state.extra as PlanetModel;
+              return PlanetDetailsView();
+            },
           ),
           GoRoute(
             path: kContactUsView,
@@ -122,7 +125,7 @@ abstract class AppRouter {
           GoRoute(
             path: kProductDetailsView,
             builder: (context, state) {
-               state.extra as ProductModel;
+              state.extra as ProductModel;
               return ProductDetailsView();
             },
           ),
