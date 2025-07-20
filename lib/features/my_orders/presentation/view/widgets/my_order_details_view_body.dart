@@ -1,4 +1,3 @@
-import 'package:fasila/features/cart/presentation/view/widget/subtotal_cart_item_widget.dart';
 import 'package:fasila/features/my_orders/presentation/view/widgets/address_information_widget.dart';
 import 'package:fasila/features/my_orders/presentation/view/widgets/deleverd_card_widget.dart';
 import 'package:fasila/features/my_orders/presentation/view/widgets/ordered_product_widget.dart';
@@ -20,7 +19,7 @@ class MyOrderDetailsViewBody extends StatelessWidget {
             const SizedBox(height: 10),
             AddressInformationWidget(),
             const SizedBox(height: 10),
-            SubtotalCartItemsWidget(),
+            // SubtotalCartItemsWidget(),
           ],
         ),
       ),

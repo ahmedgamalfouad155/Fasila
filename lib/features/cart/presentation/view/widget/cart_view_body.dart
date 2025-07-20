@@ -29,7 +29,7 @@ class CartViewBody extends StatelessWidget {
                   children: [
                     ListOfCartItemsWidget(myProductsCart: state.myProductsCart),
                     const SizedBox(height: 10),
-                    SubtotalCartItemsWidget(),
+                    SubtotalCartItemsWidget(proucts: state.myProductsCart),
                   ],
                 ),
               ),

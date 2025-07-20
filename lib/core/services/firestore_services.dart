@@ -13,6 +13,13 @@ class FirestoreServices {
     final refrence = _fireStore.doc(path);
     refrence.set(data);
   }
+  Future<void> updatedata({
+    required String path,
+    required Map<String, dynamic> data,
+  }) async {
+    final refrence = _fireStore.doc(path);
+    refrence.update(data);
+  }
 
   Future<void> deleteData({required String path}) async {
     final refrence = _fireStore.doc(path);

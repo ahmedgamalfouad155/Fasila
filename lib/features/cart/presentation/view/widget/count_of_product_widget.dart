@@ -2,17 +2,23 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/cart/presentation/manager/product_counter_cubit/product_counter_cubit.dart';
 import 'package:fasila/features/cart/presentation/manager/product_counter_cubit/product_counter_state.dart';
+import 'package:fasila/features/product_details/data/models/save_product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CountOfProdutWidget extends StatelessWidget {
-  final double width; // Assuming you want to pass width as a parameter
-
-  const CountOfProdutWidget({super.key, required this.width});
+  final double width; 
+  final SaveProductModel product;
+  const CountOfProdutWidget({
+    super.key,
+    required this.width,
+    required this.product,
+  });
 
   @override
   Widget build(BuildContext context) {
     final addToCardCubit = BlocProvider.of<ProductCounterCubit>(context);
+    addToCardCubit.quantity =product. quantity.toDouble();
     return BlocBuilder<ProductCounterCubit, ProductCounterState>(
       bloc: addToCardCubit,
       builder: (context, state) {
@@ -35,6 +41,12 @@ class CountOfProdutWidget extends StatelessWidget {
                     onTap: () {
                       addToCardCubit.changeQuantity(
                         addToCardCubit.quantity + 1,
+                      );
+                      addToCardCubit.updateProductInCart(
+                        product.copyWith(
+                          quantity: addToCardCubit.quantity,
+                          totalPrice: addToCardCubit.quantity * product.price,
+                        ),
                       );
                     },
                     child: Icon(
@@ -59,6 +71,12 @@ class CountOfProdutWidget extends StatelessWidget {
                         addToCardCubit.changeQuantity(
                           addToCardCubit.quantity - 1,
                         );
+                        addToCardCubit.updateProductInCart(
+                        product.copyWith(
+                          quantity: addToCardCubit.quantity,
+                          totalPrice: addToCardCubit.quantity * product.price,
+                        ),
+                      );
                       }
                     },
                     child: Icon(

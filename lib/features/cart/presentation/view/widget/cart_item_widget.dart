@@ -44,13 +44,13 @@ class CartItemWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "${prouct.totalPrice}.00 EGP",
+                          "${prouct.totalPrice.toDouble()} EGP",
                           style: AppStyles.textStyle16Teal(
                             context,
                           ).copyWith(fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          "Quantity: ${prouct.quantity}",
+                          "Quantity: ${prouct.quantity.toInt()}",
                           style: AppStyles.textStyle16Teal(
                             context,
                           ).copyWith(fontWeight: FontWeight.bold),
@@ -62,7 +62,7 @@ class CartItemWidget extends StatelessWidget {
               ),
             ],
           ),
-          DeleteAndFavoriteAndQuantityButtonSection(),
+          DeleteAndFavoriteAndQuantityButtonSection(product: prouct),
         ],
       ),
     );

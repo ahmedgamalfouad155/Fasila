@@ -23,8 +23,7 @@ class TogelQuantityProductWidget extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 5),
                   child: InkWell(
                     onTap: () {
-                      context.read<QuantityCubit>().changeFilter(index);
-                      
+                      context.read<QuantityCubit>().changeQuantity(index);
                     },
                     child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 5),

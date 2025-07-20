@@ -6,8 +6,7 @@ import 'package:fasila/features/product_details/data/models/save_product_model.d
 
 class CartServicesImpl implements CartServices {
   final firestorServices = FirestoreServices.instance;
-      final uid = AuthServicesImpl().currentUser!.uid;
-
+  final uid = AuthServicesImpl().currentUser!.uid;
 
   @override
   Stream<List<SaveProductModel>> getMyProductsCart() {
@@ -22,6 +21,14 @@ class CartServicesImpl implements CartServices {
   Future<void> deleteProductFromCart(SaveProductModel product) async {
     await firestorServices.deleteData(
       path: FirestorePath.carts(uid, product.id),
+    );
+  }
+
+  @override
+  Future<void> updateProductInCart(SaveProductModel product) {
+    return firestorServices.updatedata(
+      path: FirestorePath.carts(uid, product.id),
+      data: product.toMap(),
     );
   }
 }
