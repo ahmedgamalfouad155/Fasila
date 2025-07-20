@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
-import 'package:fasila/features/product_details/presentation/view/widget/share_and_favorite_widget.dart';
 import 'package:flutter/material.dart';
 
 class ImagePlanetDetailsWidget extends StatelessWidget {
@@ -34,7 +33,7 @@ class ImagePlanetDetailsWidget extends StatelessWidget {
             ),
           ),
         ),
-        ShareAndFavoriteWidget(),
+        // ShareAndFavoriteWidget(),
         Positioned(
           left: 10,
           bottom: 10,

@@ -2,7 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
-import 'package:fasila/features/product_details/presentation/view/widget/share_and_favorite_widget.dart';
 import 'package:flutter/material.dart';
 
 class ImageCategoryDetailsWidget extends StatelessWidget {
@@ -41,7 +40,7 @@ class ImageCategoryDetailsWidget extends StatelessWidget {
               ),
             ),
           ),
-          ShareAndFavoriteWidget(),
+          // ShareAndFavoriteWidget(),
           Positioned(
             left: 10,
             bottom: 10,

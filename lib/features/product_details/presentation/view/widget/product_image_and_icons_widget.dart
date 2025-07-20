@@ -28,7 +28,7 @@ class ProductImageAndIconsWidget extends StatelessWidget {
           ),
           child: CachedNetworkImage(imageUrl: productModel.imageUrl),
         ),
-        ShareAndFavoriteWidget(),
+        ShareAndFavoriteWidget( productModel: productModel),
       ],
     );
   }
