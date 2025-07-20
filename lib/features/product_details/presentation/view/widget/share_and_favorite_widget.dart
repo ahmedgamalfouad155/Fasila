@@ -1,10 +1,11 @@
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_cubit.dart';
+import 'package:fasila/features/product_details/presentation/view/widget/favorite_icon_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ShareAndFavoriteWidget extends StatelessWidget {
-  const ShareAndFavoriteWidget({super.key, this.icon});
-
-  final IconData? icon;
+  const ShareAndFavoriteWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +45,9 @@ class ShareAndFavoriteWidget extends StatelessWidget {
                 ),
               ],
             ),
-            child: Icon(
-              icon,
-              size: 15,
-              color: context.appColors.teal,
+            child: BlocProvider(
+              create: (context) => AddToFavoriteCubit(),
+              child: FavoriteIconWidget(),
             ),
           ),
         ],

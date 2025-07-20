@@ -41,7 +41,7 @@ class ImageCategoryDetailsWidget extends StatelessWidget {
               ),
             ),
           ),
-          ShareAndFavoriteWidget(icon: Icons.favorite_outline),
+          ShareAndFavoriteWidget(),
           Positioned(
             left: 10,
             bottom: 10,

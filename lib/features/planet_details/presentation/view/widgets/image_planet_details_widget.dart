@@ -34,7 +34,7 @@ class ImagePlanetDetailsWidget extends StatelessWidget {
             ),
           ),
         ),
-        ShareAndFavoriteWidget(icon: Icons.more_vert),
+        ShareAndFavoriteWidget(),
         Positioned(
           left: 10,
           bottom: 10,
