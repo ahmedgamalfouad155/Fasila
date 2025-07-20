@@ -2,16 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
-import 'package:fasila/features/my_planet/data/models/my_planet_model.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class MyPlanetItemWidget extends StatelessWidget {
-  const MyPlanetItemWidget({
-    super.key,
-    required this.myPlanetModel,
-  });
-  final MyPlanetModel myPlanetModel;
+  const MyPlanetItemWidget({super.key, required this.planet});
+  final PlanetModel planet;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +52,7 @@ class MyPlanetItemWidget extends StatelessWidget {
 
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
-                child: CachedNetworkImage(imageUrl: myPlanetModel.image),
+                child: CachedNetworkImage(imageUrl: planet.imageUrl),
               ),
             ),
             const SizedBox(width: 10),
@@ -64,18 +61,12 @@ class MyPlanetItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
-                    myPlanetModel.title,
-                    style: AppStyles.textStyle16Teal(context),
-                  ),
+                  Text(planet.name, style: AppStyles.textStyle16Teal(context)),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        myPlanetModel.type,
-                        style: AppStyles.textStyle18(context),
-                      ),
+                      Text(planet.category, style: AppStyles.textStyle18(context)),
                       Icon(
                         Icons.keyboard_arrow_right,
                         color: context.appColors.teal,
