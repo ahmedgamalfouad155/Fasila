@@ -1,5 +1,6 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/widgets/custom_snak_bar.dart';
+import 'package:fasila/features/product_details/data/models/favorit_product_model.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_cubit.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_state.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
@@ -30,9 +31,21 @@ class ProductFavoriteIconWidget extends StatelessWidget {
             state is DeleteFromFavoriteSuccessState) {
           return InkWell(
             onTap: () {
+              print(cubit.isFavorite);
               cubit.isFavorite
-                  ? cubit.deleteFromFavorite(productModel)
-                  : cubit.addToFavorite(productModel);
+                  ? cubit.deleteFromFavorite(
+                      FavoriteProductModel(
+                        productModel: productModel,
+                        type: 'product',
+                      ),
+                    )
+                  :
+                   cubit.addToFavorite(
+                      FavoriteProductModel(
+                        productModel: productModel,
+                        type: 'product',
+                      ),
+                    );
             },
             child: Icon(
               cubit.isFavorite ? Icons.favorite : Icons.favorite_border,
@@ -41,9 +54,10 @@ class ProductFavoriteIconWidget extends StatelessWidget {
             ),
           );
         } else if (state is AddToFavoriteFailedState) {
+          print(state.error);
           return Text(state.error);
         } else {
-          return Text("error");
+          return Text("");
         }
       },
     );

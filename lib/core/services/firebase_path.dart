@@ -7,12 +7,16 @@ class FirestorePath {
   static String carts(String uid, String cartId) => "users/$uid/cards/$cartId";
   static String myProductsCart(String uid) => "users/$uid/cards/";
 
-  static String favorites(String uid, String favoriteId) =>
-      "users/$uid/favorite/$favoriteId";
+  static String favoriteProduct(String uid, String productId) =>
+      "users/$uid/favorite/$productId/products/$productId";
+  static String myFavoriteProduct(String uid, String productId) =>
+      "users/$uid/favorite/$productId/products/";
 
-  static String favoritesProducts(String uid, String productId) =>
-      "users/$uid/favorite/$productId/products";
-  // static String myProductsFavorite(String uid) => "users/$uid/favorite/";
+  static String favoritePlanet(String uid, String planetId) =>
+      "users/$uid/favorite/$planetId/planets/$planetId";
+  static String myFavoritePlanet(String uid, String productId) =>
+      "users/$uid/favorite/$productId/planets/";
+
 
   static String garden(String uid, String garden) =>
       "users/$uid/garden/$garden";

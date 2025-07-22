@@ -1,7 +1,7 @@
-import 'package:fasila/features/product_details/data/services/favoririte_service/add_to_favorit_services.dart';
-import 'package:fasila/features/product_details/data/services/favoririte_service/add_to_favorite_services_impl.dart';
+import 'package:fasila/features/product_details/data/models/favorit_product_model.dart';
+import 'package:fasila/features/product_details/data/services/product_favoririte_service/product_favorit_services.dart';
+import 'package:fasila/features/product_details/data/services/product_favoririte_service/product_favorite_services_impl.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_state.dart';
-import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AddToFavoriteCubit extends Cubit<AddToFavoriteState> {
@@ -9,10 +9,10 @@ class AddToFavoriteCubit extends Cubit<AddToFavoriteState> {
 
   bool isFavorite = false;
 
-  final AddToFavoriteServices addtofavoriteServices =
-      AddToFavoriteServicesImpl();
+  final ProductFavoriteServices addtofavoriteServices =
+      ProductFavoriteServicesImpl();
 
-  Future<void> addToFavorite(ProductModel product) async {
+  Future<void> addToFavorite(FavoriteProductModel product) async {
     emit(AddToFavoriteLoadingState());
     try {
       isFavorite = !isFavorite;
@@ -23,7 +23,7 @@ class AddToFavoriteCubit extends Cubit<AddToFavoriteState> {
     }
   }
 
-  Future<void> deleteFromFavorite(ProductModel product) async {
+  Future<void> deleteFromFavorite(FavoriteProductModel product) async {
     emit(DeleteFromFavoriteLoadingState());
     try {
       isFavorite = !isFavorite;
