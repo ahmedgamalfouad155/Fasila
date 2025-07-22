@@ -1,12 +1,12 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_cubit.dart';
-import 'package:fasila/features/product_details/presentation/view/widget/favorite_icon_widget.dart';
+import 'package:fasila/features/product_details/presentation/view/widget/product_favorite_icon_widget.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ShareAndFavoriteWidget extends StatelessWidget {
-  const ShareAndFavoriteWidget({super.key , required this.productModel});
+class ShareAndFavoriteProductWidget extends StatelessWidget {
+  const ShareAndFavoriteProductWidget({super.key, required this.productModel});
   final ProductModel productModel;
 
   @override
@@ -49,9 +49,7 @@ class ShareAndFavoriteWidget extends StatelessWidget {
             ),
             child: BlocProvider(
               create: (context) => AddToFavoriteCubit(),
-              child: FavoriteIconWidget(
-                productModel: productModel,
-              ),
+              child: ProductFavoriteIconWidget(productModel: productModel),
             ),
           ),
         ],

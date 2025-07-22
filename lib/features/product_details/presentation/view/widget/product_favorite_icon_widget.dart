@@ -6,8 +6,8 @@ import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FavoriteIconWidget extends StatelessWidget {
-  const FavoriteIconWidget({super.key, required this.productModel});
+class ProductFavoriteIconWidget extends StatelessWidget {
+  const ProductFavoriteIconWidget({super.key, required this.productModel});
   final ProductModel productModel;
 
   @override
@@ -25,11 +25,9 @@ class FavoriteIconWidget extends StatelessWidget {
       builder: (context, state) {
         if (state is AddToFavoriteLoadingState) {
           return const CircularProgressIndicator();
-        } else if (
-            state is AddToFavoriteInitial ||
+        } else if (state is AddToFavoriteInitial ||
             state is AddToFavoriteSuccessState ||
-            state is DeleteFromFavoriteSuccessState
-            ) {
+            state is DeleteFromFavoriteSuccessState) {
           return InkWell(
             onTap: () {
               cubit.isFavorite
