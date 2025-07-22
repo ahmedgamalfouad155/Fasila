@@ -1,5 +1,5 @@
 import 'package:fasila/core/theme/colors.dart';
-import 'package:fasila/features/favorites/presentation/manager/favorite_togel_cubit.dart';
+import 'package:fasila/features/favorites/presentation/manager/favorire_togel_cubit/favorite_togel_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

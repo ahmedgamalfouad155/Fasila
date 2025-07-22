@@ -1,7 +1,7 @@
-import 'package:fasila/features/product_details/data/models/favorit_product_model.dart';
+import 'package:fasila/features/shop/data/models/product_model.dart';
 
 abstract class ProductFavoriteServices {
-  Future<void> addProductToFavorite(FavoriteProductModel product);
+  Future<void> addProductToFavorite(ProductModel product);
 
-  Future<void> deleteProductFromFavorite(FavoriteProductModel product);
+  Future<void> deleteProductFromFavorite(ProductModel product);
 }

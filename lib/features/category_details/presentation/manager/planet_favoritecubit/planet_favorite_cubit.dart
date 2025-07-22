@@ -1,4 +1,4 @@
-import 'package:fasila/features/category_details/data/models/planet_favorite_model.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/category_details/data/services/planet_favorit_service/planet_favorite_service.dart';
 import 'package:fasila/features/category_details/data/services/planet_favorit_service/planet_favorite_service_impl.dart';
 import 'package:fasila/features/category_details/presentation/manager/planet_favoritecubit/planet_favorite_state.dart';
@@ -12,7 +12,7 @@ class PlanetFavoriteCubit extends Cubit<PlanetFavoriteState> {
   final PlanetFavoriteServices addtofavoriteServices =
       PlanetFavoriteServiceImpl();
 
-  Future<void> addPlanetToFavorite(PlanetFavoriteModel planet) async {
+  Future<void> addPlanetToFavorite(PlanetModel planet) async {
     emit(PlanetFavoriteLoadingState());
     try {
       isFavorite = !isFavorite;
@@ -22,7 +22,7 @@ class PlanetFavoriteCubit extends Cubit<PlanetFavoriteState> {
       emit(PlanetFavoriteFailedState(e.toString()));
     }
   }
-  Future<void> deletePlanetFromFavorite(PlanetFavoriteModel planet) async {
+  Future<void> deletePlanetFromFavorite(PlanetModel planet) async {
     emit(DeletePlanetFromFavoriteLoadingState());
     try {
       isFavorite = !isFavorite;

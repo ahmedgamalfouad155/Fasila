@@ -1,4 +1,4 @@
-import 'package:fasila/features/favorites/presentation/manager/favorite_togel_cubit.dart';
+import 'package:fasila/features/favorites/presentation/manager/favorire_togel_cubit/favorite_togel_cubit.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/favorite_planet_content.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/favorite_products_content.dart'; 
 import 'package:flutter/material.dart';

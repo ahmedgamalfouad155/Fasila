@@ -1,7 +1,8 @@
-import 'package:fasila/features/category_details/data/models/planet_favorite_model.dart';
+
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
 
 abstract class PlanetFavoriteServices {
-  Future<void> addPlanetToFavorite(PlanetFavoriteModel planet);
+  Future<void> addPlanetToFavorite(PlanetModel planet);
 
-  Future<void> deletePlanetFromFavorite(PlanetFavoriteModel planet);
+  Future<void> deletePlanetFromFavorite(PlanetModel planet);
 }

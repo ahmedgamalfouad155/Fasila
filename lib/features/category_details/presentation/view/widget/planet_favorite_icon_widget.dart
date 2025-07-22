@@ -1,6 +1,5 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/widgets/custom_snak_bar.dart';
-import 'package:fasila/features/category_details/data/models/planet_favorite_model.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/category_details/presentation/manager/planet_favoritecubit/planet_favorite_cubit.dart';
 import 'package:fasila/features/category_details/presentation/manager/planet_favoritecubit/planet_favorite_state.dart';
@@ -32,18 +31,8 @@ class PlanetFavoriteIconWidget extends StatelessWidget {
           return InkWell(
             onTap: () {
               cubit.isFavorite
-                  ? cubit.deletePlanetFromFavorite(
-                      PlanetFavoriteModel(
-                        planetModel: planetModel,
-                        type: 'planet',
-                      ),
-                    )
-                  : cubit.addPlanetToFavorite(
-                      PlanetFavoriteModel(
-                        planetModel: planetModel,
-                        type: 'planet',
-                      ),
-                    );
+                  ? cubit.deletePlanetFromFavorite(planetModel)
+                  : cubit.addPlanetToFavorite(planetModel);
             },
             child: Icon(
               cubit.isFavorite ? Icons.favorite : Icons.favorite_border,
