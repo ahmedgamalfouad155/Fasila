@@ -31,7 +31,6 @@ class ProductFavoriteIconWidget extends StatelessWidget {
             state is DeleteFromFavoriteSuccessState) {
           return InkWell(
             onTap: () {
-              print(cubit.isFavorite);
               cubit.isFavorite
                   ? cubit.deleteFromFavorite(
                       FavoriteProductModel(
@@ -54,7 +53,6 @@ class ProductFavoriteIconWidget extends StatelessWidget {
             ),
           );
         } else if (state is AddToFavoriteFailedState) {
-          print(state.error);
           return Text(state.error);
         } else {
           return Text("");
