@@ -57,7 +57,7 @@ class _ListOfMyPlanetItemsWidgetState extends State<ListOfMyPlanetItemsWidget> {
             return Expanded(
               child: ListView.separated(
                 itemBuilder: (context, index) {
-                  final item = state.myPlanets[index]; 
+                  final item = state.myPlanets[index];
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: MyPlanetItemWidget(planet: item),

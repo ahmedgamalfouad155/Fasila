@@ -2,8 +2,12 @@ import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
+import 'package:fasila/features/planet_details/data/constant_planet_details.dart';
+import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/days_toget_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/planet_info_cart_widget.dart';
+import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PlanetInfoDetailsOptionWidget extends StatelessWidget {
@@ -12,6 +16,11 @@ class PlanetInfoDetailsOptionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final weekIndex = context.watch<FilterCubit>().state;
+    final dayIndex = context.watch<DaysTogetCubit>().state;
+    final data = planetModel
+        .dailyFarm[weekIndex]
+        .days[ConstantPlanetDetails().days[dayIndex].toLowerCase()];
     return Container(
       padding: EdgeInsetsGeometry.symmetric(horizontal: 5, vertical: 10),
       decoration: BoxDecoration(
@@ -26,7 +35,8 @@ class PlanetInfoDetailsOptionWidget extends StatelessWidget {
             details: Align(
               alignment: AlignmentDirectional.topStart,
               child: Text(
-                planetModel.planetCare.water,
+                data?.water ?? 'no data',
+
                 textAlign: TextAlign.start,
                 style: AppStyles.textStyle14(
                   context,
@@ -40,7 +50,7 @@ class PlanetInfoDetailsOptionWidget extends StatelessWidget {
             details: Align(
               alignment: AlignmentDirectional.topStart,
               child: Text(
-                planetModel.planetCare.light,
+                data?.light ?? 'no data',
                 style: AppStyles.textStyle14(
                   context,
                 ).copyWith(color: context.appColors.grey),
@@ -53,7 +63,7 @@ class PlanetInfoDetailsOptionWidget extends StatelessWidget {
             details: Align(
               alignment: AlignmentDirectional.topStart,
               child: Text(
-                planetModel.planetCare.temperature,
+                data?.temperature ?? 'no data',
                 style: AppStyles.textStyle14(
                   context,
                 ).copyWith(color: context.appColors.grey),
@@ -67,7 +77,7 @@ class PlanetInfoDetailsOptionWidget extends StatelessWidget {
             details: Align(
               alignment: AlignmentDirectional.topStart,
               child: Text(
-                planetModel.planetCare.soil,
+                data?.soil ?? 'no data',
                 style: AppStyles.textStyle14(
                   context,
                 ).copyWith(color: context.appColors.grey),
@@ -80,7 +90,7 @@ class PlanetInfoDetailsOptionWidget extends StatelessWidget {
             details: Align(
               alignment: AlignmentDirectional.topStart,
               child: Text(
-                planetModel.planetCare.humidity,
+                data?.humidity ?? 'no data',
                 style: AppStyles.textStyle14(
                   context,
                 ).copyWith(color: context.appColors.grey),
@@ -94,7 +104,7 @@ class PlanetInfoDetailsOptionWidget extends StatelessWidget {
               alignment: AlignmentDirectional.topStart,
 
               child: Text(
-                planetModel.planetCare.fertilizer,
+                data?.fertilizer ?? 'no data',
                 style: AppStyles.textStyle14(
                   context,
                 ).copyWith(color: context.appColors.grey),

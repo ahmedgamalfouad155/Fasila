@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class WeeksSnackBarWidget {
-  static void show({required BuildContext context}) {
+  static void show({
+    required BuildContext context,
+    required FilterCubit filterCubit,
+  }) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: const Duration(days: 1),
@@ -14,22 +17,22 @@ class WeeksSnackBarWidget {
         elevation: 3,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         behavior: SnackBarBehavior.floating,
-        content: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Choose The Week',
-              style: AppStyles.textStyle18(context).copyWith(
-                color: context.appColors.teal,
-                fontWeight: FontWeight.bold,
+        content: BlocProvider.value(
+          value: filterCubit,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Choose The Week',
+                style: AppStyles.textStyle18(context).copyWith(
+                  color: context.appColors.teal,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-            BlocProvider(
-              create: (context) => FilterCubit(),
-              child: TogelWeeksWidget(),
-            ),
-          ],
+              const SizedBox(height: 10),
+              TogelWeeksWidget(),
+            ],
+          ),
         ),
       ),
     );

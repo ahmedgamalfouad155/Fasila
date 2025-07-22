@@ -53,8 +53,8 @@ class _ListOfCateroriesItemsWidgetState
             return const Center(child: CircularProgressIndicator());
           } else if (state is PlanetsFailedState) {
             return Text(state.error);
-          } else if (state is PlanetsSuccessState) {
-            
+          } else if (state is PlanetsSuccessState) { 
+
             return Expanded(
               child: ListView.separated(
                 itemBuilder: (context, index) {

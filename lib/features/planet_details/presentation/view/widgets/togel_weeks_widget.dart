@@ -1,3 +1,4 @@
+import 'package:fasila/features/planet_details/data/constant_planet_details.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -5,17 +6,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 
 class TogelWeeksWidget extends StatelessWidget {
-  final List<String> filters = [
-    'First Week',
-    'Second Week',
-    'Third Week',
-    'Fourth Week',
-    'Fifth Week',
-    'Sixth Week',
-    'Seventh Week',
-  ];
-
-  TogelWeeksWidget({super.key});
+  const TogelWeeksWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +16,9 @@ class TogelWeeksWidget extends StatelessWidget {
       child: BlocBuilder<FilterCubit, int>(
         builder: (context, selectedIndex) {
           return Column(
-            children: List.generate(filters.length, (index) {
+            children: List.generate(ConstantPlanetDetails().weeks.length, (
+              index,
+            ) {
               final isSelected = selectedIndex == index;
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5),
@@ -59,7 +52,7 @@ class TogelWeeksWidget extends StatelessWidget {
                       ],
                     ),
                     child: Text(
-                      filters[index],
+                      ConstantPlanetDetails().weeks[index],
                       textAlign: TextAlign.center,
                       style: isSelected
                           ? AppStyles.textStyle14(

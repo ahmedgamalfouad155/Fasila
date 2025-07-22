@@ -1,13 +1,13 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/default_button_widget.dart';
-import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/weeks_toget_cubit.dart';
+import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/days_toget_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/alarm_content_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/alarm_slider_widger.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/choose_lable_alarm_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/delete_alarm_text_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/switch_alarm_card_widget.dart';
-import 'package:fasila/features/planet_details/presentation/view/widgets/weeks_togel_widget.dart';
+import 'package:fasila/features/planet_details/presentation/view/widgets/days_togel_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,8 +34,8 @@ Future<dynamic> alarmShowDialog(BuildContext context) {
               ),
               const SizedBox(height: 10),
               BlocProvider(
-                create: (context) => WeeksTogetCubit(),
-                child: WeeksTogelWidget(),
+                create: (context) => DaysTogetCubit(),
+                child: DaysTogelWidget(),
               ),
               const SizedBox(height: 10),
               ChooseLableAlarmWidget(),
