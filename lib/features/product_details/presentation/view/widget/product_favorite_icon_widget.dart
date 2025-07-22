@@ -1,8 +1,8 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/product_details/data/models/favorit_product_model.dart';
-import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_cubit.dart';
-import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_state.dart';
+import 'package:fasila/features/product_details/presentation/manager/prouduct_favorite_cubit/product_favorite_cubit.dart';
+import 'package:fasila/features/product_details/presentation/manager/prouduct_favorite_cubit/product_favorite_state.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,22 +13,22 @@ class ProductFavoriteIconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = context.read<AddToFavoriteCubit>();
-    return BlocConsumer<AddToFavoriteCubit, AddToFavoriteState>(
+    final cubit = context.read<ProductFavoriteCubit>();
+    return BlocConsumer<ProductFavoriteCubit, ProductFavoriteState>(
       bloc: cubit,
       listener: (context, state) {
-        if (state is AddToFavoriteSuccessState) {
+        if (state is ProuductFavoriteSuccessState) {
           customSnakBar(context, message: "Added To Favorite");
-        } else if (state is DeleteFromFavoriteSuccessState) {
+        } else if (state is DeleteProuductFromFavoriteSuccessState) {
           customSnakBar(context, message: "Deleted From Favorite");
         }
       },
       builder: (context, state) {
-        if (state is AddToFavoriteLoadingState) {
+        if (state is ProuductFavoriteLoadingState) {
           return const CircularProgressIndicator();
-        } else if (state is AddToFavoriteInitial ||
-            state is AddToFavoriteSuccessState ||
-            state is DeleteFromFavoriteSuccessState) {
+        } else if (state is ProuductFavoriteInitial ||
+            state is ProuductFavoriteSuccessState ||
+            state is DeleteProuductFromFavoriteSuccessState) {
           return InkWell(
             onTap: () {
               cubit.isFavorite
@@ -38,8 +38,7 @@ class ProductFavoriteIconWidget extends StatelessWidget {
                         type: 'product',
                       ),
                     )
-                  :
-                   cubit.addToFavorite(
+                  : cubit.addToFavorite(
                       FavoriteProductModel(
                         productModel: productModel,
                         type: 'product',
@@ -52,7 +51,7 @@ class ProductFavoriteIconWidget extends StatelessWidget {
               color: context.appColors.teal,
             ),
           );
-        } else if (state is AddToFavoriteFailedState) {
+        } else if (state is ProuductFavoriteFailedState) {
           return Text(state.error);
         } else {
           return Text("error");

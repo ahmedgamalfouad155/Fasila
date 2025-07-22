@@ -32,7 +32,9 @@ class ImageCategoryDetailsWidget extends StatelessWidget {
               ),
             ),
           ),
-          ShareAndFavoritePlanetWidget(),
+          ShareAndFavoritePlanetWidget(
+            planetModel: planetModel,
+          ),
           PlanetNameTextWidget(plantName: planetModel.name),
         ],
       ),

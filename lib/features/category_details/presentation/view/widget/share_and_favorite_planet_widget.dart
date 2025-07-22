@@ -1,9 +1,13 @@
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/features/category_details/data/models/planet_model.dart';
+import 'package:fasila/features/category_details/presentation/manager/planet_favoritecubit/planet_favorite_cubit.dart';
 import 'package:fasila/features/category_details/presentation/view/widget/planet_favorite_icon_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ShareAndFavoritePlanetWidget extends StatelessWidget {
-  const ShareAndFavoritePlanetWidget({super.key, }); 
+  const ShareAndFavoritePlanetWidget({super.key, required this.planetModel});
+  final PlanetModel planetModel;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +47,12 @@ class ShareAndFavoritePlanetWidget extends StatelessWidget {
                 ),
               ],
             ),
-            child: PlanetFavoriteIconWidget(),
+            child: BlocProvider(
+              create: (context) => PlanetFavoriteCubit(),
+              child: PlanetFavoriteIconWidget(
+                  planetModel: planetModel,
+              ),
+            ),
           ),
         ],
       ),

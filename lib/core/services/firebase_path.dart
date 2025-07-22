@@ -8,15 +8,14 @@ class FirestorePath {
   static String myProductsCart(String uid) => "users/$uid/cards/";
 
   static String favoriteProduct(String uid, String productId) =>
-      "users/$uid/favorite/$productId/products/$productId";
-  static String myFavoriteProduct(String uid, String productId) =>
-      "users/$uid/favorite/$productId/products/";
+      "users/$uid/favorite/$uid/products/$productId";
+  static String myFavoriteProduct(String uid) =>
+      "users/$uid/favorite/$uid/products/";
 
   static String favoritePlanet(String uid, String planetId) =>
-      "users/$uid/favorite/$planetId/planets/$planetId";
-  static String myFavoritePlanet(String uid, String productId) =>
-      "users/$uid/favorite/$productId/planets/";
-
+      "users/$uid/favorite/$uid/planets/$planetId";
+  static String myFavoritePlanet(String uid) =>
+      "users/$uid/favorite/$uid/planets/";
 
   static String garden(String uid, String garden) =>
       "users/$uid/garden/$garden";

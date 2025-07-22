@@ -1,5 +1,5 @@
 import 'package:fasila/core/theme/colors.dart';
-import 'package:fasila/features/product_details/presentation/manager/add_to_favorite_cubit/add_to_favorite_cubit.dart';
+import 'package:fasila/features/product_details/presentation/manager/prouduct_favorite_cubit/product_favorite_cubit.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/product_favorite_icon_widget.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +48,7 @@ class ShareAndFavoriteProductWidget extends StatelessWidget {
               ],
             ),
             child: BlocProvider(
-              create: (context) => AddToFavoriteCubit(),
+              create: (context) => ProductFavoriteCubit(),
               child: ProductFavoriteIconWidget(productModel: productModel),
             ),
           ),
