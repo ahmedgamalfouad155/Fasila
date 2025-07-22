@@ -55,7 +55,7 @@ class ProductFavoriteIconWidget extends StatelessWidget {
         } else if (state is AddToFavoriteFailedState) {
           return Text(state.error);
         } else {
-          return Text("");
+          return Text("error");
         }
       },
     );
