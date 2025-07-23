@@ -2,6 +2,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/favorites/presentation/manager/favorire_togel_cubit/favorite_togel_cubit.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/favorite_details_togel_content.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/togel_favorite_button_widet.dart';
+import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -10,8 +11,11 @@ class FavoritesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => FavoriteTogelCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => FavoriteTogelCubit()),
+        BlocProvider(create: (context) => FilterCubit()),
+      ],
       child: Column(
         children: [
           TogelFavoriteButtonWidet(),

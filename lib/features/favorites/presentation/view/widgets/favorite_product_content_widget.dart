@@ -1,3 +1,4 @@
+import 'package:fasila/features/favorites/presentation/manager/favorite_product_cubit/favorire_product_cubit.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/list_of_favorite_product_item_widget.dart';
 import 'package:fasila/features/shop/data/product_data.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
@@ -11,20 +12,33 @@ class FavoriteProductContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<FilterCubit, int>(
       builder: (context, selectedIndex) {
+        final cubit = context.read<FavorireProductCubit>();
         switch (selectedIndex) {
           case 0:
-            return const ListOfFavoriteProductItemWidget(category: all);
+            cubit.getAllFavoriteProducts();
+            break;
           case 1:
-            return const ListOfFavoriteProductItemWidget(category: pots);
+              cubit.getFavoriteProductsDependedOnCategoryName(
+              categoryName: pots,
+            );
+            break;
           case 2:
-            return const ListOfFavoriteProductItemWidget(category: gardenSupplies);
+            cubit.getFavoriteProductsDependedOnCategoryName(
+              categoryName: gardenSupplies,
+            );
+            break;
           case 3:
-            return const ListOfFavoriteProductItemWidget(category: seeds);
+                cubit.getFavoriteProductsDependedOnCategoryName(
+              categoryName: seeds,
+            );
+            break;
           case 4:
-            return const ListOfFavoriteProductItemWidget(category: fertilizer);
-          default:
-            return const SizedBox.shrink();
+              cubit.getFavoriteProductsDependedOnCategoryName(
+              categoryName: fertilizer,
+            );
+            break; 
         }
+        return const ListOfFavoriteProductItemWidget();
       },
     );
   }

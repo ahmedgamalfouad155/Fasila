@@ -33,7 +33,7 @@ class FavoritePlanetCubit extends Cubit<FavoritePlanetState> {
   }
 
   void getFavoritePlanetsDependedOnCategoryName({
-    required String categoryName,
+    required String categoryName
   }) async {
     emit(FavoritePlanetLoadingState());
     try {

@@ -1,3 +1,4 @@
+import 'package:fasila/features/favorites/presentation/manager/favorite_planet_cubit/favorite_planet_cubit.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/list_of_favoite_planet_item_widget.dart';
 import 'package:fasila/features/my_planet/data/my_planet_data.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
@@ -11,20 +12,34 @@ class FavoritePlanetContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<FilterCubit, int>(
       builder: (context, selectedIndex) {
+        final cubit = context.read<FavoritePlanetCubit>();
         switch (selectedIndex) {
           case 0:
-            return const ListOfFavoitePlanetItemWidget(category: all);
+            cubit.getAllFavoritePlanets();
+            break;
           case 1:
-            return const ListOfFavoitePlanetItemWidget(category: vegetable);
+            cubit.getFavoritePlanetsDependedOnCategoryName(
+              categoryName: vegetable,
+            );
+            break;
           case 2:
-            return const ListOfFavoitePlanetItemWidget(category: fruits);
+            cubit.getFavoritePlanetsDependedOnCategoryName(
+              categoryName: fruits,
+            );
+            break;
           case 3:
-            return const ListOfFavoitePlanetItemWidget(category: leavyPlant);
+            cubit.getFavoritePlanetsDependedOnCategoryName(
+              categoryName: leavyPlant,
+            );
+            break;
           case 4:
-            return const ListOfFavoitePlanetItemWidget(category: ornamental);
-          default:
-            return const SizedBox.shrink();
+            cubit.getFavoritePlanetsDependedOnCategoryName(
+              categoryName: ornamental,
+            );
+            break;
+          default: 
         }
+        return const ListOfFavoitePlanetItemWidget();
       },
     );
   }
