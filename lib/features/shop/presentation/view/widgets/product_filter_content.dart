@@ -1,5 +1,6 @@
 import 'package:fasila/features/shop/data/product_data.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/features/shop/presentation/manager/product_cubit/product_cubit.dart';
 import 'package:fasila/features/shop/presentation/view/widgets/list_of_product_items_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,20 +12,26 @@ class ProductFilterContentWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<FilterCubit, int>(
       builder: (context, selectedIndex) {
+        final cubit = context.read<ProductCubit>();
         switch (selectedIndex) {
           case 0:
-            return const ListOfProductItemsWidgets(category: all);
+            cubit.getAllProducts();
+            break;
           case 1:
-            return const ListOfProductItemsWidgets(category: pots);
+            cubit.getProductsDependedOnCategoryName(categoryName: pots);
+            break;
           case 2:
-            return const ListOfProductItemsWidgets(category: gardenSupplies);
+            cubit.getProductsDependedOnCategoryName(categoryName: gardenSupplies);
+            break;
           case 3:
-            return const ListOfProductItemsWidgets(category: seeds);
+            cubit.getProductsDependedOnCategoryName(categoryName: seeds);
+            break;
           case 4:
-            return const ListOfProductItemsWidgets(category: fertilizer);
-          default:
-            return const SizedBox.shrink();
+            cubit.getProductsDependedOnCategoryName(categoryName: fertilizer);
+            break;
         }
+
+        return const ListOfProductItemsWidgets();
       },
     );
   }

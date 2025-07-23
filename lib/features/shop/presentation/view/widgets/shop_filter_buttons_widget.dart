@@ -1,4 +1,5 @@
 import 'package:fasila/core/constants/images.dart';
+import 'package:fasila/core/theme/decoration.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,16 +22,7 @@ class ShopFilterButtonsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
-      decoration: BoxDecoration(
-        color: context.appColors.white,
-        boxShadow: [
-          BoxShadow(
-            color: context.appColors.grey.withAlpha((0.4 * 255).toInt()),
-            blurRadius: 2,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
+      decoration: defaultBoxDecoration(context),
       child: BlocBuilder<FilterCubit, int>(
         builder: (context, selectedIndex) {
           return SingleChildScrollView(
@@ -38,7 +30,6 @@ class ShopFilterButtonsWidget extends StatelessWidget {
             child: Row(
               children: [
                 SvgPicture.asset(AppImages.fillteroImage),
-
                 Row(
                   children: List.generate(filters.length, (index) {
                     final isSelected = selectedIndex == index;
