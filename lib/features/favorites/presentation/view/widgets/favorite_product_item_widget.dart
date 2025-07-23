@@ -8,8 +8,8 @@ import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ProductItemWidget extends StatelessWidget {
-  const ProductItemWidget({super.key, required this.product});
+class FavoriteProductItemWidget extends StatelessWidget {
+  const FavoriteProductItemWidget({super.key, required this.product});
   final ProductModel product;
 
   @override
@@ -30,17 +30,10 @@ class ProductItemWidget extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width / 4,
               height: MediaQuery.of(context).size.width / 4,
-              decoration: BoxDecoration(
+              decoration: defaultBoxDecoration(
+                context,
+                border: true,
                 color: context.appColors.white,
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: context.appColors.teal, width: 1),
-                boxShadow: [
-                  BoxShadow(
-                    color: context.appColors.grey,
-                    blurRadius: 6,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
@@ -63,13 +56,9 @@ class ProductItemWidget extends StatelessWidget {
                         product.name,
                         style: AppStyles.textStyle16Teal(context),
                       ),
-
                       Row(
                         children: [
-                          Icon(
-                            Icons.favorite_border,
-                            color: context.appColors.teal,
-                          ),
+                          Icon(Icons.favorite, color: context.appColors.teal),
                           Icon(
                             Icons.share_rounded,
                             color: context.appColors.teal,

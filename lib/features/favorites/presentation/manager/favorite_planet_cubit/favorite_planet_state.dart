@@ -17,3 +17,13 @@ final class FavoritePlanetFailedState extends FavoritePlanetState {
 
   FavoritePlanetFailedState(this.error);
 }
+
+final class DeletePlanetFromFavoriteLoadingState extends FavoritePlanetState {}
+
+final class DeletePlanetFromFavoriteSuccessState extends FavoritePlanetState {}
+
+final class DeletePlanetFromFavoriteFailedState extends FavoritePlanetState {
+  final String error;
+
+  DeletePlanetFromFavoriteFailedState(this.error);
+}

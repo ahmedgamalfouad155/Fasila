@@ -32,4 +32,14 @@ class FavoritePlanetCubit extends Cubit<FavoritePlanetState> {
       emit(FavoritePlanetFailedState(e.toString()));
     }
   }
+
+  void deletePlanetFromFavorite(PlanetModel planet) async {
+    emit(DeletePlanetFromFavoriteLoadingState());
+    try {
+      await favoritePlanetService.deletePlanetFromFavorite(planet);
+      emit(DeletePlanetFromFavoriteSuccessState());
+    } catch (e) {
+      emit(DeletePlanetFromFavoriteFailedState(e.toString()));
+    }
+  }
 }

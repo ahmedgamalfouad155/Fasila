@@ -5,6 +5,6 @@ abstract class FavoritePlanetService {
   Future<List<PlanetModel>> getFavoritePlanetsDependedOnCategoryName(
     String categoryName,
   );
-
+    Future<void> deletePlanetFromFavorite(PlanetModel planet);
  
 }

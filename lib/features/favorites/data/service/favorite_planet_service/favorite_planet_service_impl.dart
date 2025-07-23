@@ -27,5 +27,10 @@ class FavoritePlanetServiceImpl implements FavoritePlanetService {
     );
   }
 
-
+    @override
+  Future<void> deletePlanetFromFavorite(PlanetModel planet) async {
+    await firestorServices.deleteData(
+      path: FirestorePath.favoritePlanet(uid, planet.id),
+    );
+  }
 }
