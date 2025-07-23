@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:fasila/features/favorites/data/service/favorite_product_service/favorire_product_service_impl.dart';
 import 'package:fasila/features/favorites/data/service/favorite_product_service/favorite_product_service.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
@@ -8,15 +10,24 @@ class FavorireProductCubit extends Cubit<FavorireProductState> {
   FavorireProductCubit() : super(FavorireProductInitial());
     final FavoriteProductService favoriteProductService =
       FavoriteProductServiceImpl();
+        StreamSubscription? _cartSubscription;
+
+    @override
+  Future<void> close() {
+    _cartSubscription?.cancel();
+    return super.close();
+  }
 
   void getAllFavoriteProducts() async {
     emit(FavorireProductLoadingState());
-    try {
-      final products = await favoriteProductService.getAllFavoriteProducts();
-      emit(FavorireProductSuccessState(products));
-    } catch (e) {
-      emit(FavorireProductFailedState(e.toString()));
-    }
+      _cartSubscription = favoriteProductService.getAllFavoriteProducts().listen(
+      (products) {
+        emit(FavorireProductSuccessState(products));
+      },
+      onError: (e) {
+        emit(FavorireProductFailedState(e.toString()));
+      },
+    );
   }
 
   void getFavoriteProductsDependedOnCategoryName({required String categoryName}) async {  
@@ -31,6 +42,14 @@ class FavorireProductCubit extends Cubit<FavorireProductState> {
     }
   }
 
-
+  void deleteFromFavorite(ProductModel product) async {
+    emit(DeleteFromFavoriteLoadingState());
+    try {
+      await favoriteProductService.deleteProductFromFavorite(product);
+      emit(DeleteFromFavoriteSuccessState());
+    } catch (e) {
+      emit(DeleteFromFavoriteFailedState(e.toString()));
+    }
+  }
 
 }

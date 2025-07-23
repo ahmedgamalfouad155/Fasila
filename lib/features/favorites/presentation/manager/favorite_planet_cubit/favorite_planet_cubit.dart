@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/favorites/data/service/favorite_planet_service/favorite_planet_service.dart';
 import 'package:fasila/features/favorites/data/service/favorite_planet_service/favorite_planet_service_impl.dart';
@@ -9,15 +11,25 @@ class FavoritePlanetCubit extends Cubit<FavoritePlanetState> {
   FavoritePlanetCubit() : super(FavoritePlanetInitial());
   final FavoritePlanetService favoritePlanetService =
       FavoritePlanetServiceImpl();
+  StreamSubscription? _cartSubscription;
 
   void getAllFavoritePlanets() async {
     emit(FavoritePlanetLoadingState());
-    try {
-      final planets = await favoritePlanetService.getAllFavoritePlanets();
-      emit(FavoritePlanetSuccessState(planets));
-    } catch (e) {
-      emit(FavoritePlanetFailedState(e.toString()));
-    }
+
+    _cartSubscription = favoritePlanetService.getAllFavoritePlanets().listen(
+      (planets) {
+        emit(FavoritePlanetSuccessState(planets));
+      },
+      onError: (e) {
+        emit(FavoritePlanetFailedState(e.toString()));
+      },
+    );
+  }
+
+  @override
+  Future<void> close() {
+    _cartSubscription?.cancel();
+    return super.close();
   }
 
   void getFavoritePlanetsDependedOnCategoryName({

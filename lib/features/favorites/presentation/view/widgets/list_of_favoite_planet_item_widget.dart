@@ -1,3 +1,4 @@
+
 import 'package:fasila/features/favorites/presentation/manager/favorite_planet_cubit/favorite_planet_cubit.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/favorite_planet_item_widget.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +57,7 @@ class _ListOfFavoitePlanetItemWidgetState
             return const Center(child: CircularProgressIndicator());
           } else if (state is FavoritePlanetFailedState) {
             return Text(state.error);
-          } else if (state is FavoritePlanetSuccessState) {
+          } else if (state is FavoritePlanetSuccessState ) {
             return SizedBox(
               height: MediaQuery.of(context).size.height / 2,
               child: ListView.separated(
@@ -72,8 +73,8 @@ class _ListOfFavoitePlanetItemWidgetState
                 itemCount: state.favoritePlanets.length,
               ),
             );
-          } else {
-            return Text("error");
+          } else { 
+            return Text("error in list of favorite planet item widget");
           }
         },
       ),

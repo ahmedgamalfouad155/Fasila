@@ -9,10 +9,10 @@ class FavoritePlanetServiceImpl implements FavoritePlanetService {
   final uid = AuthServicesImpl().currentUser!.uid;
 
   @override
-  Future<List<PlanetModel>> getAllFavoritePlanets() {
-    return firestorServices.getCollection(
+  Stream<List<PlanetModel>> getAllFavoritePlanets() {
+    return firestorServices.collectionsStram(
       path: FirestorePath.myFavoritePlanet(uid),
-      builder: (data, documentId) => PlanetModel.fromMap(data, documentId),
+      builder: (data, documentId) => PlanetModel.fromMap(data!, documentId),
     );
   }
 

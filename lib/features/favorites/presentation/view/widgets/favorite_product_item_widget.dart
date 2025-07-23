@@ -4,6 +4,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/decoration.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
+import 'package:fasila/features/favorites/presentation/view/widgets/favorite_icon_in_favorite_product_item_widget.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -58,7 +59,9 @@ class FavoriteProductItemWidget extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Icon(Icons.favorite, color: context.appColors.teal),
+                          FavoriteIconInFavoriteProductItemWidget(
+                            product: product,
+                          ),
                           Icon(
                             Icons.share_rounded,
                             color: context.appColors.teal,

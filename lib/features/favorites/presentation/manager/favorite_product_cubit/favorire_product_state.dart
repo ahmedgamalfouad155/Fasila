@@ -16,3 +16,14 @@ final class FavorireProductFailedState extends FavorireProductState {
 
   FavorireProductFailedState(this.error);
 }
+
+
+  final class DeleteFromFavoriteLoadingState extends FavorireProductState {}
+
+final class DeleteFromFavoriteSuccessState extends FavorireProductState {}
+
+final class DeleteFromFavoriteFailedState extends FavorireProductState {
+  final String error;
+
+  DeleteFromFavoriteFailedState(this.error);
+}

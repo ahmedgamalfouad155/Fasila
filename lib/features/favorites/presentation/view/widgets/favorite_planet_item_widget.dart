@@ -4,6 +4,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/decoration.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
+import 'package:fasila/features/favorites/presentation/view/widgets/favorite_icon_in_favorite_planet_item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -59,7 +60,9 @@ class FavoritePlanetItemWidget extends StatelessWidget {
 
                       Row(
                         children: [
-                          Icon(Icons.favorite, color: context.appColors.teal),
+                          FavoriteIconInFavoritePlanetItemWidget(
+                            planetModel: planetModel,
+                          ),
                           Icon(Icons.share, color: context.appColors.teal),
                         ],
                       ),

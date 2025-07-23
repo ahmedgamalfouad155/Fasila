@@ -8,11 +8,11 @@ class FavoriteProductServiceImpl implements FavoriteProductService {
   final firestorServices = FirestoreServices.instance;
   final uid = AuthServicesImpl().currentUser!.uid;
 
-    @override
-  Future<List<ProductModel>> getAllFavoriteProducts() {
-    return firestorServices.getCollection(
+  @override
+  Stream<List<ProductModel>> getAllFavoriteProducts() {
+    return firestorServices.collectionsStram(
       path: FirestorePath.myFavoriteProduct(uid),
-      builder: (data, documentId) => ProductModel.fromMap(data, documentId),
+      builder: (data, documentId) => ProductModel.fromMap(data!, documentId),
     );
   }
 
@@ -24,6 +24,13 @@ class FavoriteProductServiceImpl implements FavoriteProductService {
       path: FirestorePath.myFavoriteProduct(uid),
       builder: (data, documentId) => ProductModel.fromMap(data, documentId),
       queryBuilder: (query) => query.where('category', isEqualTo: categoryName),
+    );
+  }
+
+  @override
+  Future<void> deleteProductFromFavorite(ProductModel product) {
+    return firestorServices.deleteData(
+      path: FirestorePath.favoriteProduct(uid, product.id),
     );
   }
 }
