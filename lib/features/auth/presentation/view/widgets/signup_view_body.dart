@@ -1,8 +1,10 @@
+import 'package:fasila/features/auth/presentation/manager/password_validation_cubit.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/auth_heder_text_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/signup_button_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/signup_fields_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/signup_role_section_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
@@ -50,7 +52,12 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 confirmPasswordController: confirmPasswordController,
               ),
               const SizedBox(height: 16),
-              SignupRoleSectionWidget(),
+              BlocProvider(
+                create: (context) =>  PasswordValidationCubit(),
+                child: SignupRoleSectionWidget(
+                  passwordController: passwordController,
+                ),
+              ),
               SignupButtonSectionWidget(
                 formKey: formKey,
                 passwordController: passwordController,

@@ -9,10 +9,7 @@ class SignupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context) => PasswordVisibilityCubit(),
-        child: SignupViewBody(),
-      ),
+      body: SignupViewBody(),
     );
   }
 }
