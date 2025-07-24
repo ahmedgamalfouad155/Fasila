@@ -1,5 +1,5 @@
-import 'dart:async';
-
+import 'dart:async'; 
+import 'package:fasila/core/constants/global_data.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/favorites/data/service/favorite_planet_service/favorite_planet_service.dart';
 import 'package:fasila/features/favorites/data/service/favorite_planet_service/favorite_planet_service_impl.dart';
@@ -50,6 +50,7 @@ class FavoritePlanetCubit extends Cubit<FavoritePlanetState> {
     try {
       await favoritePlanetService.deletePlanetFromFavorite(planet);
       emit(DeletePlanetFromFavoriteSuccessState());
+      favoritePlanetsId.remove(planet.id);
     } catch (e) {
       emit(DeletePlanetFromFavoriteFailedState(e.toString()));
     }

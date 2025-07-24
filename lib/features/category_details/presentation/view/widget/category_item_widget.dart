@@ -1,15 +1,19 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/core/theme/decoration.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
+import 'package:fasila/features/category_details/presentation/manager/planet_favoritecubit/planet_favorite_cubit.dart';
+import 'package:fasila/features/category_details/presentation/view/widget/planet_favorite_icon_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class CategoryItemWidget extends StatelessWidget {
-  const CategoryItemWidget({super.key, required this.planetModel, this.button});
+  const CategoryItemWidget({super.key, required this.planetModel});
   final PlanetModel planetModel;
-  final Widget? button;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -22,35 +26,13 @@ class CategoryItemWidget extends StatelessWidget {
         padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height / 5,
-        decoration: BoxDecoration(
-          color: context.appColors.offWhite,
-          borderRadius: BorderRadius.all(Radius.circular(16)),
-          boxShadow: [
-            BoxShadow(
-              color: context.appColors.grey.withAlpha((0.4 * 255).toInt()),
-              offset: const Offset(-2, 4),
-              blurRadius: 6,
-              spreadRadius: 1,
-            ),
-          ],
-        ),
+        decoration: defaultBoxDecoration(context),
         child: Row(
           children: [
             Container(
               width: MediaQuery.of(context).size.width / 4,
               height: MediaQuery.of(context).size.width / 4,
-              decoration: BoxDecoration(
-                color: context.appColors.white,
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: context.appColors.teal, width: 1),
-                boxShadow: [
-                  BoxShadow(
-                    color: context.appColors.grey,
-                    blurRadius: 6,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
+              decoration: defaultBoxDecoration(context, border: true),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: CachedNetworkImage(imageUrl: planetModel.imageUrl),
@@ -68,13 +50,15 @@ class CategoryItemWidget extends StatelessWidget {
                       Text(
                         planetModel.name,
                         style: AppStyles.textStyle16Teal(context),
-                      ),
-
+                      ), 
                       Row(
                         children: [
-                          Icon(
-                            Icons.favorite_border,
-                            color: context.appColors.teal,
+                          BlocProvider(
+                            create: (context) => PlanetFavoriteCubit(),
+                            child: PlanetFavoriteIconWidget(
+                              planetModel: planetModel,
+                              iconSize: 23,
+                            ),
                           ),
                           Icon(
                             Icons.share_rounded,
@@ -88,8 +72,6 @@ class CategoryItemWidget extends StatelessWidget {
                     planetModel.category,
                     style: AppStyles.textStyle18(context),
                   ),
-
-                  button ?? SizedBox(),
                 ],
               ),
             ),

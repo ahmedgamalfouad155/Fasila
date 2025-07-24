@@ -19,8 +19,7 @@ class ListOfCateroriesItemsWidget extends StatelessWidget {
           return Expanded(
             child: ListView.separated(
               itemBuilder: (context, index) {
-                final item = state.planets[index];
-
+                final item = state.planets[index]; 
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: CategoryItemWidget(planetModel: item),

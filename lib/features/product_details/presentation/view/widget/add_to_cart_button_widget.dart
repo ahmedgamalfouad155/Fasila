@@ -1,4 +1,4 @@
-import 'package:fasila/core/constants/constants.dart';
+import 'package:fasila/core/helper/generate_id.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/product_details/data/models/save_product_model.dart';
@@ -39,7 +39,7 @@ class AddToCartButtonWidget extends StatelessWidget {
             onPressed: () {
               addToCartCubit.addProducttoCart(
                 SaveProductModel(
-                  id: documentIdFromLocalData(),
+                  id: generateDocumentIdFromDateTime(),
                   productId: productModel.id,
                   name: productModel.name,
                   category: productModel.category,

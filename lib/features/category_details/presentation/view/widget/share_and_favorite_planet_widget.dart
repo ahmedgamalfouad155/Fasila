@@ -49,9 +49,7 @@ class ShareAndFavoritePlanetWidget extends StatelessWidget {
             ),
             child: BlocProvider(
               create: (context) => PlanetFavoriteCubit(),
-              child: PlanetFavoriteIconWidget(
-                  planetModel: planetModel,
-              ),
+              child: PlanetFavoriteIconWidget(planetModel: planetModel),
             ),
           ),
         ],
