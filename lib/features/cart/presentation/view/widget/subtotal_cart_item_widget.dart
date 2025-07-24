@@ -1,5 +1,5 @@
 import 'package:fasila/core/theme/colors.dart';
-import 'package:fasila/core/theme/decoration.dart';
+import 'package:fasila/core/theme/customs_box_decoratino.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/cart/presentation/view/widget/subtotal_option_content_widget.dart';
 import 'package:fasila/features/product_details/data/models/save_product_model.dart';
@@ -22,7 +22,7 @@ class SubtotalCartItemsWidget extends StatelessWidget {
       padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 4,
-      decoration: defaultBoxDecoration(context),
+      decoration:CustomsBoxDecoration(). defaultBoxDecoration(context),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,

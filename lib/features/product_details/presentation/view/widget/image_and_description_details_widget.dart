@@ -1,4 +1,4 @@
-import 'package:fasila/core/theme/decoration.dart';
+import 'package:fasila/core/theme/customs_box_decoratino.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/product_description_widget.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/product_image_and_icons_widget.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
@@ -16,7 +16,7 @@ class ImageAndDescriptionDetailsWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),
       width: MediaQuery.of(context).size.width,
-      decoration: defaultBoxDecoration(context),
+      decoration:CustomsBoxDecoration(). defaultBoxDecoration(context),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
