@@ -1,5 +1,6 @@
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
+import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,15 +29,13 @@ class LoginButonSectionWidget extends StatelessWidget {
           passwordController.clear();
           emailController.clear();
         } else if (state is LoginFailedState) {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text("error in login")));
+          customSnakBar(context, message: state.error);
         }
       },
       builder: (context, state) {
         if (state is LoginLoadingState) {
           return const CircularProgressIndicator();
-        } else if (state is AuthInitial) {
+        } else if (state is AuthInitial || state is LoginFailedState) {
           return CustomButon(
             text: 'Login',
             onPressed: () async {
@@ -48,7 +47,7 @@ class LoginButonSectionWidget extends StatelessWidget {
               }
             },
           );
-        }
+        } 
         return Text('error in authentication');
       },
     );
