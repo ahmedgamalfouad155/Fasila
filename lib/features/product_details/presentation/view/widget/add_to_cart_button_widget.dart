@@ -1,4 +1,3 @@
-import 'package:fasila/core/helper/generate_id.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/product_details/data/models/save_product_model.dart';
@@ -13,10 +12,12 @@ class AddToCartButtonWidget extends StatelessWidget {
     super.key,
     required this.quantity,
     required this.productModel,
+    this.isFromProductItemWidget,
   });
 
   final num quantity;
   final ProductModel productModel;
+  final bool? isFromProductItemWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +35,14 @@ class AddToCartButtonWidget extends StatelessWidget {
         } else if (state is AddToCartInitial ||
             state is AddToCartSuccessState) {
           return CustomButon(
-            width: MediaQuery.of(context).size.width / 1.4,
+            width: isFromProductItemWidget == true
+                ? 180
+                : MediaQuery.of(context).size.width / 1.4,
+            height: isFromProductItemWidget == true ? 40 : null,
             text: "Add To Card",
             onPressed: () {
               addToCartCubit.addProducttoCart(
                 SaveProductModel(
-                  id: generateDocumentIdFromDateTime(),
                   productId: productModel.id,
                   name: productModel.name,
                   category: productModel.category,

@@ -13,21 +13,21 @@ class CartServicesImpl implements CartServices {
     return firestorServices.collectionsStram(
       path: FirestorePath.myProductsCart(uid),
       builder: (data, documentId) =>
-          SaveProductModel.fromMap(data!, documentId),
+          SaveProductModel.fromMap(data!),
     );
   }
 
   @override
   Future<void> deleteProductFromCart(SaveProductModel product) async {
     await firestorServices.deleteData(
-      path: FirestorePath.carts(uid, product.id),
+      path: FirestorePath.carts(uid , product.productId),
     );
   }
 
   @override
   Future<void> updateProductInCart(SaveProductModel product) {
     return firestorServices.updatedata(
-      path: FirestorePath.carts(uid, product.id),
+      path: FirestorePath.carts(uid, product.productId),
       data: product.toMap(),
     );
   }

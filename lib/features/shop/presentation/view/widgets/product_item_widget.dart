@@ -3,8 +3,9 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/customs_box_decoratino.dart';
 import 'package:fasila/core/theme/styles.dart';
-import 'package:fasila/core/widgets/custom_buton.dart';
+import 'package:fasila/features/product_details/presentation/manager/add_to_cart_cubit/add_to_cart_cubit.dart';
 import 'package:fasila/features/product_details/presentation/manager/prouduct_favorite_cubit/product_favorite_cubit.dart';
+import 'package:fasila/features/product_details/presentation/view/widget/add_to_cart_button_widget.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/product_favorite_icon_widget.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class ProductItemWidget extends StatelessWidget {
         padding: EdgeInsetsGeometry.symmetric(horizontal: 10, vertical: 10),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height / 4,
-        decoration:CustomsBoxDecoration(). defaultBoxDecoration(context),
+        decoration: CustomsBoxDecoration().defaultBoxDecoration(context),
         child: Row(
           children: [
             Container(
@@ -98,12 +99,15 @@ class ProductItemWidget extends StatelessWidget {
                       context,
                     ).copyWith(fontWeight: FontWeight.bold),
                   ),
-                  CustomButon(
-                    text: "Add To My Cart",
-                    onPressed: () {},
-                    width: 180,
-                    height: 40,
+                  BlocProvider(
+                    create: (context) => AddToCartCubit(),
+                    child: AddToCartButtonWidget(
+                      quantity: 1,
+                      productModel: product,
+                      isFromProductItemWidget: true,
+                    ),
                   ),
+                  
                 ],
               ),
             ),

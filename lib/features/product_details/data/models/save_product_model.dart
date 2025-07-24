@@ -1,5 +1,4 @@
 class SaveProductModel {
-  final String id;
   final String productId;
   final String name;
   final String category;
@@ -10,7 +9,6 @@ class SaveProductModel {
   final String discription;
 
   SaveProductModel({
-    required this.id,
     required this.productId,
     required this.name,
     required this.category,
@@ -22,7 +20,6 @@ class SaveProductModel {
   });
 
   SaveProductModel copyWith({
-    String? id,
     String? productId,
     String? name,
     String? category,
@@ -33,7 +30,6 @@ class SaveProductModel {
     String? discription,
   }) {
     return SaveProductModel(
-      id: id ?? this.id,
       productId: productId ?? this.productId,
       name: name ?? this.name,
       category: category ?? this.category,
@@ -47,7 +43,6 @@ class SaveProductModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
       'productId': productId,
       'name': name,
       'category': category,
@@ -59,9 +54,8 @@ class SaveProductModel {
     };
   }
 
-  factory SaveProductModel.fromMap(Map<String, dynamic> map, String documentId) {
+  factory SaveProductModel.fromMap(Map<String, dynamic> map) {
     return SaveProductModel(
-      id: documentId,
       productId: map['productId'] as String,
       name: map['name'] as String,
       category: map['category'] as String,
