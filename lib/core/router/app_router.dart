@@ -16,7 +16,7 @@ import 'package:fasila/features/location/presentation/view/location_view.dart';
 import 'package:fasila/features/location/presentation/view/select_location_view.dart';
 import 'package:fasila/features/my_orders/presentation/view/my_order_details_view.dart';
 import 'package:fasila/features/my_orders/presentation/view/my_orders_view.dart';
-import 'package:fasila/features/my_planet/presentation/view/my_planet.dart';
+import 'package:fasila/features/my_planet/presentation/view/my_planet_view.dart';
 import 'package:fasila/features/nav_bar/presentation/view/nav_bar_view.dart';
 import 'package:fasila/features/notification/presentation/view/notification_view.dart';
 import 'package:fasila/features/onbording/onboarding_view.dart';
