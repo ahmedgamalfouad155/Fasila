@@ -7,8 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductFavoriteIconWidget extends StatelessWidget {
-  const ProductFavoriteIconWidget({super.key, required this.productModel});
+  const ProductFavoriteIconWidget({
+    super.key,
+    required this.productModel,
+    this.iconSize,
+  });
   final ProductModel productModel;
+  final double? iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -30,13 +35,15 @@ class ProductFavoriteIconWidget extends StatelessWidget {
             state is DeleteProuductFromFavoriteSuccessState) {
           return InkWell(
             onTap: () {
-              cubit.isFavorite
+              cubit.isProductFavorite(productModel.id)
                   ? cubit.deleteFromFavorite(productModel)
                   : cubit.addToFavorite(productModel);
             },
             child: Icon(
-              cubit.isFavorite ? Icons.favorite : Icons.favorite_border,
-              size: 15,
+              cubit.isProductFavorite(productModel.id)
+                  ? Icons.favorite
+                  : Icons.favorite_border,
+              size: iconSize ?? 15,
               color: context.appColors.teal,
             ),
           );

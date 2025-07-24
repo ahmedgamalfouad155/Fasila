@@ -4,8 +4,11 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/decoration.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
+import 'package:fasila/features/product_details/presentation/manager/prouduct_favorite_cubit/product_favorite_cubit.dart';
+import 'package:fasila/features/product_details/presentation/view/widget/product_favorite_icon_widget.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class ProductItemWidget extends StatelessWidget {
@@ -66,9 +69,12 @@ class ProductItemWidget extends StatelessWidget {
 
                       Row(
                         children: [
-                          Icon(
-                            Icons.favorite_border,
-                            color: context.appColors.teal,
+                          BlocProvider(
+                            create: (context) => ProductFavoriteCubit(),
+                            child: ProductFavoriteIconWidget(
+                              productModel: product,
+                              iconSize: 23,
+                            ),
                           ),
                           Icon(
                             Icons.share_rounded,
