@@ -1,3 +1,4 @@
+import 'package:fasila/core/helper/notification_initializer.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/thems.dart';
 import 'package:fasila/features/auth/data/services/auth_services_impl.dart';
@@ -12,12 +13,18 @@ import 'package:path_provider/path_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   final appDocumentDir = await getApplicationDocumentsDirectory();
   Hive.init(appDocumentDir.path);
   await Hive.openBox('fasilaBox');
+
+  await initializeNotifications(); 
   runApp(const MyApp());
-}
+} 
+
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
