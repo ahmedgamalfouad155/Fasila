@@ -15,6 +15,6 @@ class PlanetDetailscTogelContent extends StatelessWidget {
 
     return selectedTab == FavoriteTogelTap.plantInfo
         ? PlanetInfoContent(planetModel: planetModel,)
-        : const ReminderContent();
+        :  ReminderContent(  planetModel: planetModel,);
   }
 }

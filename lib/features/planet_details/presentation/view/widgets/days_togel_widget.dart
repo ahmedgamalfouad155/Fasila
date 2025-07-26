@@ -23,7 +23,7 @@ class DaysTogelWidget extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 6),
                 child: InkWell(
                   onTap: () {
-                    context.read<DaysTogetCubit>().togetBetwenWeeks(index);
+                    context.read<DaysTogetCubit>().togetBetwenDays(index);
                   },
                   child: Container(
                     padding: const EdgeInsets.symmetric(

@@ -17,11 +17,20 @@ class FirestorePath {
   static String myFavoritePlanet(String uid) =>
       "users/$uid/favorite/$uid/planets/";
 
-  static String garden(String uid, String garden) =>
-      "users/$uid/garden/$garden";
+  static String garden(String uid, String planetId) =>
+      "users/$uid/garden/$planetId";
   static String myGarden(String uid) => "users/$uid/garden/";
+
+  static String planetAlarm(String uid, String planetId,String alarmId) =>
+      "users/$uid/garden/$planetId/alarms/$alarmId";
+  static String myPlanetAlarm(String uid, String productId) =>
+      "users/$uid/garden/$productId/alarms/";
 
   static String addresses(String uid, String addressId) =>
       "users/$uid/addresses/$addressId";
   static String myAddresses(String uid) => "users/$uid/addresses/";
 }
+
+
+
+
