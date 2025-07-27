@@ -26,7 +26,9 @@ class CartViewBody extends StatelessWidget {
           } else if (state is CartSuccsessState) {
             return state.myProductsCart.isNotEmpty
                 ? Scaffold(
-                    bottomNavigationBar: CheckoutAndAddProductButtonsWidget(),
+                    bottomNavigationBar: CheckoutAndAddProductButtonsWidget(
+                      productsCart: state.myProductsCart,
+                    ),
                     body: SingleChildScrollView(
                       child: Column(
                         children: [

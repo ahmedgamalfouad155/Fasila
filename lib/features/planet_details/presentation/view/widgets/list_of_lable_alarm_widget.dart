@@ -35,7 +35,6 @@ class ListOfLableAlarmWidget extends StatelessWidget {
             itemCount: state.listOfAlarms.length,
           );
         } else {
-          print(state);
           return const Text("error");
         }
       },
