@@ -1,3 +1,4 @@
+import 'package:fasila/core/logic/search_cubit.dart';
 import 'package:fasila/features/category_details/presentation/manager/planets_cubit/planets_cubit.dart';
 import 'package:fasila/features/category_details/presentation/view/widget/category_filter_content_widget.dart';
 import 'package:fasila/features/my_planet/presentation/view/widgets/my_planet_filter_buttons_widget.dart';

@@ -1,12 +1,15 @@
+import 'package:fasila/core/logic/search_cubit.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomSearchTextFormFieldWidget extends StatelessWidget {
   const CustomSearchTextFormFieldWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController controller = TextEditingController();
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -22,7 +25,11 @@ class CustomSearchTextFormFieldWidget extends StatelessWidget {
         ],
       ),
       child: TextFormField(
+        controller: controller,
         cursorColor: context.appColors.teal,
+        onChanged: (v) {
+          context.read<SearchCubit>().updateQuery(controller.text);
+        },
         decoration: InputDecoration(
           hintText: "search for your plants",
           hintStyle: AppStyles.textStyle16Black(
