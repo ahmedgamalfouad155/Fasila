@@ -17,9 +17,7 @@ class ListOfCateroriesItemsWidget extends StatelessWidget {
         } else if (state is PlanetsFailedState) {
           return Text(state.error);
         } else if (state is PlanetsSuccessState) {
-          final searchQuery = context.watch<SearchCubit>().state.toLowerCase();
-
-          // ✅ لو الكلمة مش فاضية نفلتر، لو فاضية نعرض الكل
+          final searchQuery = context.watch<SearchCubit>().state.toLowerCase(); 
           final filteredPlanets = searchQuery.isEmpty
               ? state.planets
               : state.planets
@@ -27,8 +25,7 @@ class ListOfCateroriesItemsWidget extends StatelessWidget {
                       (planet) =>
                           planet.name.toLowerCase().contains(searchQuery),
                     )
-                    .toList();
-
+                    .toList(); 
           return Expanded(
             child: filteredPlanets.isEmpty
                 ? const Center(child: Text("No matching results found."))
