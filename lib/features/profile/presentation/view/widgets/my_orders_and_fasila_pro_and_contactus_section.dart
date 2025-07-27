@@ -1,4 +1,3 @@
-
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
@@ -8,9 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 class MyOrdersAndFasilaProAndContactUsSection extends StatelessWidget {
-  const MyOrdersAndFasilaProAndContactUsSection({
-    super.key,
-  });
+  const MyOrdersAndFasilaProAndContactUsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,19 +21,19 @@ class MyOrdersAndFasilaProAndContactUsSection extends StatelessWidget {
           },
         ),
         const SizedBox(height: 10),
-        
+
         ProfileOptionWidget(
           logo: SvgPicture.asset(AppImages.faselaProLogo),
-        
+
           title: 'Fasila Pro',
           onTap: () {
             GoRouter.of(context).push(AppRouter.kFasilaProView);
           },
         ),
         const SizedBox(height: 10),
-        
+
         ProfileOptionWidget(
-          logo: Icon(Icons.phone, color: context.appColors.teal),
+          logo: Icon(Icons.phone, color: Color(0xff076B5F)),
           title: 'Contact Us',
           onTap: () {
             GoRouter.of(context).push(AppRouter.kContactUsView);

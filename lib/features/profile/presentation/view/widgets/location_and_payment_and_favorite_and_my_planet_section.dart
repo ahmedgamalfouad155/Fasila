@@ -16,7 +16,7 @@ class LocationAndPaymentAndFavoritAndMyPlanetSection extends StatelessWidget {
     return Column(
       children: [
         ProfileOptionWidget(
-          logo: Icon(Icons.location_on, color: context.appColors.teal),
+          logo: Icon(Icons.location_on, color: Color(0xff076B5F)),
           title: 'Location',
           onTap: () {
             GoRouter.of(context).push(AppRouter.kLocationView);
@@ -30,7 +30,7 @@ class LocationAndPaymentAndFavoritAndMyPlanetSection extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         ProfileOptionWidget(
-          logo: Icon(Icons.favorite, color: context.appColors.teal),
+          logo: Icon(Icons.favorite, color: Color(0xff076B5F)),
           title: 'Favorites',
           onTap: () {
             GoRouter.of(context).push(AppRouter.kFavoritesView);
