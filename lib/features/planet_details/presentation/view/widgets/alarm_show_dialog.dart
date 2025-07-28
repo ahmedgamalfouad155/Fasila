@@ -15,13 +15,14 @@ import 'package:fasila/features/planet_details/presentation/view/widgets/delete_
 import 'package:fasila/features/planet_details/presentation/view/widgets/switch_alarm_card_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/days_togel_widget.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-Future<dynamic> alarmShowDialog(BuildContext context,PlanetModel planetModel) {
+Future<dynamic> alarmShowDialog(BuildContext context, PlanetModel planetModel) {
   final alarmPlanetCubit = context.read<AlarmPlanetCubit>();
   return showDialog(
-    context: context, 
+    context: context,
     builder: (context) => Dialog(
       backgroundColor: context.appColors.offWhite,
       insetPadding: EdgeInsets.all(10),
@@ -46,10 +47,12 @@ Future<dynamic> alarmShowDialog(BuildContext context,PlanetModel planetModel) {
                     const SizedBox(height: 10),
                     ChooseLableAlarmWidget(),
                     SwitchAlarmCardWidget(
-                      discribtion: "Vibrate when alarm Sound",
+                      discribtion: S.of(context).vibrateWhenAlarmSound,
                     ),
                     const SizedBox(height: 10),
-                    SwitchAlarmCardWidget(discribtion: "Delet after goes off"),
+                    SwitchAlarmCardWidget(
+                      discribtion: S.of(context).deletAfterGoesOff,
+                    ),
                     const SizedBox(height: 10),
                     AlarmVolumeWidget(),
                     const SizedBox(height: 10),
@@ -57,7 +60,9 @@ Future<dynamic> alarmShowDialog(BuildContext context,PlanetModel planetModel) {
                     const SizedBox(height: 10),
                     BlocProvider.value(
                       value: alarmPlanetCubit,
-                      child: SaveAndCancelButtonWidget( planetModel: planetModel,),
+                      child: SaveAndCancelButtonWidget(
+                        planetModel: planetModel,
+                      ),
                     ),
                   ],
                 );

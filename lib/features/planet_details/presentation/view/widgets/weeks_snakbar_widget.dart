@@ -2,6 +2,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/togel_weeks_widget.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,7 +24,7 @@ class WeeksSnackBarWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Choose The Week',
+                    S.of(context).chooseWeek,
                 style: AppStyles.textStyle18(context).copyWith(
                   color: context.appColors.teal,
                   fontWeight: FontWeight.bold,

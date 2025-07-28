@@ -2,6 +2,7 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/auth/presentation/manager/password_validation_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -49,7 +50,7 @@ class SignupRoleSectionWidget extends StatelessWidget {
                 GoRouter.of(context).push(AppRouter.kLogInView);
               },
               child: Text(
-                'Already have an account ?',
+                  S.of(context).alreadyHaveAnAccount,
                 style: AppStyles.textStyle14(
                   context,
                 ).copyWith(fontWeight: FontWeight.bold),
@@ -57,27 +58,27 @@ class SignupRoleSectionWidget extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              'The password must be at least 8 characters long and must include:',
+              S.of(context).thePasswordMustBeAtLeast8CharactersLongAndMustInclude,
               style: AppStyles.textStyle12Grey(context),
             ),
             const SizedBox(height: 10),
 
-            buildItem(state.hasUpperCase, '• Capital letter (A-Z)'),
+            buildItem(state.hasUpperCase,   S.of(context).capitalLetter),
             const SizedBox(height: 5),
 
-            buildItem(state.hasLowerCase, '• One lowercase letter (a-z)'),
+            buildItem(state.hasLowerCase, S.of(context).lowercaseLetter),
             const SizedBox(height: 5),
 
-            buildItem(state.hasNumber, '• 1 number (0-9)'),
+            buildItem(state.hasNumber,  S.of(context).number),
             const SizedBox(height: 5),
 
             buildItem(
               state.hasSpecialChar,
-              '• 1 special character (@#+\$%^&*_-+=,.?/)',
+                S.of(context).specialCharacter,
             ),
             const SizedBox(height: 5),
 
-            buildItem(state.hasMinLength, '• At least 8 characters'),
+            buildItem(state.hasMinLength, S.of(context).atLeast8Characters),
             const SizedBox(height: 30),
           ],
         );

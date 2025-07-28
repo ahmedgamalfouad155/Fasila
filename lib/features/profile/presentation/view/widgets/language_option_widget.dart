@@ -1,6 +1,7 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/profile/presentation/manager/language_cubit/language_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,10 +21,10 @@ class LanguageOptionWidget extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(Icons.public, color: context.appColors.teal, size: 30),
+            Icon(Icons.public, color: Color(0xff076B5F), size: 30),
             const SizedBox(width: 15),
             Text(
-              "Language",
+              S.of(context).language,
               style: AppStyles.textStyle16Teal(
                 context,
               ).copyWith(fontWeight: FontWeight.bold),

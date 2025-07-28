@@ -26,13 +26,13 @@ class LocationAndPaymentAndFavoritAndMyPlanetSection extends StatelessWidget {
         const SizedBox(height: 10),
         ProfileOptionWidget(
           logo: SvgPicture.asset(AppImages.paymentImage),
-          title: 'Payment',
+          title:  S.of(context).payment,
           onTap: () {},
         ),
         const SizedBox(height: 10),
         ProfileOptionWidget(
           logo: Icon(Icons.favorite, color: Color(0xff076B5F)),
-          title: 'Favorites',
+          title:  S.of(context).favorites,
           onTap: () {
             GoRouter.of(context).push(AppRouter.kFavoritesView);
           },
@@ -43,7 +43,7 @@ class LocationAndPaymentAndFavoritAndMyPlanetSection extends StatelessWidget {
           create: (context) => NavBarCubit(),
           child: ProfileOptionWidget(
             logo: SvgPicture.asset(AppImages.navMyPlanetIconClick),
-            title: 'My Plants',
+            title:  S.of(context).myPlants,
             onTap: () {
               context.read<NavBarCubit>().changeIndex(3);
               GoRouter.of(context).push(AppRouter.kMyPlanetView);

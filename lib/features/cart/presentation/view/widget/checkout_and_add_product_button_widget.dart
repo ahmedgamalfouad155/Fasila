@@ -9,6 +9,7 @@ import 'package:fasila/features/cart/data/models/item_list_model/item.dart';
 import 'package:fasila/features/cart/data/models/item_list_model/item_list_model.dart';
 import 'package:fasila/features/cart/presentation/view/widget/add_product_button_widget.dart';
 import 'package:fasila/features/product_details/data/models/save_product_model.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
@@ -30,7 +31,7 @@ class CheckoutAndAddProductButtonsWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         DefaultButtonWidget(
-          text: "Checkout",
+          text:   S.of(context).checkout,
           onPressed: () {
             var amount = AmountModel(
               total: "$totalP",

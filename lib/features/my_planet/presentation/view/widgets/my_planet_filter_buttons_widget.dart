@@ -1,22 +1,22 @@
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 
 class MyPlanetFilterButtonsWidget extends StatelessWidget {
-  final List<String> filters = [
-    'All',
-    'vegetable',
-    'Fruits',
-    'Leavy plant',
-    'Ornamental',
-  ];
-
-  MyPlanetFilterButtonsWidget({super.key});
+  const MyPlanetFilterButtonsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<String> filters = [
+      S.of(context).all,
+      S.of(context).vegetables,
+      S.of(context).fruits,
+      S.of(context).leavyPlant,
+        S.of(context).ornamental,
+    ];
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
@@ -71,7 +71,7 @@ class MyPlanetFilterButtonsWidget extends StatelessWidget {
                       ),
                     );
                   }),
-                ), 
+                ),
               ],
             ),
           );

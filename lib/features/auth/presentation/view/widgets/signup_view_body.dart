@@ -3,6 +3,7 @@ import 'package:fasila/features/auth/presentation/view/widgets/auth_heder_text_w
 import 'package:fasila/features/auth/presentation/view/widgets/signup_button_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/signup_fields_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/signup_role_section_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -41,8 +42,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AuthHederTextWidget(
-                title: 'Create account',
-                subTitle: 'Welcome! Sign up to get started',
+                title: S.of(context).createAccount,
+                subTitle: S.of(context).welcomSignUpToGetStarted,
               ),
               const SizedBox(height: 30),
               SignupFieldsSectionWidget(

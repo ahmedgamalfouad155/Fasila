@@ -3,6 +3,7 @@ import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/core/widgets/default_button_widget.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/category_details/presentation/manager/add_to_garden_cubit/add_to_garden_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,7 +27,7 @@ class AddToMyGardenButtonWidget extends StatelessWidget {
         } else if (state is AddToGardenInitial ||
             state is AddToGardenSuccessState) {
           return DefaultButtonWidget(
-            text: "Add to my garden",
+            text:   S.of(context).addToMyGarden,
             onPressed: () {
               addToGardenCubit.addPlanetToGarden(planetModel);
             },

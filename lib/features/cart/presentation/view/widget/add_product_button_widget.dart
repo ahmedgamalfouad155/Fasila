@@ -3,6 +3,7 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/default_button_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -14,7 +15,7 @@ class AddProductButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultButtonWidget(
-      text: "Add Product",
+      text: S.of(context).addProduct,
       onPressed: () {
         GoRouter.of(context).push(AppRouter.kShopView);
       },

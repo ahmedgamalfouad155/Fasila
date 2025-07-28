@@ -1,23 +1,24 @@
 import 'package:fasila/core/theme/customs_box_decoratino.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 
 class ShopFilterButtonsWidget extends StatelessWidget {
-  final List<String> filters = [
-    'All',
-    'Pots & Planters',
-    'Garden Supplies',
-    'Seeds',
-    'fertilizer',
-  ];
-
-  ShopFilterButtonsWidget({super.key});
+  const ShopFilterButtonsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<String> filters = [
+      S.of(context).all,
+      S.of(context).potsAndPlaners,
+      S.of(context).gardenSupplies,
+      S.of(context).seeds,
+      S.of(context).fertilizer,
+    ];
+
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: CustomsBoxDecoration().customFiltersBoxDecoration(context),

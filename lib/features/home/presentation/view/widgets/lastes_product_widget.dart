@@ -4,6 +4,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/home/presentation/view/widgets/home_category_typy_widget.dart';
 import 'package:fasila/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -22,8 +23,7 @@ class LastesProductWidget extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
           child: SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 4.5,
+            width: MediaQuery.of(context).size.width, 
             child: InkWell(
               onTap: () {
                 context.read<NavBarCubit>().changeIndex(1);
@@ -33,7 +33,7 @@ class LastesProductWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Lastest products',
+                    S.of(context).lastestProducts,
                     style: AppStyles.textStyle16Teal(
                       context,
                     ).copyWith(fontWeight: FontWeight.bold),
@@ -44,7 +44,7 @@ class LastesProductWidget extends StatelessWidget {
                     children: [
                       HomeCategoryTypeWidget(
                         image: AppImages.lastest1Image,
-                        title: 'Take a picture',
+                        title: S.of(context).takePicture,
                       ),
                       Icon(
                         Icons.arrow_forward_ios,
@@ -53,7 +53,7 @@ class LastesProductWidget extends StatelessWidget {
                       ),
                       HomeCategoryTypeWidget(
                         image: AppImages.lastest2Image,
-                        title: 'See diagnosis',
+                        title: S.of(context).seeDiagnosis,
                       ),
                       Icon(
                         Icons.arrow_forward_ios,
@@ -62,7 +62,7 @@ class LastesProductWidget extends StatelessWidget {
                       ),
                       HomeCategoryTypeWidget(
                         image: AppImages.lastest3Image,
-                        title: 'Get medicine',
+                        title: S.of(context).getMedicine,
                       ),
                     ],
                   ),

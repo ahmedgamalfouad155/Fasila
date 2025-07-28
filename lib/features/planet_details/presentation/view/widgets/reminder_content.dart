@@ -6,6 +6,7 @@ import 'package:fasila/features/planet_details/presentation/manager/alarm_planet
 import 'package:fasila/features/planet_details/presentation/view/widgets/alarm_show_dialog.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/list_of_lable_alarm_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/lable_alarm_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,7 +24,7 @@ class ReminderContent extends StatelessWidget {
           return Column(
             children: [
               DefaultButtonWidget(
-                text: "Add Alarm",
+                text: S.of(context).addAlarm,
                 onPressed: () {
                   alarmShowDialog(context, planetModel);
                 },

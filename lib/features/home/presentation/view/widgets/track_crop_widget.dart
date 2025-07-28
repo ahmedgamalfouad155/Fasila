@@ -3,6 +3,7 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,7 +24,6 @@ class TrackCropCardWiget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
           child: SizedBox(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 10,
             child: InkWell(
               onTap: () {
                 context.read<NavBarCubit>().changeIndex(3);
@@ -38,7 +38,7 @@ class TrackCropCardWiget extends StatelessWidget {
                       SvgPicture.network(AppImages.drowImage, height: 30),
                       const SizedBox(height: 8),
                       Text(
-                        'Track your crop',
+                        S.of(context).trackYourCrop,
                         style: AppStyles.textStyle16Teal(
                           context,
                         ).copyWith(fontWeight: FontWeight.bold),

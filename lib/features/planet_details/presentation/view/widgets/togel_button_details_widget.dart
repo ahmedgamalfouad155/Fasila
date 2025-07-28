@@ -1,5 +1,6 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/details_togel_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,7 +30,7 @@ class TogelButtonDetailsWidget extends StatelessWidget {
         borderColor: context.appColors.grey,
         selectedBorderColor: context.appColors.teal,
         constraints: const BoxConstraints(minHeight: 40, minWidth: 160),
-        children: const [Text('Plant Info'), Text('Reminders')],
+        children: [Text(S.of(context).plantInfo), Text(S.of(context).reminders)],
       ),
     );
   }

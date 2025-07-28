@@ -3,6 +3,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/planet_info_cart_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -21,7 +22,7 @@ class CategoryDetailsOptionWidget extends StatelessWidget {
       child: Column(
         children: [
           PlanetInfoCardWidget(
-            title: 'Water',
+            title:  S.of(context).water,
             icon: SvgPicture.network(AppImages.waterImage),
             details: Align(
               alignment: AlignmentDirectional.topStart,
@@ -35,7 +36,7 @@ class CategoryDetailsOptionWidget extends StatelessWidget {
             ),
           ),
           PlanetInfoCardWidget(
-            title: 'Light',
+            title:    S.of(context).light,
             icon: SvgPicture.network(AppImages.lightImage),
             details: Align(
               alignment: AlignmentDirectional.topStart,
@@ -48,7 +49,7 @@ class CategoryDetailsOptionWidget extends StatelessWidget {
             ),
           ),
           PlanetInfoCardWidget(
-            title: 'Temperature',
+            title: S.of(context).temperature,
             icon: SvgPicture.network(AppImages.temperatureImage),
             details: Align(
               alignment: AlignmentDirectional.topStart,
@@ -62,7 +63,7 @@ class CategoryDetailsOptionWidget extends StatelessWidget {
           ),
 
           PlanetInfoCardWidget(
-            title: 'The Soil',
+            title: S.of(context).soil,
             icon: SvgPicture.network(AppImages.soilImage),
             details: Align(
               alignment: AlignmentDirectional.topStart,
@@ -75,7 +76,7 @@ class CategoryDetailsOptionWidget extends StatelessWidget {
             ),
           ),
           PlanetInfoCardWidget(
-            title: 'Humidty',
+            title:  S.of(context).humidity,
             icon: SvgPicture.network(AppImages.humidityImage),
             details: Align(
               alignment: AlignmentDirectional.topStart,
@@ -88,7 +89,7 @@ class CategoryDetailsOptionWidget extends StatelessWidget {
             ),
           ),
           PlanetInfoCardWidget(
-            title: 'Fertiliz',
+            title:  S.of(context).fertilizer,
             icon: SvgPicture.network(AppImages.fertilizerImage),
             details: Align(
               alignment: AlignmentDirectional.topStart,

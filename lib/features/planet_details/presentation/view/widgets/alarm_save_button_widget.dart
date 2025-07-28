@@ -4,6 +4,7 @@ import 'package:fasila/features/planet_details/data/models/alarm_model.dart';
 import 'package:fasila/features/planet_details/presentation/manager/alarm_planet_cubit/alarm_planet_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/days_toget_cubit.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,7 +31,7 @@ class SaveButtonAlarmWidget extends StatelessWidget {
             state is AlarmPlanetInitial ||
             state is GettingAlarmPlanetSuccessState) {
           return DefaultButtonWidget(
-            text: "Save",
+            text:   S.of(context).save,
             onPressed: () async {
               final selectedTime = context.read<AlarmTimeCubit>().state;
               final selectedDayIndex = context.read<DaysTogetCubit>().state;
@@ -55,13 +56,13 @@ class SaveButtonAlarmWidget extends StatelessWidget {
               alarmPlanetCubit.addLableAlarm(
                 AlarmModel(
                   id: DateTime.now().toString(),
-                  title: ConstantPlanetDetails()
+                  title: ConstantPlanetDetails(context)
                       .options[context.read<FilterCubit>().state],
-                  icon: ConstantPlanetDetails()
+                  icon: ConstantPlanetDetails(context)
                       .images[context.read<FilterCubit>().state],
                   hour: selectedTime.hour,
                   minute: selectedTime.minute,
-                  day: ConstantPlanetDetails().days[selectedDayIndex],
+                  day: ConstantPlanetDetails(context).days[selectedDayIndex],
                   isActive: true,
                 ),
                 planetModel.id,

@@ -3,6 +3,7 @@ import 'package:fasila/features/auth/presentation/view/widgets/continue_text_and
 import 'package:fasila/features/auth/presentation/view/widgets/forget_and_create_account_text_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/login_buton_section_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/login_fields_section_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class LoginViewBody extends StatefulWidget {
@@ -35,8 +36,8 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               AuthHederTextWidget(
-                title: "Login here",
-                subTitle: "Welcome back you’ve been missed!",
+                title:S.of(context).loginHere,
+                subTitle: S.of(context).welcomeBackYouveBeenMissed,
               ),
               const SizedBox(height: 30),
               LoginFieldsSectionWidget(

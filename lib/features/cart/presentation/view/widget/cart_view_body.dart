@@ -5,6 +5,7 @@ import 'package:fasila/features/cart/presentation/manager/cart_cubit/cart_state.
 import 'package:fasila/features/cart/presentation/view/widget/checkout_and_add_product_button_widget.dart';
 import 'package:fasila/features/cart/presentation/view/widget/list_of_cart_item_widget.dart';
 import 'package:fasila/features/cart/presentation/view/widget/subtotal_cart_item_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -45,8 +46,8 @@ class CartViewBody extends StatelessWidget {
                   )
                 : CustomEmptyPage(
                     image: AppImages.myPlanetFruit1Image,
-                    title: "You Have No Products In Your Cart",
-                    subTitle: 'Add Products To Your Cart',
+                    title: S.of(context).youHaveNoProductsInYourCart,
+                    subTitle: S.of(context).addProductsToYourCart,
                   );
           } else {
             return const Text("Something went wrong.");

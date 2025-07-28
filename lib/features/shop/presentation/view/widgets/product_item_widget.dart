@@ -8,6 +8,7 @@ import 'package:fasila/features/product_details/presentation/manager/prouduct_fa
 import 'package:fasila/features/product_details/presentation/view/widget/add_to_cart_button_widget.dart';
 import 'package:fasila/features/product_details/presentation/view/widget/product_favorite_icon_widget.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -94,7 +95,7 @@ class ProductItemWidget extends StatelessWidget {
                   ),
 
                   Text(
-                    "${product.price.toDouble()} EGP",
+                    "${product.price.toDouble()} ${S.of(context).egp}",
                     style: AppStyles.textStyle16Teal(
                       context,
                     ).copyWith(fontWeight: FontWeight.bold),

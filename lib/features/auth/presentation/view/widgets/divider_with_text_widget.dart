@@ -6,14 +6,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class DividerWithTextWidget extends StatelessWidget {
   const DividerWithTextWidget({
     super.key,
-    this.text = "Or Continue with",
+    this.text ,
     this.dividerColor,
     this.textStyle,
     this.dividerThickness = 1.0,
     this.spacing = 16.0,
   });
 
-  final String text;
+  final String? text;
   final Color? dividerColor;
   final TextStyle? textStyle;
   final double dividerThickness;
@@ -33,7 +33,7 @@ class DividerWithTextWidget extends StatelessWidget {
 
         SizedBox(width: spacing.w),
 
-        Text(text, style: textStyle ?? AppStyles.textStyle16Teal(context)),
+        Text(text!, style: textStyle ?? AppStyles.textStyle16Teal(context)),
 
         SizedBox(width: spacing.w),
 

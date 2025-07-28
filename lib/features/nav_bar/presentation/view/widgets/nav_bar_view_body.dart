@@ -4,6 +4,7 @@ import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
 import 'package:fasila/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_state.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -67,7 +68,7 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
                         ? AppImages.navHomeIconClick
                         : AppImages.navHomeIcon,
                   ),
-                  label: 'Home',
+                  label: S.of(context).home,
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(
@@ -75,7 +76,7 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
                         ? AppImages.navShopIconClick
                         : AppImages.navShopIcon,
                   ),
-                  label: 'Shop',
+                  label: S.of(context).shop,
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(AppImages.navCameraIcon, width: 60),
@@ -87,7 +88,7 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
                         ? AppImages.navMyPlanetIconClick
                         : AppImages.navMyPlanetIcon,
                   ),
-                  label: 'My Planet',
+                  label: S.of(context).myPlanet,
                 ),
                 BottomNavigationBarItem(
                   icon: SvgPicture.asset(
@@ -95,7 +96,7 @@ class _NavBarViewBodyState extends State<NavBarViewBody> {
                         ? AppImages.navProfileIconClick
                         : AppImages.navProfileIcon,
                   ),
-                  label: 'Profile',
+                  label: S.of(context).profile,
                 ),
               ],
             ),

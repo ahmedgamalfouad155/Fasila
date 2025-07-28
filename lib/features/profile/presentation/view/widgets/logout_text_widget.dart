@@ -1,5 +1,6 @@
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -25,7 +26,7 @@ class LogoutTextWidget extends StatelessWidget {
                 Icon(Icons.logout, color: Colors.red),
                 const SizedBox(width: 10),
                 Text(
-                  'Logout',
+                    S.of(context).logout,
                   style: TextStyle(
                     color: Colors.red,
                     fontWeight: FontWeight.bold,

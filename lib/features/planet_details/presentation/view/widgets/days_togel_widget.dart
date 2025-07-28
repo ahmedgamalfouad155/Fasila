@@ -15,59 +15,60 @@ class DaysTogelWidget extends StatelessWidget {
         return SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: List.generate(ConstantPlanetDetails().days.length, (
-              index,
-            ) {
-              final isSelected = selectedIndex == index;
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 6),
-                child: InkWell(
-                  onTap: () {
-                    context.read<DaysTogetCubit>().togetBetwenDays(index);
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 15,
-                      vertical: 5,
-                    ),
-                    decoration: BoxDecoration(
-                      color: isSelected
-                          ? context.appColors.teal
-                          : context.appColors.offWhite,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: context.appColors.teal,
-                        width: 1.2,
+            children: List.generate(
+              ConstantPlanetDetails(context).days.length,
+              (index) {
+                final isSelected = selectedIndex == index;
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
+                  child: InkWell(
+                    onTap: () {
+                      context.read<DaysTogetCubit>().togetBetwenDays(index);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                        vertical: 5,
+                      ),
+                      decoration: BoxDecoration(
+                        color: isSelected
+                            ? context.appColors.teal
+                            : context.appColors.offWhite,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: context.appColors.teal,
+                          width: 1.2,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            ConstantPlanetDetails(context).days[index],
+                            style: isSelected
+                                ? AppStyles.textStyle14(
+                                    context,
+                                  ).copyWith(color: context.appColors.white)
+                                : AppStyles.textStyle14(
+                                    context,
+                                  ).copyWith(color: context.appColors.teal),
+                          ),
+                          Text(
+                            ConstantPlanetDetails(context).number[index],
+                            style: isSelected
+                                ? AppStyles.textStyle14(
+                                    context,
+                                  ).copyWith(color: context.appColors.white)
+                                : AppStyles.textStyle14(
+                                    context,
+                                  ).copyWith(color: context.appColors.teal),
+                          ),
+                        ],
                       ),
                     ),
-                    child: Column(
-                      children: [
-                        Text(
-                          ConstantPlanetDetails().days[index],
-                          style: isSelected
-                              ? AppStyles.textStyle14(
-                                  context,
-                                ).copyWith(color: context.appColors.white)
-                              : AppStyles.textStyle14(
-                                  context,
-                                ).copyWith(color: context.appColors.teal),
-                        ),
-                        Text(
-                          ConstantPlanetDetails().number[index],
-                          style: isSelected
-                              ? AppStyles.textStyle14(
-                                  context,
-                                ).copyWith(color: context.appColors.white)
-                              : AppStyles.textStyle14(
-                                  context,
-                                ).copyWith(color: context.appColors.teal),
-                        ),
-                      ],
-                    ),
                   ),
-                ),
-              );
-            }),
+                );
+              },
+            ),
           ),
         );
       },

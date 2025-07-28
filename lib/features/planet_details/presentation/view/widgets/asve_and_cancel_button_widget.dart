@@ -5,6 +5,7 @@ import 'package:fasila/features/planet_details/presentation/manager/alarm_planet
 import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/days_toget_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/alarm_save_button_widget.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/days_togel_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +21,7 @@ class SaveAndCancelButtonWidget extends StatelessWidget {
         SaveButtonAlarmWidget(  planetModel: planetModel,),
         const SizedBox(width: 5),
         DefaultButtonWidget(
-          text: "Cancel",
+          text: S.of(context).cancel,
           onPressed: () {
             Navigator.pop(context);
           },

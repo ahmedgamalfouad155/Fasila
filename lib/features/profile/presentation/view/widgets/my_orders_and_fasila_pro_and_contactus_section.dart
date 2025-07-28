@@ -2,6 +2,7 @@ import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/profile/presentation/view/widgets/profile_option_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
@@ -15,7 +16,7 @@ class MyOrdersAndFasilaProAndContactUsSection extends StatelessWidget {
       children: [
         ProfileOptionWidget(
           logo: SvgPicture.asset(AppImages.myOrdersLogo),
-          title: 'My Orders',
+          title:  S.of(context).myOrders,
           onTap: () {
             GoRouter.of(context).push(AppRouter.kMyOrdersView);
           },
@@ -23,9 +24,8 @@ class MyOrdersAndFasilaProAndContactUsSection extends StatelessWidget {
         const SizedBox(height: 10),
 
         ProfileOptionWidget(
-          logo: SvgPicture.asset(AppImages.faselaProLogo),
-
-          title: 'Fasila Pro',
+          logo: SvgPicture.asset(AppImages.faselaProLogo), 
+          title:  S.of(context).fasilaPro,
           onTap: () {
             GoRouter.of(context).push(AppRouter.kFasilaProView);
           },
@@ -34,7 +34,7 @@ class MyOrdersAndFasilaProAndContactUsSection extends StatelessWidget {
 
         ProfileOptionWidget(
           logo: Icon(Icons.phone, color: Color(0xff076B5F)),
-          title: 'Contact Us',
+          title:  S.of(context).contactUs,
           onTap: () {
             GoRouter.of(context).push(AppRouter.kContactUsView);
           },

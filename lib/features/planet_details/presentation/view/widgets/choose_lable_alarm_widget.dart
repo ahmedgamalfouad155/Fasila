@@ -7,6 +7,7 @@ import 'package:fasila/features/planet_details/data/constant_planet_details.dart
 import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/days_toget_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/choose_lable_alarm.dart';
 import 'package:fasila/features/shop/presentation/manager/filter_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,13 +18,13 @@ class ChooseLableAlarmWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChooseLableAlarmCardWidget(
-      title: 'Choose the Label',
+      title: S.of(context).chooseTheLable,
       details: SizedBox(
         height: MediaQuery.of(context).size.height / 4.5,
         child: BlocBuilder<FilterCubit, int>(
           builder: (context, selectedIndex) {
             return GridView.builder(
-              itemCount: ConstantPlanetDetails().options.length,
+              itemCount: ConstantPlanetDetails(context).options.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 12,
@@ -46,11 +47,11 @@ class ChooseLableAlarmWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SvgPicture.network(
-                          ConstantPlanetDetails().images[index],
+                          ConstantPlanetDetails(context).images[index],
                         ),
                         const SizedBox(width: 5),
                         Text(
-                          ConstantPlanetDetails().options[index],
+                          ConstantPlanetDetails(context).options[index],
                           style: AppStyles.textStyle14(context).copyWith(
                             color: isSelected
                                 ? context.appColors.white

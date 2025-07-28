@@ -1,6 +1,7 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/auth/presentation/manager/password_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,7 +28,7 @@ class CustomTextFormFieldWidget extends StatelessWidget {
           cursorColor: context.appColors.teal,
           validator: (value) {
             if (value == null || value.isEmpty) {
-              return 'Please enter your $hintText';
+              return '${S.of(context).pleaseEnterYour} $hintText';
             }
             return null;
           },

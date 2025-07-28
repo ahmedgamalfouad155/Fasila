@@ -1,6 +1,7 @@
 import 'package:fasila/core/constants/images.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/divider_with_text_widget.dart';
 import 'package:fasila/features/auth/presentation/view/widgets/logo_container_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class ContinueTextAndSocialLogoSectionWdiget extends StatelessWidget {
@@ -10,7 +11,9 @@ class ContinueTextAndSocialLogoSectionWdiget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const DividerWithTextWidget(),
+         DividerWithTextWidget(
+          text: S.of(context).orContinueWith,
+        ),
         const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

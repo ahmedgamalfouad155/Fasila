@@ -1,6 +1,7 @@
 import 'package:fasila/core/logic/search_cubit.dart';
 import 'package:fasila/features/shop/presentation/manager/product_cubit/product_cubit.dart';
 import 'package:fasila/features/shop/presentation/view/widgets/product_item_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,7 +28,7 @@ class ListOfProductItemsWidgets extends StatelessWidget {
                     .toList(); 
           return Expanded(
             child: filteredProducts.isEmpty
-                ? const Center(child: Text("No matching results found."))
+                ?  Center(child: Text(S.of(context).noMatchingResultsFound))
                 : ListView.separated(
                     itemBuilder: (context, index) {
                       final product = filteredProducts[index];
@@ -42,7 +43,7 @@ class ListOfProductItemsWidgets extends StatelessWidget {
                   ),
           );
         } else {
-          return const Text("Something went wrong.");
+          return  Text(  S.of(context).somethingWentWrong);
         }
       },
     );

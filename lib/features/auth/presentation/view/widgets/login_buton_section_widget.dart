@@ -2,6 +2,7 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -37,7 +38,7 @@ class LoginButonSectionWidget extends StatelessWidget {
           return const CircularProgressIndicator();
         } else if (state is AuthInitial || state is LoginFailedState) {
           return CustomButon(
-            text: 'Login',
+            text:   S.of(context).signin,
             onPressed: () async {
               if (formKey.currentState!.validate()) {
                 await authcubit.login(

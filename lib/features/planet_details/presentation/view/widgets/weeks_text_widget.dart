@@ -23,7 +23,7 @@ class WeeksWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            '(${ConstantPlanetDetails().weeks[weekIndex]})',
+            '(${ConstantPlanetDetails (context).weeks[weekIndex]})',
             style: AppStyles.textStyle16Teal(
               context,
             ).copyWith(fontWeight: FontWeight.bold),

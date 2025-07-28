@@ -4,6 +4,7 @@ import 'package:fasila/features/product_details/data/models/save_product_model.d
 import 'package:fasila/features/product_details/presentation/manager/add_to_cart_cubit/add_to_cart_cubit.dart';
 import 'package:fasila/features/product_details/presentation/manager/add_to_cart_cubit/add_to_cart_state.dart';
 import 'package:fasila/features/shop/data/models/product_model.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,7 +27,7 @@ class AddToCartButtonWidget extends StatelessWidget {
       bloc: addToCartCubit,
       listener: (context, state) {
         if (state is AddToCartSuccessState) {
-          customSnakBar(context, message: "Add to Cart");
+          customSnakBar(context, message:   S.of(context).addToCard);
         }
       },
       builder: (context, state) {
@@ -39,7 +40,7 @@ class AddToCartButtonWidget extends StatelessWidget {
                 ? 180
                 : MediaQuery.of(context).size.width / 1.4,
             height: isFromProductItemWidget == true ? 40 : null,
-            text: "Add To Card",
+            text: S.of(context).addToCard,
             onPressed: () {
               addToCartCubit.addProducttoCart(
                 SaveProductModel(

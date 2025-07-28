@@ -1,6 +1,7 @@
 
 import 'package:fasila/core/widgets/custom_text_field_widget.dart';
 import 'package:fasila/core/widgets/custom_textformfield_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class LoginFieldsSectionWidget extends StatelessWidget {
@@ -18,12 +19,12 @@ class LoginFieldsSectionWidget extends StatelessWidget {
     return Column(
       children: [
         CustomTextFieldWidget(
-          hintText: 'Email',
+          hintText:   S.of(context).email,
           controller: emailController,
         ),
         const SizedBox(height: 20),
         CustomTextFormFieldWidget(
-          hintText: 'Password',
+          hintText:   S.of(context).password,
           controller: passwordController,
         ),
       ],

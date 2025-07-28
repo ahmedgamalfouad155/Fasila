@@ -1,6 +1,7 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/profile/presentation/manager/them_cubit/them_cubit.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,7 +27,7 @@ class ModeOptionWidget extends StatelessWidget {
             ),
             SizedBox(width: 15),
             Text(
-              "Mode",
+              S.of(context).mode,
               style: AppStyles.textStyle16Teal(
                 context,
               ).copyWith(fontWeight: FontWeight.bold),

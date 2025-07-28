@@ -1,6 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
@@ -52,71 +50,201 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Sign in`
-  String get Signin {
+  /// `Log in`
+  String get signin {
     return Intl.message(
-      'Sign in',
-      name: 'Signin',
+      'Log in',
+      name: 'signin',
       desc: '',
       args: [],
     );
   }
 
   /// `Sign up`
-  String get Signup {
+  String get signup {
     return Intl.message(
       'Sign up',
-      name: 'Signup',
+      name: 'signup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Or continue with`
+  String get orContinueWith {
+    return Intl.message(
+      'Or continue with',
+      name: 'orContinueWith',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome back you’ve been missed!`
+  String get welcomeBackYouveBeenMissed {
+    return Intl.message(
+      'Welcome back you’ve been missed!',
+      name: 'welcomeBackYouveBeenMissed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login here`
+  String get loginHere {
+    return Intl.message(
+      'Login here',
+      name: 'loginHere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New account`
+  String get createAccount {
+    return Intl.message(
+      'Create New account',
+      name: 'createAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome, sign up to get started`
+  String get welcomSignUpToGetStarted {
+    return Intl.message(
+      'Welcome, sign up to get started',
+      name: 'welcomSignUpToGetStarted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account ?`
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account ?',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The password must be at least 8 characters long and must include:`
+  String get thePasswordMustBeAtLeast8CharactersLongAndMustInclude {
+    return Intl.message(
+      'The password must be at least 8 characters long and must include:',
+      name: 'thePasswordMustBeAtLeast8CharactersLongAndMustInclude',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `• Capital letter (A-Z)`
+  String get capitalLetter {
+    return Intl.message(
+      '• Capital letter (A-Z)',
+      name: 'capitalLetter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `• One lowercase letter (a-z)`
+  String get lowercaseLetter {
+    return Intl.message(
+      '• One lowercase letter (a-z)',
+      name: 'lowercaseLetter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `• 1 number (0-9)`
+  String get number {
+    return Intl.message(
+      '• 1 number (0-9)',
+      name: 'number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `• 1 special character (@#+/$%^&*_-+=,.?/) `
+  String get specialCharacter {
+    return Intl.message(
+      '• 1 special character (@#+/\$%^&*_-+=,.?/) ',
+      name: 'specialCharacter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `• At least 8 characters`
+  String get atLeast8Characters {
+    return Intl.message(
+      '• At least 8 characters',
+      name: 'atLeast8Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your`
+  String get pleaseEnterYour {
+    return Intl.message(
+      'Please enter your',
+      name: 'pleaseEnterYour',
       desc: '',
       args: [],
     );
   }
 
   /// `Name`
-  String get Name {
+  String get name {
     return Intl.message(
       'Name',
-      name: 'Name',
+      name: 'name',
       desc: '',
       args: [],
     );
   }
 
   /// `Email`
-  String get Email {
+  String get email {
     return Intl.message(
       'Email',
-      name: 'Email',
+      name: 'email',
       desc: '',
       args: [],
     );
   }
 
   /// `Password`
-  String get Password {
+  String get password {
     return Intl.message(
       'Password',
-      name: 'Password',
+      name: 'password',
       desc: '',
       args: [],
     );
   }
 
   /// `Confirm Password`
-  String get ConfirmPassword {
+  String get confirmPassword {
     return Intl.message(
       'Confirm Password',
-      name: 'ConfirmPassword',
+      name: 'confirmPassword',
       desc: '',
       args: [],
     );
   }
 
   /// `Forgote Password`
-  String get ForgotePassword {
+  String get forgotePassword {
     return Intl.message(
       'Forgote Password',
-      name: 'ForgotePassword',
+      name: 'forgotePassword',
       desc: '',
       args: [],
     );
@@ -243,20 +371,20 @@ class S {
   }
 
   /// `See Diagnosis`
-  String get SeeDiagnosis {
+  String get seeDiagnosis {
     return Intl.message(
       'See Diagnosis',
-      name: 'SeeDiagnosis',
+      name: 'seeDiagnosis',
       desc: '',
       args: [],
     );
   }
 
   /// `Get Medicine`
-  String get GetMedicine {
+  String get getMedicine {
     return Intl.message(
       'Get Medicine',
-      name: 'GetMedicine',
+      name: 'getMedicine',
       desc: '',
       args: [],
     );
@@ -272,7 +400,15 @@ class S {
     );
   }
 
-  // skipped getter for the 'get Advice' key
+  /// `Get Advice`
+  String get getAdvice {
+    return Intl.message(
+      'Get Advice',
+      name: 'getAdvice',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Talk to an expert to your problem`
   String get talkToAnExpertToYourProblem {
@@ -794,6 +930,16 @@ class S {
     );
   }
 
+  /// `Fasila Pro`
+  String get fasilaPro {
+    return Intl.message(
+      'Fasila Pro',
+      name: 'fasilaPro',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Contact Us`
   String get contactUs {
     return Intl.message(
@@ -839,6 +985,166 @@ class S {
     return Intl.message(
       'Products',
       name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EGP`
+  String get egp {
+    return Intl.message(
+      'EGP',
+      name: 'egp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No matching results found.`
+  String get noMatchingResultsFound {
+    return Intl.message(
+      'No matching results found.',
+      name: 'noMatchingResultsFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong.`
+  String get somethingWentWrong {
+    return Intl.message(
+      'Something went wrong.',
+      name: 'somethingWentWrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get cart {
+    return Intl.message(
+      'Cart',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantity`
+  String get quantity {
+    return Intl.message(
+      'Quantity',
+      name: 'quantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checkout`
+  String get checkout {
+    return Intl.message(
+      'Checkout',
+      name: 'checkout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Product`
+  String get addProduct {
+    return Intl.message(
+      'Add Product',
+      name: 'addProduct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subtotal`
+  String get subTotal {
+    return Intl.message(
+      'Subtotal',
+      name: 'subTotal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Items`
+  String get items {
+    return Intl.message(
+      'Items',
+      name: 'items',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get total {
+    return Intl.message(
+      'Total',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery`
+  String get delivery {
+    return Intl.message(
+      'Delivery',
+      name: 'delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You Have No Products In Your Cart`
+  String get youHaveNoProductsInYourCart {
+    return Intl.message(
+      'You Have No Products In Your Cart',
+      name: 'youHaveNoProductsInYourCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Products To Your Cart`
+  String get addProductsToYourCart {
+    return Intl.message(
+      'Add Products To Your Cart',
+      name: 'addProductsToYourCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to my garden`
+  String get addToMyGarden {
+    return Intl.message(
+      'Add to my garden',
+      name: 'addToMyGarden',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Week`
+  String get chooseWeek {
+    return Intl.message(
+      'Choose Week',
+      name: 'chooseWeek',
       desc: '',
       args: [],
     );

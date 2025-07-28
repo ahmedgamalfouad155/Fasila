@@ -1,5 +1,6 @@
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/alarm_slider_widger.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/cupertino.dart';
 
 class AlarmVolumeWidget extends StatelessWidget {
@@ -11,7 +12,7 @@ class AlarmVolumeWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Alarm volume',
+            S.of(context).alarmVolume,
           style: AppStyles.textStyle16Teal(
             context,
           ).copyWith(fontWeight: FontWeight.bold),

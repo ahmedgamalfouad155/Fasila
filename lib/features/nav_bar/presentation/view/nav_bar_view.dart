@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NavBarView extends StatelessWidget {
-  final Widget child; // ✅ هنا ضفناها
+  final Widget child;
 
-  const NavBarView({super.key, required this.child}); // ✅ هنا ضفنا required
+  const NavBarView({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => NavBarCubit(),
-      child: NavBarViewBody(child: child), // ✅ استخدمناها هنا صح
+      child: NavBarViewBody(child: child), 
     );
   }
 }

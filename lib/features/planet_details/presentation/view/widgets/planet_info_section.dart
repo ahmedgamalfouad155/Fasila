@@ -20,7 +20,7 @@ class PlanetInfoSection extends StatelessWidget {
     } else {
       final data = planetModel
           .dailyFarm[weekIndex]
-          .days[ConstantPlanetDetails().days[dayIndex].toLowerCase()];
+          .days[ConstantPlanetDetails(context).days[dayIndex].toLowerCase()];
       return PlanetInfoDetailsOptionWidget(data: data);
     }
   }

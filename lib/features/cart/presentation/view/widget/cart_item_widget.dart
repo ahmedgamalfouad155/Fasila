@@ -3,6 +3,7 @@ import 'package:fasila/core/theme/customs_box_decoratino.dart';
 import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/features/cart/presentation/view/widget/delete_and_favorite_and_quantity_section.dart';
 import 'package:fasila/features/product_details/data/models/save_product_model.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class CartItemWidget extends StatelessWidget {
@@ -44,13 +45,13 @@ class CartItemWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "${prouct.totalPrice.toDouble()} EGP",
+                          "${prouct.totalPrice.toDouble()} ${S.of(context).egp}",
                           style: AppStyles.textStyle16Teal(
                             context,
                           ).copyWith(fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          "Quantity: ${prouct.quantity.toInt()}",
+                          "${S.of(context).quantity}: ${prouct.quantity.toInt()}",
                           style: AppStyles.textStyle16Teal(
                             context,
                           ).copyWith(fontWeight: FontWeight.bold),

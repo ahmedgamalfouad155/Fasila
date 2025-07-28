@@ -1,5 +1,6 @@
 import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/theme/styles.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -11,13 +12,16 @@ class ForgetAndCreateAccountTextWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Forgot Password?', style: AppStyles.textStyle12Grey(context)),
+        Text(
+          S.of(context).forgotePassword,
+          style: AppStyles.textStyle12Grey(context),
+        ),
         InkWell(
           onTap: () {
             GoRouter.of(context).push(AppRouter.kSignUpView);
           },
           child: Text(
-            'Create New Account',
+            S.of(context).createAccount,
             style: AppStyles.textStyle12Grey(context),
           ),
         ),
