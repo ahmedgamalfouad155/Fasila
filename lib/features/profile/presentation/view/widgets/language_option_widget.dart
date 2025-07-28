@@ -1,14 +1,15 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/core/theme/styles.dart';
-import 'package:fasila/features/profile/presentation/manager/them_cubit/them_cubit.dart';
+import 'package:fasila/features/profile/presentation/manager/language_cubit/language_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ModeOptionWidget extends StatelessWidget {
-  const ModeOptionWidget({super.key});
+class LanguageOptionWidget extends StatelessWidget {
+  const LanguageOptionWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final isDark = context.watch<ThemeCubit>().state == ThemeMode.dark;
+    final currentLang = context.watch<LanguageCubit>().state.languageCode;
 
     return Card(
       elevation: 4,
@@ -19,27 +20,27 @@ class ModeOptionWidget extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(
-              Icons.brightness_6_outlined,
-              color: Color(0xff076B5F),
-              size: 30,
-            ),
-            SizedBox(width: 15),
+            Icon(Icons.public, color: context.appColors.teal, size: 30),
+            const SizedBox(width: 15),
             Text(
-              "Mode",
+              "Language",
               style: AppStyles.textStyle16Teal(
                 context,
               ).copyWith(fontWeight: FontWeight.bold),
             ),
-
-            Spacer(),
-            Icon(Icons.light_mode, size: 20, color: context.appColors.teal),
+            const Spacer(),
+            Text(
+              "En",
+              style: AppStyles.textStyle16Teal(
+                context,
+              ).copyWith(fontWeight: FontWeight.bold),
+            ),
             Transform.scale(
-              scale: .8,
+              scale: 0.8,
               child: Switch(
-                value: isDark,
+                value: currentLang == 'ar',
                 onChanged: (value) {
-                  context.read<ThemeCubit>().toggleTheme(value);
+                  context.read<LanguageCubit>().toggleLanguage();
                 },
                 activeColor: context.appColors.white,
                 activeTrackColor: context.appColors.teal,
@@ -47,7 +48,13 @@ class ModeOptionWidget extends StatelessWidget {
                 inactiveTrackColor: context.appColors.teal,
               ),
             ),
-            Icon(Icons.dark_mode, size: 20, color: context.appColors.teal),
+            Text(
+              "ع",
+              style: AppStyles.textStyle20(context).copyWith(
+                fontWeight: FontWeight.bold,
+                color: context.appColors.teal,
+              ),
+            ),
           ],
         ),
       ),
