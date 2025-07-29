@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:fasila/features/planet_details/data/models/alarm_model.dart';
-import 'package:fasila/features/planet_details/data/service/alarm_service.dart';
-import 'package:fasila/features/planet_details/data/service/alarm_service_impl.dart';
+import 'package:fasila/features/planet_details/data/service/alarm_service/alarm_service.dart';
+import 'package:fasila/features/planet_details/data/service/alarm_service/alarm_service_impl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 part 'alarm_planet_state.dart';
 

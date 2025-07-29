@@ -1,5 +1,6 @@
 import 'package:fasila/core/theme/colors.dart';
 import 'package:fasila/features/category_details/data/models/planet_model.dart';
+import 'package:fasila/features/planet_details/presentation/manager/deleting_planet_cubit/deleting_planet_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/manager/togel_cubit/details_togel_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/manager/weeks_togel_cubit/days_toget_cubit.dart';
 import 'package:fasila/features/planet_details/presentation/view/widgets/date_text_widget.dart';
@@ -37,7 +38,12 @@ class PlanetDetailsViewBody extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      ImagePlanetDetailsWidget(planetModel: planetModel),
+                      BlocProvider(
+                        create: (context) => DeletingPlanetCubit(),
+                        child: ImagePlanetDetailsWidget(
+                          planetModel: planetModel,
+                        ),
+                      ),
                       const SizedBox(height: 10),
                       WeeksWidget(),
                       const SizedBox(height: 10),

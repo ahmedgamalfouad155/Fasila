@@ -1,4 +1,3 @@
-import 'package:fasila/features/category_details/presentation/view/widget/custom_planet_loding_widget.dart';
 import 'package:fasila/features/my_planet/presentation/manager/my_planet_cubit/my_planet_cubit.dart';
 import 'package:fasila/features/my_planet/presentation/manager/my_planet_cubit/my_planet_state.dart';
 import 'package:fasila/features/my_planet/presentation/view/widgets/my_planet_item_widget.dart';
@@ -13,7 +12,7 @@ class ListOfMyPlanetItemsWidget extends StatelessWidget {
     return BlocBuilder<MyPlanetCubit, MyPlanetState>(
       builder: (context, state) {
         if (state is MyPlanetLoadingState) {
-          return const CustomShimerPlanetLoadingWidget();
+          return const Center(child: CircularProgressIndicator());
         } else if (state is MyPlanetFailedState) {
           return Text(state.error);
         } else if (state is MyPlanetSuccessState) {

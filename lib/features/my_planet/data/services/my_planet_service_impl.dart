@@ -24,6 +24,6 @@ class MyPlanetServicesImpl implements MyPlanetServices {
       path: FirestorePath.myGarden(uid),
       builder: (data, documentId) => PlanetModel.fromMap(data, documentId),
       queryBuilder: (query) => query.where('category', isEqualTo: categoryName),
-    );  
-  }
+    );
+  } 
 }

@@ -2,7 +2,7 @@ import 'package:fasila/core/services/firebase_path.dart';
 import 'package:fasila/core/services/firestore_services.dart';
 import 'package:fasila/features/auth/data/services/auth_services_impl.dart';
 import 'package:fasila/features/planet_details/data/models/alarm_model.dart';
-import 'package:fasila/features/planet_details/data/service/alarm_service.dart';
+import 'package:fasila/features/planet_details/data/service/alarm_service/alarm_service.dart';
 
 class AlarmServiceImpl implements AlarmService {
   final firestorServices = FirestoreServices.instance;
