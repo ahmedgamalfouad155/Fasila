@@ -112,6 +112,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الأحواض والمزروعات"),
         "products": MessageLookupByLibrary.simpleMessage("المنتجات"),
         "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "prowseAndAddNewFavoritePlants": MessageLookupByLibrary.simpleMessage(
+            "تصفح و أضف نباتات مفضلة جديدة"),
+        "prowseAndAddNewPlants":
+            MessageLookupByLibrary.simpleMessage("تصفح و أضف نباتات جديدة"),
+        "prowseAndAddNewProducts":
+            MessageLookupByLibrary.simpleMessage("تصفح و أضف منتجات جديدة"),
         "qty": MessageLookupByLibrary.simpleMessage("الكمية"),
         "quantity": MessageLookupByLibrary.simpleMessage("الكمية"),
         "reminders": MessageLookupByLibrary.simpleMessage("التنبيهات"),
@@ -161,6 +167,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "مرحباً بكم، قم بتسجيل الدخول للبدء"),
         "welcomeBackYouveBeenMissed":
             MessageLookupByLibrary.simpleMessage("أهلاً بعودتك لقد فاتتك!"),
+        "youHaveNoCarePlants": MessageLookupByLibrary.simpleMessage(
+            "ليس لديك أي نباتات تحتاج إلى عناية"),
+        "youHaveNoFavoritePlants":
+            MessageLookupByLibrary.simpleMessage("ليس لديك أي نباتات مفضلة"),
         "youHaveNoProductsInYourCart": MessageLookupByLibrary.simpleMessage(
             "ليس لديك أي منتجات في سلة التسوق")
       };

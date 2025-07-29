@@ -45,7 +45,7 @@ class CartViewBody extends StatelessWidget {
                     ),
                   )
                 : CustomEmptyPage(
-                    image: AppImages.myPlanetFruit1Image,
+                    image: AppImages.emptyCartImage,
                     title: S.of(context).youHaveNoProductsInYourCart,
                     subTitle: S.of(context).addProductsToYourCart,
                   );

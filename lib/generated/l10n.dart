@@ -1120,6 +1120,16 @@ class S {
     );
   }
 
+  /// `Browse and add new products`
+  String get prowseAndAddNewProducts {
+    return Intl.message(
+      'Browse and add new products',
+      name: 'prowseAndAddNewProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Add Products To Your Cart`
   String get addProductsToYourCart {
     return Intl.message(
@@ -1175,6 +1185,46 @@ class S {
     return Intl.message(
       'Signing up....',
       name: 'signupLoading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have no care plants`
+  String get youHaveNoCarePlants {
+    return Intl.message(
+      'You have no care plants',
+      name: 'youHaveNoCarePlants',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Browse and add new plants`
+  String get prowseAndAddNewPlants {
+    return Intl.message(
+      'Browse and add new plants',
+      name: 'prowseAndAddNewPlants',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have no favorite plants`
+  String get youHaveNoFavoritePlants {
+    return Intl.message(
+      'You have no favorite plants',
+      name: 'youHaveNoFavoritePlants',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Browse and add new favorite plants`
+  String get prowseAndAddNewFavoritePlants {
+    return Intl.message(
+      'Browse and add new favorite plants',
+      name: 'prowseAndAddNewFavoritePlants',
       desc: '',
       args: [],
     );

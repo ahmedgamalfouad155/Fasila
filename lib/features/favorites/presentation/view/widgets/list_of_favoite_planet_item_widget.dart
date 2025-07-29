@@ -1,5 +1,8 @@
+import 'package:fasila/core/constants/images.dart';
+import 'package:fasila/core/widgets/custom_emty_page_widget.dart';
 import 'package:fasila/features/favorites/presentation/manager/favorite_planet_cubit/favorite_planet_cubit.dart';
 import 'package:fasila/features/favorites/presentation/view/widgets/favorite_planet_item_widget.dart';
+import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,6 +18,13 @@ class ListOfFavoitePlanetItemWidget extends StatelessWidget {
         } else if (state is FavoritePlanetFailedState) {
           return Text(state.error);
         } else if (state is FavoritePlanetSuccessState) {
+          if (state.favoritePlanets.isEmpty) {
+            return CustomEmptyPage(
+              image: AppImages.emptyFavoriteImage,
+              title: S.of(context).youHaveNoFavoritePlants,
+              subTitle: S.of(context).prowseAndAddNewFavoritePlants,
+            );
+          }
           return SizedBox(
             height: MediaQuery.of(context).size.height / 2,
             child: ListView.separated(

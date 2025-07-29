@@ -106,10 +106,15 @@
     "total": "الإجمالي",
     "delivery": "التوصيل",
     "youHaveNoProductsInYourCart": "ليس لديك أي منتجات في سلة التسوق",
+    "prowseAndAddNewProducts": "تصفح و أضف منتجات جديدة",
     "addProductsToYourCart": "أضف منتجات إلى سلة التسوق",
     "addToMyGarden": "أضف إلى حديقتي",
     "chooseWeek": "اختر الأسبوع",
     "logout": "تسجيل الخروج",
     "loggingn": "....جاري تسجيل الدخول",
-    "signupLoading": "....جاري إنشاء الحساب"
+    "signupLoading": "....جاري إنشاء الحساب",
+    "youHaveNoCarePlants": "ليس لديك أي نباتات تحتاج إلى عناية",
+    "prowseAndAddNewPlants": "تصفح و أضف نباتات جديدة",
+    "youHaveNoFavoritePlants": "ليس لديك أي نباتات مفضلة",
+    "prowseAndAddNewFavoritePlants": "تصفح و أضف نباتات مفضلة جديدة"
 }

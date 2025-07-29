@@ -115,6 +115,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Posts & Planters"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "prowseAndAddNewFavoritePlants": MessageLookupByLibrary.simpleMessage(
+            "Browse and add new favorite plants"),
+        "prowseAndAddNewPlants":
+            MessageLookupByLibrary.simpleMessage("Browse and add new plants"),
+        "prowseAndAddNewProducts":
+            MessageLookupByLibrary.simpleMessage("Browse and add new products"),
         "qty": MessageLookupByLibrary.simpleMessage("Q T Y"),
         "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
         "reminders": MessageLookupByLibrary.simpleMessage("Reminders"),
@@ -164,6 +170,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Welcome, sign up to get started"),
         "welcomeBackYouveBeenMissed": MessageLookupByLibrary.simpleMessage(
             "Welcome back you’ve been missed!"),
+        "youHaveNoCarePlants":
+            MessageLookupByLibrary.simpleMessage("You have no care plants"),
+        "youHaveNoFavoritePlants":
+            MessageLookupByLibrary.simpleMessage("You have no favorite plants"),
         "youHaveNoProductsInYourCart": MessageLookupByLibrary.simpleMessage(
             "You Have No Products In Your Cart")
       };

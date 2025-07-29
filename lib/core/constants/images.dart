@@ -195,8 +195,13 @@ class AppImages {
   static const String myPlanetLogo =
       'https://drive.google.com/uc?export=view&id=1Y_PFaxNZ4UlNoIeNuOTrg85Qft_VzSO2';
 
-  static const String emptyFavoriteImage =
-      'https://drive.google.com/uc?export=view&id=1MtzD5roJQ7aboEe21Ei8ocNPVtk0y8PH';
-  static const String emptyCartImage =
-      'https://drive.google.com/uc?export=view&id=1YvLYkD8uYPXXb0TsAHpKXVSLhVmezJlG';
+  // static const String emptyFavoriteImage =
+  //     'https://drive.google.com/uc?export=view&id=1MtzD5roJQ7aboEe21Ei8ocNPVtk0y8PH';
+  // static const String emptyCartImage =
+  //     'https://drive.google.com/uc?export=view&id=1YvLYkD8uYPXXb0TsAHpKXVSLhVmezJlG';
+
+
+      static const String emptyMyPlanetImage = 'assets/emptyMyPlanetPage.png';
+      static const String emptyFavoriteImage = 'assets/emptyFavoritePage.png';
+      static const String emptyCartImage = 'assets/emptyCartPage.png';
 }

@@ -1,4 +1,5 @@
-
+import 'package:fasila/core/theme/colors.dart';
+import 'package:fasila/core/theme/styles.dart';
 import 'package:fasila/core/widgets/default_button_widget.dart';
 import 'package:fasila/features/cart/presentation/manager/cart_cubit/cart_cubit.dart';
 import 'package:fasila/features/cart/presentation/manager/product_counter_cubit/product_counter_cubit.dart';
@@ -27,10 +28,14 @@ class DeleteAndFavoriteAndQuantityButtonSection extends StatelessWidget {
             width: MediaQuery.of(context).size.width / 4,
           ),
         ),
-    
+
         DefaultButtonWidget(
           borderRadius: BorderRadius.circular(10),
-          text:   S.of(context).delete,
+          text: S.of(context).delete,
+          style: AppStyles.textStyle14(context).copyWith(
+            color: context.appColors.white,
+            fontWeight: FontWeight.bold,
+          ),
           onPressed: () {
             context.read<CartCubit>().deleteCart(product);
           },
@@ -40,6 +45,10 @@ class DeleteAndFavoriteAndQuantityButtonSection extends StatelessWidget {
         DefaultButtonWidget(
           borderRadius: BorderRadius.circular(10),
           text: S.of(context).favorites,
+          style: AppStyles.textStyle14(context).copyWith(
+            color: context.appColors.white,
+            fontWeight: FontWeight.bold,
+          ),
           onPressed: () {},
           width: MediaQuery.of(context).size.width / 4,
           height: 40,

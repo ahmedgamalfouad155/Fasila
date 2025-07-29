@@ -17,8 +17,8 @@ class CustomEmptyPage extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: MediaQuery.of(context).size.height / 2.5,
-          child: CachedNetworkImage(imageUrl: image),
+          height: MediaQuery.of(context).size.height / 3,
+          child: Image.asset(image),
         ),
         const SizedBox(height: 15),
         Text(

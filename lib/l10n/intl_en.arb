@@ -106,10 +106,15 @@
     "total": "Total",
     "delivery": "Delivery",
     "youHaveNoProductsInYourCart": "You Have No Products In Your Cart",
+    "prowseAndAddNewProducts": "Browse and add new products",
     "addProductsToYourCart": "Add Products To Your Cart",
     "addToMyGarden": "Add to my garden",
     "chooseWeek": "Choose Week",
     "logout": "Logout",
     "loggingn": "Logging in....",
-    "signupLoading": "Signing up...."
+    "signupLoading": "Signing up....",
+    "youHaveNoCarePlants": "You have no care plants",
+    "prowseAndAddNewPlants": "Browse and add new plants",
+    "youHaveNoFavoritePlants":"You have no favorite plants",
+    "prowseAndAddNewFavoritePlants":"Browse and add new favorite plants"
 }
