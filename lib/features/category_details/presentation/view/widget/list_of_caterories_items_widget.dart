@@ -2,6 +2,7 @@ import 'package:fasila/core/logic/search_cubit.dart';
 import 'package:fasila/features/category_details/presentation/manager/planets_cubit/planets_cubit.dart';
 import 'package:fasila/features/category_details/presentation/manager/planets_cubit/planets_state.dart';
 import 'package:fasila/features/category_details/presentation/view/widget/category_item_widget.dart';
+import 'package:fasila/features/category_details/presentation/view/widget/custom_planet_loding_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,11 +14,11 @@ class ListOfCateroriesItemsWidget extends StatelessWidget {
     return BlocBuilder<PlanetsCubit, PlanetsState>(
       builder: (context, state) {
         if (state is PlanetsLoadingState) {
-          return const Center(child: CircularProgressIndicator());
+          return const CustomShimerPlanetLoadingWidget();
         } else if (state is PlanetsFailedState) {
           return Text(state.error);
         } else if (state is PlanetsSuccessState) {
-          final searchQuery = context.watch<SearchCubit>().state.toLowerCase(); 
+          final searchQuery = context.watch<SearchCubit>().state.toLowerCase();
           final filteredPlanets = searchQuery.isEmpty
               ? state.planets
               : state.planets
@@ -25,7 +26,7 @@ class ListOfCateroriesItemsWidget extends StatelessWidget {
                       (planet) =>
                           planet.name.toLowerCase().contains(searchQuery),
                     )
-                    .toList(); 
+                    .toList();
           return Expanded(
             child: filteredPlanets.isEmpty
                 ? const Center(child: Text("No matching results found."))

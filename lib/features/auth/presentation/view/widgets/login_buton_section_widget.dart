@@ -2,6 +2,7 @@ import 'package:fasila/core/router/app_router.dart';
 import 'package:fasila/core/widgets/custom_buton.dart';
 import 'package:fasila/core/widgets/custom_snak_bar.dart';
 import 'package:fasila/features/auth/presentation/manager/auth_cubit/auth_cubit.dart';
+import 'package:fasila/features/auth/presentation/view/widgets/custom_shimmer_button_widget.dart';
 import 'package:fasila/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,10 +36,13 @@ class LoginButonSectionWidget extends StatelessWidget {
       },
       builder: (context, state) {
         if (state is LoginLoadingState) {
-          return const CircularProgressIndicator();
-        } else if (state is AuthInitial || state is LoginFailedState) {
+          return CustomShimmerButton(text: S.of(context).loggingn);
+        } else if (state is AuthInitial ||
+            state is LoginFailedState ||
+            state is GoogleSignInSuccess ||
+            state is GoogleSignInFailure) {
           return CustomButon(
-            text:   S.of(context).signin,
+            text: S.of(context).signin,
             onPressed: () async {
               if (formKey.currentState!.validate()) {
                 await authcubit.login(
@@ -48,8 +52,8 @@ class LoginButonSectionWidget extends StatelessWidget {
               }
             },
           );
-        } 
-        return Text('error in authentication');
+        }
+        return CustomShimmerButton(text: S.of(context).loggingn);
       },
     );
   }

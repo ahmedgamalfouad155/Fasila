@@ -23,3 +23,15 @@ final class LogoutFailedState extends AuthState {
     final String error;
     LogoutFailedState(this.error);
 }
+
+class GoogleSignInLoading extends AuthState {}
+
+class GoogleSignInSuccess extends AuthState {
+  final User user;
+  GoogleSignInSuccess(this.user);
+}
+
+class GoogleSignInFailure extends AuthState {
+  final String error;
+  GoogleSignInFailure(this.error);
+}

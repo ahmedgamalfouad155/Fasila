@@ -1159,6 +1159,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Logging in....`
+  String get loggingn {
+    return Intl.message(
+      'Logging in....',
+      name: 'loggingn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signing up....`
+  String get signupLoading {
+    return Intl.message(
+      'Signing up....',
+      name: 'signupLoading',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

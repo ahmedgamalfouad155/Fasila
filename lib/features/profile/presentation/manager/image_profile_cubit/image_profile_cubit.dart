@@ -3,10 +3,10 @@ import 'package:fasila/core/constants/global_data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:image_picker/image_picker.dart';
-part 'camera_state.dart';
+part 'image_profile_state.dart';
 
-class CameraCubit extends Cubit<CameraState> {
-  CameraCubit() : super(CameraInitial()) {
+class ImageProfileCubit extends Cubit<ImageProfileState> {
+  ImageProfileCubit() : super(ImageProfileInitial()) {
     loadImage();
   }
 
@@ -18,34 +18,31 @@ class CameraCubit extends Cubit<CameraState> {
     final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
 
     if (pickedFile != null) {
-      final newImagePath = pickedFile.path; 
-      final oldImagePath = shopBox.get(cameraImage);
+      final newImagePath = pickedFile.path;
+      final oldImagePath = shopBox.get(profileImage);
       if (oldImagePath != null && File(oldImagePath).existsSync()) {
         await File(oldImagePath).delete();
       }
-
-      await shopBox.put(cameraImage, newImagePath);
-
-      emit(CameraUpdated(imagePath: newImagePath));
+      await shopBox.put(profileImage, newImagePath);
+      emit(ImageProfileUpdated(imagePath: newImagePath));
     }
   }
 
   void loadImage() {
-    final imagePath = shopBox.get(cameraImage);
+    final imagePath = shopBox.get(profileImage);
     if (imagePath != null && File(imagePath).existsSync()) {
-      emit(CameraUpdated(imagePath: imagePath));
+      emit(ImageProfileUpdated(imagePath: imagePath));
     } else {
-      emit(CameraInitial());
+      emit(ImageProfileInitial());
     }
   }
 
   void deleteImage() async {
-    final imagePath = shopBox.get(cameraImage);
+    final imagePath = shopBox.get(profileImage);
     if (imagePath != null && File(imagePath).existsSync()) {
       await File(imagePath).delete();
     }
-
-    await shopBox.delete(cameraImage);
-    emit(CameraInitial());
+    await shopBox.delete(profileImage);
+    emit(ImageProfileInitial());
   }
 }

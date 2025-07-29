@@ -1,4 +1,5 @@
 import 'package:fasila/core/logic/search_cubit.dart';
+import 'package:fasila/features/shop/presentation/view/widgets/custom_popular_loading_widget.dart';
 import 'package:fasila/features/shop/presentation/manager/product_cubit/product_cubit.dart';
 import 'package:fasila/features/shop/presentation/view/widgets/product_item_widget.dart';
 import 'package:fasila/generated/l10n.dart';
@@ -13,7 +14,7 @@ class ListOfProductItemsWidgets extends StatelessWidget {
     return BlocBuilder<ProductCubit, ProductState>(
       builder: (context, state) {
         if (state is ProductLoadingState) {
-          return const Center(child: CircularProgressIndicator());
+          return const CustomShimerLoadingProductsWidget();
         } else if (state is ProductFailedState) {
           return Text(state.error);
         } else if (state is ProductSuccessState) {

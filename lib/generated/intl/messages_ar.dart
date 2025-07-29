@@ -82,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "leavyPlant": MessageLookupByLibrary.simpleMessage("النباتات الورقية"),
         "light": MessageLookupByLibrary.simpleMessage("الضوء"),
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
+        "loggingn":
+            MessageLookupByLibrary.simpleMessage("....جاري تسجيل الدخول"),
         "loginHere": MessageLookupByLibrary.simpleMessage("تسجيل الدخول هنا"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "lowercaseLetter":
@@ -126,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "shop": MessageLookupByLibrary.simpleMessage("المتجر"),
         "signin": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "signupLoading":
+            MessageLookupByLibrary.simpleMessage("....جاري إنشاء الحساب"),
         "sixthWeek": MessageLookupByLibrary.simpleMessage("الأسبوع السادس"),
         "soil": MessageLookupByLibrary.simpleMessage("التربة"),
         "somethingWentWrong":

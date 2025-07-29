@@ -85,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "leavyPlant": MessageLookupByLibrary.simpleMessage("Leavy plant"),
         "light": MessageLookupByLibrary.simpleMessage("Light"),
         "location": MessageLookupByLibrary.simpleMessage("Location"),
+        "loggingn": MessageLookupByLibrary.simpleMessage("Logging in...."),
         "loginHere": MessageLookupByLibrary.simpleMessage("Login here"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "lowercaseLetter": MessageLookupByLibrary.simpleMessage(
@@ -130,6 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shop": MessageLookupByLibrary.simpleMessage("Shop"),
         "signin": MessageLookupByLibrary.simpleMessage("Log in"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "signupLoading": MessageLookupByLibrary.simpleMessage("Signing up...."),
         "sixthWeek": MessageLookupByLibrary.simpleMessage("Sixth Week"),
         "soil": MessageLookupByLibrary.simpleMessage("The Soil"),
         "somethingWentWrong":

@@ -1,92 +1,59 @@
-import 'package:fasila/core/constants/images.dart';
+import 'dart:io';
+
 import 'package:fasila/core/theme/colors.dart';
-import 'package:fasila/core/theme/styles.dart';
+import 'package:fasila/core/theme/customs_box_decoratino.dart';
+import 'package:fasila/features/profile/presentation/manager/image_profile_cubit/image_profile_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProfileImageWidget extends StatelessWidget {
   const ProfileImageWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 4,
-      color: context.appColors.offWhite,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10),
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height / 4,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Stack(
-                children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: context.appColors.white,
-                      border: Border.all(
-                        color: context.appColors.teal,
-                        width: 1,
-                      ),
-                    ),
-                    padding: const EdgeInsets.all(12),
-                    child: Image.asset(
-                      AppImages.logoImage,
-                      fit: BoxFit.contain,
-                    ),
-                  ),
+    return BlocBuilder<ImageProfileCubit, ImageProfileState>(
+      builder: (context, state) {
+        String? imagePath;
+        if (state is ImageProfileUpdated) {
+          imagePath = state.imagePath;
+        }
+        return Stack(
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              decoration: CustomsBoxDecoration().circleBoxDecoration(context),
+              child: imagePath != null
+                  ? ClipOval(
+                      child: Image.file(File(imagePath), fit: BoxFit.cover),
+                    )
+                  : Icon(Icons.person, color: context.appColors.teal, size: 70),
+            ),
 
-                  Positioned(
-                    bottom: 5,
-                    right: 5,
-                    child: Container(
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                        color: context.appColors.white,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: context.appColors.teal,
-                          width: 1,
-                        ),
-                      ),
-                      child: Icon(
-                        Icons.camera_alt,
-                        size: 13,
-                        color: context.appColors.teal,
-                      ),
-                    ),
+            Positioned(
+              bottom: 5,
+              right: 5,
+              child: InkWell(
+                onTap: () {
+                  context.read<ImageProfileCubit>().pickImageFromGallery();
+                },
+                child: Container(
+                  width: 20,
+                  height: 20,
+                  decoration: CustomsBoxDecoration().circleBoxDecoration(
+                    context,
                   ),
-                ],
-              ),
-
-              const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Ahmed Gamal',
-                    style: AppStyles.textStyle16Teal(
-                      context,
-                    ).copyWith(fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(width: 10),
-                  Icon(
-                    Icons.edit_outlined,
+                  child: Icon(
+                    Icons.camera_alt,
+                    size: 13,
                     color: context.appColors.teal,
-                    size: 20,
                   ),
-                ],
+                ),
               ),
-            ],
-          ),
-        ),
-      ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

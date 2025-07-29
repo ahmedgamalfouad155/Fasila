@@ -8,6 +8,9 @@ abstract class AuthServices {
   Future<User?> signUpWithEmailAndPassword(String email, String password); 
   Future<void> logOut(); 
   Future<void> setUserData(UserModel userData);
+
+  Future<User?> signInWithGoogle();
+
 }
 
 

@@ -45,4 +45,12 @@ class CustomsBoxDecoration {
       borderRadius: BorderRadius.circular(10),
     );
   }
+
+  BoxDecoration circleBoxDecoration(BuildContext context) {
+    return BoxDecoration(
+      color: context.appColors.white,
+      shape: BoxShape.circle,
+      border: Border.all(color: context.appColors.teal, width: 1),
+    );
+  }
 }

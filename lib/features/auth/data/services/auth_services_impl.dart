@@ -3,6 +3,7 @@ import 'package:fasila/core/services/firestore_services.dart';
 import 'package:fasila/features/auth/data/models/user_model.dart';
 import 'package:fasila/features/auth/data/services/auth_services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthServicesImpl implements AuthServices {
   final firebaseAuth = FirebaseAuth.instance;
@@ -65,4 +66,39 @@ class AuthServicesImpl implements AuthServices {
     path: FirestorePath.user(userData.uid),
     data: userData.toMap(),
   );
+
+@override
+Future<User?> signInWithGoogle() async {
+  try {
+    final GoogleSignIn googleSignIn = GoogleSignIn(scopes: ['email']);
+
+    final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+    if (googleUser == null) return null;
+
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
+
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    final userCredential = await firebaseAuth.signInWithCredential(credential);
+
+    if (userCredential.additionalUserInfo?.isNewUser ?? false) {
+      final user = userCredential.user!;
+      final userData = UserModel(
+        uid: user.uid,
+        name: user.displayName ?? '',
+        email: user.email ?? '',
+      );
+      await setUserData(userData);
+    }
+
+    return userCredential.user;
+  } catch (e) {
+    throw Exception("فشل تسجيل الدخول بجوجل: ${e.toString()}");
+  }
+}
+
 }
