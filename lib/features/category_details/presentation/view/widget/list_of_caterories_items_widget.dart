@@ -14,7 +14,10 @@ class ListOfCateroriesItemsWidget extends StatelessWidget {
     return BlocBuilder<PlanetsCubit, PlanetsState>(
       builder: (context, state) {
         if (state is PlanetsLoadingState) {
-          return const CustomShimerPlanetLoadingWidget();
+          return SizedBox(
+            height: MediaQuery.of(context).size.height / 2,
+            child: Center(child: CircularProgressIndicator()),
+          );
         } else if (state is PlanetsFailedState) {
           return Text(state.error);
         } else if (state is PlanetsSuccessState) {

@@ -14,7 +14,10 @@ class ListOfProductItemsWidgets extends StatelessWidget {
     return BlocBuilder<ProductCubit, ProductState>(
       builder: (context, state) {
         if (state is ProductLoadingState) {
-          return const CustomShimerLoadingProductsWidget();
+          return SizedBox(
+            height: MediaQuery.of(context).size.height / 2,
+            child: const Center(child: CircularProgressIndicator()),
+          );
         } else if (state is ProductFailedState) {
           return Text(state.error);
         } else if (state is ProductSuccessState) {
@@ -26,10 +29,10 @@ class ListOfProductItemsWidgets extends StatelessWidget {
                       (planet) =>
                           planet.name.toLowerCase().contains(searchQuery),
                     )
-                    .toList(); 
+                    .toList();
           return Expanded(
             child: filteredProducts.isEmpty
-                ?  Center(child: Text(S.of(context).noMatchingResultsFound))
+                ? Center(child: Text(S.of(context).noMatchingResultsFound))
                 : ListView.separated(
                     itemBuilder: (context, index) {
                       final product = filteredProducts[index];
@@ -44,7 +47,7 @@ class ListOfProductItemsWidgets extends StatelessWidget {
                   ),
           );
         } else {
-          return  Text(  S.of(context).somethingWentWrong);
+          return Text(S.of(context).somethingWentWrong);
         }
       },
     );

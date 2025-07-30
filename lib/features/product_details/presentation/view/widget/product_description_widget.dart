@@ -25,7 +25,7 @@ class ProductDescriptionWidget extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          "Lightweight Hand Trowel for scooping the soil and making your gardening activities easier and more fun, made from durable and strong carbon steel.",
+          productModel.discription,
           style: AppStyles.textStyle14(context),
         ),
       ],

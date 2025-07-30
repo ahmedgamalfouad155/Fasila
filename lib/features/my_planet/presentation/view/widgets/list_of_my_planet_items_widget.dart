@@ -15,7 +15,10 @@ class ListOfMyPlanetItemsWidget extends StatelessWidget {
     return BlocBuilder<MyPlanetCubit, MyPlanetState>(
       builder: (context, state) {
         if (state is MyPlanetLoadingState) {
-          return const Center(child: CircularProgressIndicator());
+          return SizedBox(
+            height: MediaQuery.of(context).size.height / 2,
+            child: const Center(child: CircularProgressIndicator()),
+          );
         } else if (state is MyPlanetFailedState) {
           return Text(state.error);
         } else if (state is MyPlanetSuccessState) {
