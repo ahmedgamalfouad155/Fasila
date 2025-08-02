@@ -9,61 +9,79 @@
 
 ## 📱 Overview
 
-Fasila is a smart gardening assistant that helps users grow their favorite plants with confidence and ease. Whether you're a beginner or a seasoned gardener, Fasila provides all the necessary guidance for successful plant care — including information about ideal temperature, humidity, and watering schedules for each plant.
-
-In addition to plant care features, Fasila includes a built-in agricultural **e-commerce store** where users can browse, favorite, and purchase farming tools and supplies. Products are categorized for easier navigation, and users can add items to their cart and choose their delivery address either manually or via Google Maps.
-
-Fasila combines education, guidance, and shopping in one place — making gardening smarter, simpler, and more accessible than ever.
-
+**Fasila** is a smart farming app designed to help users take care of their plants efficiently while offering a full e-commerce experience for agricultural tools and products. Whether you're a beginner or an expert in gardening, Fasila provides the guidance, tools, and smart reminders you need to succeed.
 
 ---
 
-## 🌱 Features
+## 📱 Key Features
 
 ### 🔐 Authentication
-- Simple and clean authentication flow (Sign up / Login).
-- Designed to integrate Firebase in future releases.
+- Sign up and log in using email & password or Google Sign-In.
+- Integrated with **Firebase Authentication**.
 
-### 🪴 Plant Guide & Tracking
-- Browse a wide variety of plants with detailed information:
-  - Required temperature 🌡️
-  - Ideal humidity 💧
-  - Watering schedule 🕒
-- Add your plant to the **"My Plants"** section and receive personalized care instructions.
-- Set **reminders** to stay on top of your plant care routine.
+### 🪴 Plant Guide & Care
+- Explore a wide collection of plants with detailed care information:
+  - Ideal temperature 🌡️  
+  - Required humidity 💧  
+  - Watering schedules 🕒  
+- Add your own plants to the **"My Plants"** section and receive personalized care tips.
+- Set up **automatic reminders** for watering and other plant needs.
 
-### 🛒 E-commerce Shop
-- Built-in **agricultural tools store** to buy planting supplies.
-- Products are organized by category for easier browsing.
-- Supports two methods for entering shipping address:
-  - Manual entry 📝
-  - Google Maps location picker 📍
+### 🛒 E-Commerce Store
+- Browse and purchase farming tools directly from the app.
+- Products are categorized for easy navigation.
+- Choose your delivery address:
+  - Manual input 📝  
+  - Or via **Google Maps** integration 📍
+- **Online payment** supported via **PayPal** 💳
 
-### ❤️ Favorites & Cart
-- Add your favorite **plants** and **products** to the favorites list.
-- Add products to your **cart** and proceed to checkout when ready.
+### ❤️ Wishlist & Cart
+- Add favorite plants and tools to your wishlist.
+- Add products to your cart and complete orders smoothly.
+
+### ⏰ Notifications & Smart Alarms
+- Schedule notifications to remind you when it's time to care for each plant.
+- Fully automated alarm system based on user preferences (day, time, plant type).
+
+### 🎨 Dark & Light Theme Support
+- Toggle between **dark mode** and **light mode** manually or automatically.
+
+### 🧩 Smooth Animations
+- Beautiful and seamless animations for all navigation and UI interactions.
 
 ---
 
-## 🧠 Tech Stack
-
-- **Flutter**
-- **State Management:** Cubit (Bloc)
-- **Architecture:** MVVM (Model-View-ViewModel)
-- **Local Data Only** (Future plan to integrate Firebase for real-time data and cloud sync)
-- **Responsive UI** with clean modular code
-- **Google Maps Integration** for address selection
+## 🚧 Roadmap (Coming Soon)
+- Advanced plant disease detection using camera 📷
+- AI-powered suggestions for seasonal planting 🤖
+- Social features: Share your plant collection with friends 🌱
 
 ---
 
-## 🚧 Roadmap
+## 🛠 Built With
+- **Flutter** 💙
+- **Firebase (Auth, Firestore, Cloud Messaging)**
+- **Google Maps API**
+- **PayPal API**
+- **Hive (Local Storage)**
+- **flutter_local_notifications**
+- **Bloc / Cubit State Management**
+- Clean Architecture & Responsive Design
 
-- [ ] Integrate **Firebase Authentication**
-- [ ] Connect to **Firebase Firestore** for real-time plant data
-- [ ] Add **push notifications** for plant care reminders
-- [ ] Implement **payment gateway** for e-commerce
-- [ ] Improve accessibility & localization (multi-language support)
+---
 
+## 📷 Demo & Screenshots
+> Coming soon: UI showcase and feature walkthrough.
+
+---
+
+## 📩 Contact
+For collaboration, feedback, or contributions:  
+**Ahmed Gamal** – [LinkedIn](www.linkedin.com/in/ahmed-gamal-29b93a218)
+
+---
+
+> Made with 💚 by a plant lover and Flutter enthusiast.
 ---
 
 ## 📂 Repository Structure
