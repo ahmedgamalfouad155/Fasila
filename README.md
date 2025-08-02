@@ -77,7 +77,8 @@
 
 ## 📩 Contact
 For collaboration, feedback, or contributions:  
-**Ahmed Gamal** – [LinkedIn](www.linkedin.com/in/ahmed-gamal-29b93a218)
+**Ahmed Gamal** – [LinkedIn](https://www.linkedin.com/in/ahmed-gamal-29b93a218)
+
 
 ---
 
