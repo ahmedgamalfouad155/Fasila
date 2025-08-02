@@ -3,7 +3,7 @@
 
 ## 📽️ Demo
 ### 📱 Mobile Version:
-[🔗 Click here to watch the demo video](https://drive.google.com/file/d/1sU7QVmWZyRIJzjpO3UJnSe69zyKxZSbf/view?usp=sharing)
+[🔗 Click here to watch the demo video](https://drive.google.com/file/d/1AUC3LgdpSJUmDvKwD3Go0n6flmAoFqNk/view?usp=sharing)
 
 ---
 
