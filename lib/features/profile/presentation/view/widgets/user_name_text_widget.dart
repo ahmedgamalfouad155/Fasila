@@ -18,7 +18,12 @@ class UserNameTextWidget extends StatelessWidget {
 
           builder: (context, state) {
             if (state is UserInfoLoadingState) {
-              return const Text("User Name");
+              return Text(
+                "Ahmed Gamal",
+                style: AppStyles.textStyle16Teal(
+                  context,
+                ).copyWith(fontWeight: FontWeight.bold),
+              );
             } else if (state is UserInfoSuccessState) {
               return Text(
                 state.userModel.name,

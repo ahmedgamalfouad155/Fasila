@@ -41,7 +41,6 @@ class ChooseLableAlarmWidget extends StatelessWidget {
                           ? context.appColors.teal
                           : context.appColors.offWhite,
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: context.appColors.teal),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

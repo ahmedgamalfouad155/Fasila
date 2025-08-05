@@ -15,16 +15,22 @@ class ImageProfileCubit extends Cubit<ImageProfileState> {
   final ImagePicker _picker = ImagePicker();
 
   Future<void> pickImageFromGallery() async {
-    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
+    try {
+      final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
 
-    if (pickedFile != null) {
-      final newImagePath = pickedFile.path;
-      final oldImagePath = shopBox.get(profileImage);
-      if (oldImagePath != null && File(oldImagePath).existsSync()) {
-        await File(oldImagePath).delete();
+      if (pickedFile != null) {
+        final newImagePath = pickedFile.path;
+        final oldImagePath = shopBox.get(profileImage);
+        if (oldImagePath != null && File(oldImagePath).existsSync()) {
+          await File(oldImagePath).delete();
+        }
+        await shopBox.put(profileImage, newImagePath);
+        emit(ImageProfileUpdated(imagePath: newImagePath));
+      } else {
+        print("User cancelled image picking.");
       }
-      await shopBox.put(profileImage, newImagePath);
-      emit(ImageProfileUpdated(imagePath: newImagePath));
+    } catch (e) {
+      print("Error picking image: $e");
     }
   }
 
