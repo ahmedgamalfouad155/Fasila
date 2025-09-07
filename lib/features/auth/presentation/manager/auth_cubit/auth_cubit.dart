@@ -91,7 +91,7 @@ class AuthCubit extends Cubit<AuthState> {
       emit(GoogleSignInSuccess(userCredential.user!));
     } catch (e) {
       emit(GoogleSignInFailure("فشل تسجيل الدخول بجوجل: ${e.toString()}"));
-      print(e.toString());
+      // print(e.toString());
     }
   }
 }

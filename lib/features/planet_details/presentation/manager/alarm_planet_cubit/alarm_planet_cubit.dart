@@ -52,7 +52,7 @@ class AlarmPlanetCubit extends Cubit<AlarmPlanetState> {
     }
   }
 
-  void updateLableAlarm(  String planetId, AlarmModel alarm) async {
+  void updateLableAlarm(String planetId, AlarmModel alarm) async {
     emit(AlarmPlanetInitial());
     await alarmService.updateLableAlarm( planetId,alarm);
     emit(AddingAlarmPlanetSuccessState());

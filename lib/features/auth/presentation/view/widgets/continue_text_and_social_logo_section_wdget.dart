@@ -22,7 +22,7 @@ class ContinueTextAndSocialLogoSectionWdiget extends StatelessWidget {
               onTap: () async {
                 final authcubit = BlocProvider.of<AuthCubit>(context);
                 await authcubit.signInWithGoogle();
-                print(authcubit.state);
+                // print(authcubit.state);
               },
               child: LogoContainerWidget(logo: AppImages.googleLogo),
             ),

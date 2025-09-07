@@ -72,6 +72,7 @@ abstract class AppRouter {
           return BlocBuilder<AuthCubit, AuthState>(
             bloc: BlocProvider.of<AuthCubit>(context),
             builder: (context, state) {
+              // print(state);
               if (state is LoginSuccessState) {
                 return NavBarView(child: HomeView());
               } else {

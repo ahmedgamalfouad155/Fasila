@@ -27,10 +27,10 @@ class ImageProfileCubit extends Cubit<ImageProfileState> {
         await shopBox.put(profileImage, newImagePath);
         emit(ImageProfileUpdated(imagePath: newImagePath));
       } else {
-        print("User cancelled image picking.");
+        // print("User cancelled image picking.");
       }
     } catch (e) {
-      print("Error picking image: $e");
+      // print("Error picking image: $e");
     }
   }
 

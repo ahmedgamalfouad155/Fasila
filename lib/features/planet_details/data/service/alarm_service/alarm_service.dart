@@ -5,5 +5,5 @@ abstract class AlarmService {
   Stream<List<AlarmModel>> getLablesAlarm(String planetId);
   Future<void> deleteLableAlarm( String planetId,AlarmModel alarm);
 
-  Future<void> updateLableAlarm( String planetId,AlarmModel alarm);
+  Future<void> updateLableAlarm(String planetId,AlarmModel alarm);
 }
