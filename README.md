@@ -70,11 +70,6 @@
 
 ---
 
-## 📷 Demo & Screenshots
-> Coming soon: UI showcase and feature walkthrough.
-
----
-
 ## 📩 Contact
 For collaboration, feedback, or contributions:  
 **Ahmed Gamal** – [LinkedIn](https://www.linkedin.com/in/ahmed-gamal-29b93a218)
